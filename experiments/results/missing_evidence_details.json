@@ -1,0 +1,5851 @@
+{
+  "n_queries": 100,
+  "hybrid_k": 50,
+  "probe_k": 100,
+  "n_queries_missing_from_hybrid": 94,
+  "ceiling_gap_note": "Query table: queries with at least one golden ID absent from Hybrid@50. Passage table: individual missed relevant IDs (the Recall@50 gap).",
+  "table": [
+    {
+      "failure_category": "lexical mismatch",
+      "count": 69,
+      "percentage": 0.7340425531914894,
+      "potential_remedy": "Stronger lexical matching / domain synonyms for BM25"
+    },
+    {
+      "failure_category": "both BM25 and dense failure",
+      "count": 7,
+      "percentage": 0.07446808510638298,
+      "potential_remedy": "First-stage recall (larger K, domain encoder, or different lexical model)"
+    },
+    {
+      "failure_category": "dense retrieval failure",
+      "count": 7,
+      "percentage": 0.07446808510638298,
+      "potential_remedy": "Biomedical embeddings; do not rely on MiniLM alone"
+    },
+    {
+      "failure_category": "terminology mismatch",
+      "count": 6,
+      "percentage": 0.06382978723404255,
+      "potential_remedy": "Better BioASQ-specific abbreviation handling"
+    },
+    {
+      "failure_category": "BM25 failure",
+      "count": 4,
+      "percentage": 0.0425531914893617,
+      "potential_remedy": "Query rewriting for lexical gaps; keep dense"
+    },
+    {
+      "failure_category": "query formulation issue",
+      "count": 1,
+      "percentage": 0.010638297872340425,
+      "potential_remedy": "Selective decomposition for multi-part questions"
+    }
+  ],
+  "rows": [
+    {
+      "query_id": 0,
+      "question": "Is Hirschsprung disease a mendelian or a multifactorial disorder?",
+      "query_type": "terminology_heavy",
+      "detected_terms": [
+        "hirschsprung disease",
+        "hirschsprung"
+      ],
+      "misses": [
+        {
+          "relevant_passage_id": 20598273,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 50,
+          "rrf_rank": 81,
+          "in_corpus": true,
+          "token_overlap": 0.625,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 6650562,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 15829955,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 8896569,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 21995290,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 15858239,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        }
+      ],
+      "primary_category": "BM25 failure"
+    },
+    {
+      "query_id": 1,
+      "question": "List signaling molecules (ligands) that interact with the receptor EGFR?",
+      "query_type": "terminology_heavy",
+      "detected_terms": [
+        "egfr"
+      ],
+      "misses": [
+        {
+          "relevant_passage_id": 23821377,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 24323361,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 27,
+          "dense_rank": null,
+          "rrf_rank": 63,
+          "in_corpus": true,
+          "token_overlap": 0.6,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 22247333,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 22260327,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 23959273,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 23089711,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 21,
+          "dense_rank": null,
+          "rrf_rank": 54,
+          "in_corpus": true,
+          "token_overlap": 0.5,
+          "category": "dense retrieval failure"
+        }
+      ],
+      "primary_category": "terminology mismatch"
+    },
+    {
+      "query_id": 2,
+      "question": "Is the protein Papilin secreted?",
+      "query_type": "terminology_heavy",
+      "detected_terms": [
+        "papilin"
+      ],
+      "misses": [
+        {
+          "relevant_passage_id": 20805556,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 19724244,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.6,
+          "category": "terminology mismatch"
+        }
+      ],
+      "primary_category": "terminology mismatch"
+    },
+    {
+      "query_id": 3,
+      "question": "Are long non coding RNAs spliced?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 21622663,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24106460,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 4,
+      "question": "Is RANKL secreted from the cells?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 23827649,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21618594,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23835909,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23698708,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22901753,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 5,
+      "question": "Does metformin interfere thyroxine absorption?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 26191653,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 6,
+      "question": "Which miRNAs could be used as potential biomarkers for epithelial ovarian cancer?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 22246341,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23978303,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20035894,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21571355,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 79,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5833333333333334,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 21345725,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23836287,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 7,
+      "question": "Which acetylcholinesterase inhibitors are used for treatment of myasthenia gravis?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 21328290,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 8,
+      "question": "Has Denosumab (Prolia) been approved by FDA?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 24114694,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22540167,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23956508,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23757624,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 61,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.42857142857142855,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 22716221,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.7142857142857143,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 21208140,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21470540,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23652187,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 31,
+          "dense_rank": null,
+          "rrf_rank": 57,
+          "in_corpus": true,
+          "token_overlap": 0.7142857142857143,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 20811384,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 9,
+      "question": "List the human genes encoding for the dishevelled proteins?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 16457155,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.25,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 12883684,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 23836490,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24040443,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 7958461,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "both BM25 and dense failure"
+    },
+    {
+      "query_id": 10,
+      "question": "Name synonym of Acrokeratosis paraneoplastica.",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 1433123,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22146896,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22252191,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 11,
+      "question": "Which are the classes of anti-arrhythmic drugs according to Vaughan-Williams classification?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 9803978,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 1290288,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 12,
+      "question": "Which are the different isoforms of the mammalian Notch receptor?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 21356309,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 11532344,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 13,
+      "question": "Which are the major characteristics of cellular senescence?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 18976161,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 14,
+      "question": "Orteronel was developed for treatment of which cancer?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 25624429,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.25,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 24100689,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 25701170,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 25264242,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 25537627,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "both BM25 and dense failure"
+    },
+    {
+      "query_id": 15,
+      "question": "Is the monoclonal antibody Trastuzumab (Herceptin) of potential use in the treatment of prostate cancer?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 22505344,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 11502465,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 15571968,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 12677892,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 12173324,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 18071949,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 10473102,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21364123,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 15046685,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 17142577,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 11786427,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 11236029,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21254978,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 42,
+          "dense_rank": null,
+          "rrf_rank": 72,
+          "in_corpus": true,
+          "token_overlap": 0.7692307692307693,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 23294030,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 11920466,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21326934,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 11685722,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 54,
+          "dense_rank": null,
+          "rrf_rank": 87,
+          "in_corpus": true,
+          "token_overlap": 0.6153846153846154,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 19373278,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 18038879,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 95,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5384615384615384,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 15036648,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23255921,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 24,
+          "rrf_rank": 54,
+          "in_corpus": true,
+          "token_overlap": 0.6153846153846154,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 22137850,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 16,
+      "question": "Which are the Yamanaka factors?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 23612755,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 35,
+          "dense_rank": null,
+          "rrf_rank": 65,
+          "in_corpus": true,
+          "token_overlap": 0.6,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 23166588,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23704989,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "dense retrieval failure"
+    },
+    {
+      "query_id": 17,
+      "question": "What is the aim of the Human Chromosome-centric Proteome Project (C-HPP)?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 23312004,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23308364,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21742803,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 18,
+      "question": "Where is the protein Pannexin1 located?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 25007779,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24642372,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 64,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.3333333333333333,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 17064878,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 71,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.3333333333333333,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 25056878,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.3333333333333333,
+          "category": "both BM25 and dense failure"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 19,
+      "question": "Which currently known mitochondrial diseases have been attributed to POLG mutations?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 12825077,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22647225,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 20,
+      "question": "What is the effect of ivabradine in heart failure after myocardial infarction?",
+      "query_type": "terminology_heavy",
+      "detected_terms": [
+        "myocardial infarction"
+      ],
+      "misses": [
+        {
+          "relevant_passage_id": 18757088,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.08333333333333333,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 19514618,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 19129742,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 18310678,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 20028694,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 21878041,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 23067195,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        }
+      ],
+      "primary_category": "terminology mismatch"
+    },
+    {
+      "query_id": 21,
+      "question": "What is the mode of inheritance of Wilson's disease?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 12152840,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 2724779,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 8615372,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 1940586,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 759736,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 22,
+      "question": "Are transcription and splicing connected?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 21095588,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22156210,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 33,
+          "rrf_rank": 69,
+          "in_corpus": true,
+          "token_overlap": 0.6,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 20808788,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 16769980,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 23,
+      "question": "What is the mode of inheritance of Facioscapulohumeral muscular dystrophy (FSHD)?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 10864616,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 15307599,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 19248726,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23573591,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22525183,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 24,
+      "question": "Is Alu hypomethylation associated with breast cancer?",
+      "query_type": "semantic",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 20682973,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 25,
+      "question": "Which proteins participate in the formation of the ryanodine receptor quaternary macromolecular complex?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 18206802,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 9287354,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22025663,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 39,
+          "dense_rank": null,
+          "rrf_rank": 70,
+          "in_corpus": true,
+          "token_overlap": 0.5833333333333334,
+          "category": "dense retrieval failure"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 26,
+      "question": "What kind of chromatography is HILIC?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 21737084,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 27,
+      "question": "What is the effect of TRH on myocardial contractility?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 2848686,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 28,
+      "question": "Proteomic analyses need prior knowledge of the organism complete genome. Is the complete genome of the bacteria of the genus Arthrobacter available?",
+      "query_type": "broad_literature",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 28450506,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.06666666666666667,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 28315371,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.13333333333333333,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23039946,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 28642378,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.06666666666666667,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 29,
+      "question": "What is the structural fold of bromodomain proteins?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 17274598,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 17694091,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 17148447,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 30,
+      "question": "List the endoscopic diagnoses that have been reported in children with autism",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 11007230,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 31,
+      "question": "What are the outcomes of Renal sympathetic denervation?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 23890950,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23819768,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23176687,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 32,
+      "question": "Which MAP kinase phosphorylates the transcription factor c-jun?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 24113186,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24285252,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5555555555555556,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 15228586,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 77,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.6666666666666666,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 24272171,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 72,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.4444444444444444,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 24291243,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 74,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5555555555555556,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 15708845,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24321066,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 52,
+          "dense_rank": null,
+          "rrf_rank": 92,
+          "in_corpus": true,
+          "token_overlap": 0.5555555555555556,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 24252081,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 32,
+          "rrf_rank": 62,
+          "in_corpus": true,
+          "token_overlap": 0.4444444444444444,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 24144051,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.4444444444444444,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 24139673,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 78,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5555555555555556,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 24321566,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 93,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.6666666666666666,
+          "category": "dense retrieval failure"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 33,
+      "question": "What is the meaning of the acronym \"TAILS\" used in protein N-terminomics?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 21604129,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20305284,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22367194,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 55,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.6666666666666666,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 21604127,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 34,
+      "question": "Do mutations of AKT1 occur in meningiomas?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 24096618,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23475883,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 25146167,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 35,
+      "question": "What are the main indications of lacosamide?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 17461888,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 42,
+          "dense_rank": null,
+          "rrf_rank": 81,
+          "in_corpus": true,
+          "token_overlap": 0.5714285714285714,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 21271304,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 86,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5714285714285714,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 20677583,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21861814,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "dense retrieval failure"
+    },
+    {
+      "query_id": 36,
+      "question": "Which fusion protein is involved in the development of Ewing sarcoma?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 25401475,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 25162919,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20691659,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24481407,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 37,
+      "question": "List Hemolytic Uremic Syndrome Triad.",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 25011592,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 25280590,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 19625716,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 38,
+      "question": "Does physical activity influence gut hormones?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 21615652,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20690071,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 16942616,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 82,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.16666666666666666,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 21927572,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 21,
+          "rrf_rank": 54,
+          "in_corpus": true,
+          "token_overlap": 0.16666666666666666,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 18987287,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 39,
+      "question": "What are the effects of depleting protein  km23-1 (DYNLRB1)  in a cell?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 17420258,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22637579,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 40,
+      "question": "Treatment of which disease was investigated in the MR CLEAN study?",
+      "query_type": "entity_heavy",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 25179366,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.45454545454545453,
+          "category": "both BM25 and dense failure"
+        }
+      ],
+      "primary_category": "both BM25 and dense failure"
+    },
+    {
+      "query_id": 42,
+      "question": "Is irritable bowel syndrome more common in women with endometriosis?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 22134016,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 18715239,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 18715240,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21868492,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 18478547,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 43,
+      "question": "What is evaluated using the EORTC QLQ \u2013 INFO25 questionnaire?",
+      "query_type": "entity_heavy",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 22638756,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20674333,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 44,
+      "question": "Does BNP increase after intensive exercise in athletes?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 22653984,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 19638823,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 14523304,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 18076361,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 17395308,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 12417808,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 18184752,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 17289431,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 16879068,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23304255,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 45,
+      "question": "What is the association of estrogen replacement therapy and intracranial meningioma risk?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 20802020,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21067422,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 16759391,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 47,
+      "question": "Is Weaver syndrome similar to Sotos?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 24214728,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23592277,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 12807965,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 48,
+      "question": "Which enzyme is targeted by Evolocumab?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 24859266,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 24953393,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 84,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.6666666666666666,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 25002170,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 25410046,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24477778,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24481874,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 25282519,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 25282520,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24509273,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 25052769,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.3333333333333333,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 24284914,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.16666666666666666,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 24373748,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "both BM25 and dense failure"
+    },
+    {
+      "query_id": 49,
+      "question": "Are ultraconserved elements often transcribed?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 22328099,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 34,
+          "dense_rank": null,
+          "rrf_rank": 64,
+          "in_corpus": true,
+          "token_overlap": 0.6,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 22617881,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 47,
+          "dense_rank": null,
+          "rrf_rank": 77,
+          "in_corpus": true,
+          "token_overlap": 0.8,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 19660540,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "dense retrieval failure"
+    },
+    {
+      "query_id": 50,
+      "question": "What is the methyl donor of DNA (cytosine-5)-methyltransferases?",
+      "query_type": "terminology_heavy",
+      "detected_terms": [
+        "dna"
+      ],
+      "misses": [
+        {
+          "relevant_passage_id": 7578083,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 15273274,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 70,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.6,
+          "category": "dense retrieval failure"
+        }
+      ],
+      "primary_category": "terminology mismatch"
+    },
+    {
+      "query_id": 51,
+      "question": "Is peripheral neuroepithelioma related to Ewing sarcoma?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 3390826,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 9825003,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 1283315,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 8644855,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 7595741,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 52,
+      "question": "Which signaling pathway does sonidegib inhibit?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 24928708,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.16666666666666666,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 24613036,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "both BM25 and dense failure"
+    },
+    {
+      "query_id": 53,
+      "question": "In which phase of the cell cycle arrest is impaired in Fanconi anemia?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 9414295,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 54,
+      "question": "Which DNA sequences are more prone for the formation of R-loops?",
+      "query_type": "terminology_heavy",
+      "detected_terms": [
+        "dna"
+      ],
+      "misses": [
+        {
+          "relevant_passage_id": 25147206,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 24843019,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 62,
+          "rrf_rank": 100,
+          "in_corpus": true,
+          "token_overlap": 0.5833333333333334,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 18986989,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 24743386,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 25296254,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        }
+      ],
+      "primary_category": "terminology mismatch"
+    },
+    {
+      "query_id": 55,
+      "question": "Mutation of which gene is implicated in the familial isolated pituitary adenoma?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 22527616,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23038625,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24366639,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20833337,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20570174,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24996936,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23310926,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22915287,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24078436,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 19883897,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 56,
+      "question": "which mutations of troponin C gene have been found to cause hypertrophic cardiomyopathy?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 24260207,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 82,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.38461538461538464,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 19506933,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20566645,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23425245,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "BM25 failure"
+    },
+    {
+      "query_id": 57,
+      "question": "What is known about the effect of acupuncture in smoking cessation ?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 17264832,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 12416359,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 58,
+      "question": "Which post-translational histone modifications are characteristic of constitutive heterochromatin?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 18592385,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 18987983,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 12581305,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22572731,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 33,
+          "rrf_rank": 62,
+          "in_corpus": true,
+          "token_overlap": 0.3,
+          "category": "BM25 failure"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 59,
+      "question": "GV1001 vaccine targets which enzyme?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 20822343,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 19388882,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23827187,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22841437,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.2,
+          "category": "both BM25 and dense failure"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 60,
+      "question": "Which is the E3 ubiquitin ligase which ubiquitinates IkB leading to its proteasomal degradation?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 17001349,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20028970,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 16778892,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.6153846153846154,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 10837071,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 82,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.6923076923076923,
+          "category": "dense retrieval failure"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 61,
+      "question": "Is c-met involved in the activation of the Akt pathway?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 22789825,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 14570904,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 61,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.7,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 15522281,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 29,
+          "dense_rank": null,
+          "rrf_rank": 54,
+          "in_corpus": true,
+          "token_overlap": 0.8,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 17942284,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 10714768,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 11821397,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.8,
+          "category": "both BM25 and dense failure"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 62,
+      "question": "Is pregnancy an additional risk during during H1N1 infection?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 22120858,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22515877,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21756329,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21596080,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 19643469,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22782418,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22272853,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22411229,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22901103,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20148081,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 63,
+      "question": "Are long non coding RNAs as conserved in sequence as protein coding genes?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 21622663,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20428234,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23454638,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23467124,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 27,
+          "rrf_rank": 61,
+          "in_corpus": true,
+          "token_overlap": 0.6363636363636364,
+          "category": "BM25 failure"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 64,
+      "question": "Mutation of which gene is implicated in the Brain-lung-thyroid syndrome?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 21867529,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20020530,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23430038,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 26196025,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 65,
+      "question": "What is clathrin?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 19809570,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 12952941,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24280271,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21445329,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 66,
+      "question": "What are the main results of PRKAR1A Knockdown?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 16937372,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.375,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 20824711,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "both BM25 and dense failure"
+    },
+    {
+      "query_id": 69,
+      "question": "Which enzyme is targeted by the drug Imetelstat?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 20232321,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 99,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.75,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 19908230,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23727752,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.375,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 21332640,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23326372,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22906540,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23272238,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.625,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 24327604,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.375,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 23558965,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23516479,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.375,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 23467584,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.625,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 20824134,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21208905,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22870217,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.25,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 23521791,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.375,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 23386830,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 20048334,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22382179,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21845093,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 21549308,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 40,
+          "dense_rank": null,
+          "rrf_rank": 79,
+          "in_corpus": true,
+          "token_overlap": 0.5,
+          "category": "dense retrieval failure"
+        }
+      ],
+      "primary_category": "dense retrieval failure"
+    },
+    {
+      "query_id": 70,
+      "question": "Which interleukins are inhibited by Dupilumab?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 23688323,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 25584909,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 56,
+          "dense_rank": null,
+          "rrf_rank": 93,
+          "in_corpus": true,
+          "token_overlap": 0.3333333333333333,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 24275927,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 59,
+          "dense_rank": null,
+          "rrf_rank": 99,
+          "in_corpus": true,
+          "token_overlap": 0.5,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 25006719,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 71,
+      "question": "Which human genes are more commonly related to craniosynostosis?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 9934984,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 10914960,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 34,
+          "rrf_rank": 55,
+          "in_corpus": true,
+          "token_overlap": 0.2222222222222222,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 11341328,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.4444444444444444,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 11484208,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.2222222222222222,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 17955513,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 8106171,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 14672347,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 15964893,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 9042914,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 11746040,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.2222222222222222,
+          "category": "both BM25 and dense failure"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 72,
+      "question": "Are transcribed ultraconserved regions involved in cancer?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 24247010,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 18323801,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20802525,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 73,
+      "question": "In which breast cancer patients can palbociclib be used?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 25792301,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 25524798,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 74,
+      "question": "Do patients with Pendred syndrome present congenital deafness?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 10602116,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23459462,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 1810081,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 16482981,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 11375792,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 9398842,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22109890,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 41,
+          "dense_rank": null,
+          "rrf_rank": 56,
+          "in_corpus": true,
+          "token_overlap": 0.75,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 17299139,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 8630498,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 15320950,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 75,
+      "question": "List side effects of SGLT2 inhibitors?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 24400675,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 88,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 23042029,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24341330,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24631482,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "dense retrieval failure"
+    },
+    {
+      "query_id": 76,
+      "question": "Is CD56 useful in Ewing sarcoma prognosis?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 22498946,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 20,
+          "dense_rank": null,
+          "rrf_rank": 67,
+          "in_corpus": true,
+          "token_overlap": 0.7142857142857143,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 21467162,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 9692823,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "dense retrieval failure"
+    },
+    {
+      "query_id": 77,
+      "question": "What is the method FASP used for?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 24288579,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.42857142857142855,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 22092713,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5714285714285714,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 22949036,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5714285714285714,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 23436586,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23603217,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 34,
+          "dense_rank": null,
+          "rrf_rank": 62,
+          "in_corpus": true,
+          "token_overlap": 0.7142857142857143,
+          "category": "dense retrieval failure"
+        }
+      ],
+      "primary_category": "both BM25 and dense failure"
+    },
+    {
+      "query_id": 79,
+      "question": "Are there any urine biomarkers for chronic kidney disease?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 24205707,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 44,
+          "dense_rank": null,
+          "rrf_rank": 75,
+          "in_corpus": true,
+          "token_overlap": 0.6666666666666666,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 24224012,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24152229,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 18,
+          "rrf_rank": 52,
+          "in_corpus": true,
+          "token_overlap": 0.5555555555555556,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 23339563,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 25,
+          "rrf_rank": 59,
+          "in_corpus": true,
+          "token_overlap": 0.4444444444444444,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 20425065,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23061738,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24065527,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 35,
+          "rrf_rank": 66,
+          "in_corpus": true,
+          "token_overlap": 0.3333333333333333,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 22914685,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "dense retrieval failure"
+    },
+    {
+      "query_id": 80,
+      "question": "What is being measured with an accelerometer in back pain patients",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 21872993,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23560880,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21195646,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 19895697,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 11387574,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 81,
+      "question": "List the releases of JASPAR database",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 19906716,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 16381983,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 82,
+      "question": "List symptoms of the IFAP syndrome.",
+      "query_type": "multi_part",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 25685152,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "query formulation issue"
+        },
+        {
+          "relevant_passage_id": 21886760,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "query formulation issue"
+        },
+        {
+          "relevant_passage_id": 10326971,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "query formulation issue"
+        },
+        {
+          "relevant_passage_id": 24090718,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "query formulation issue"
+        }
+      ],
+      "primary_category": "query formulation issue"
+    },
+    {
+      "query_id": 83,
+      "question": "Which gene is required for the efficient function of clopidogrel?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 21099121,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20826260,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 84,
+      "question": "Is valproic acid effective for glioblastoma treatment?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 21880994,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24874578,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 26194676,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 24899645,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 85,
+      "question": "Which transcription factor is considered as a master regulator of lysosomal genes?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 23830905,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21617040,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23457305,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21752829,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 86,
+      "question": "Which antibiotics target peptidoglycan biosynthesis?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 8891144,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 2334153,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 7590155,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 12440876,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22280885,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21091161,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21867549,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 88,
+      "question": "Is fatigue prevalent in patients receiving treatment for glioblastoma?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 18758912,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 31,
+          "rrf_rank": 62,
+          "in_corpus": true,
+          "token_overlap": 0.6666666666666666,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 19904263,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23422478,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23184145,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 14649883,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21986722,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 2168357,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.6666666666666666,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 20308655,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 18581057,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 18477765,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 18990027,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22090453,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 88,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.7777777777777778,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 20200024,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5555555555555556,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 23086432,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 78,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.4444444444444444,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 3008359,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22079725,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 94,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.7777777777777778,
+          "category": "BM25 failure"
+        }
+      ],
+      "primary_category": "BM25 failure"
+    },
+    {
+      "query_id": 89,
+      "question": "List two common features of Tay syndrome.",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 20687499,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 6538137,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 2087835,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 90,
+      "question": "Which cell types are known to be driving Rheumatoid Arthritis?",
+      "query_type": "terminology_heavy",
+      "detected_terms": [
+        "rheumatoid arthritis"
+      ],
+      "misses": [
+        {
+          "relevant_passage_id": 17875202,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 57,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.4,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 15641091,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 21160042,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 57,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.7,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 23036591,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 15692990,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        }
+      ],
+      "primary_category": "BM25 failure"
+    },
+    {
+      "query_id": 91,
+      "question": "What is the association between personality trait of neuroticism and risk for Alzheimer's disease?",
+      "query_type": "terminology_heavy",
+      "detected_terms": [
+        "alzheimer's disease",
+        "alzheimer"
+      ],
+      "misses": [
+        {
+          "relevant_passage_id": 18590355,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 23706517,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 23040035,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 18079420,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 20438208,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 23567438,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 16252381,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 25274849,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 9924832,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        },
+        {
+          "relevant_passage_id": 15358438,
+          "bm25_retrieved": false,
+          "dense_retrieved": true,
+          "bm25_rank": null,
+          "dense_rank": 56,
+          "rrf_rank": 93,
+          "in_corpus": true,
+          "token_overlap": 0.5333333333333333,
+          "category": "BM25 failure"
+        },
+        {
+          "relevant_passage_id": 10718200,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "terminology mismatch"
+        }
+      ],
+      "primary_category": "terminology mismatch"
+    },
+    {
+      "query_id": 92,
+      "question": "What is the mode of action of everolimus?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 22139982,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 16699448,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5714285714285714,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 16625599,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 93,
+      "question": "Have Quantitative Trait Loci affecting splicing (splicing QTLs) been linked to disease?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 20707912,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22784570,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 94,
+      "question": "Which technique is used for detection of EWS/FLI1 fusion transcripts?",
+      "query_type": "entity_heavy",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 17154184,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 15565546,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 9552022,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 95,
+      "question": "Does the CTCF protein co-localize with cohesin?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 19369356,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 19109133,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23295672,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21876668,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22780989,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21880767,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21106760,
+          "bm25_retrieved": true,
+          "dense_retrieved": false,
+          "bm25_rank": 45,
+          "dense_rank": null,
+          "rrf_rank": 78,
+          "in_corpus": true,
+          "token_overlap": 0.625,
+          "category": "dense retrieval failure"
+        },
+        {
+          "relevant_passage_id": 23204437,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.5,
+          "category": "both BM25 and dense failure"
+        },
+        {
+          "relevant_passage_id": 21606361,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 19158269,
+          "bm25_retrieved": true,
+          "dense_retrieved": true,
+          "bm25_rank": 58,
+          "dense_rank": 95,
+          "rrf_rank": 61,
+          "in_corpus": true,
+          "token_overlap": 0.375,
+          "category": "other"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 96,
+      "question": "What is the application of the Bimolecular Fluorescence Complementation (BiFC) assay in Drosophila embryos?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 17534848,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 18573091,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 25151172,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 19771334,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 17406412,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23317900,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 21091444,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 97,
+      "question": "Which pathological condition of the heart is known as hypertrophic cardiomyopathy (HCM)?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 22665960,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 98,
+      "question": "What is the genetic basis of Rubinstein-Taybi syndrome?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 16359492,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 22269667,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20684013,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 23432975,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 15706485,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 20689175,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    },
+    {
+      "query_id": 99,
+      "question": "What is the function of the viral KP4 protein?",
+      "query_type": "simple_factual",
+      "detected_terms": [],
+      "misses": [
+        {
+          "relevant_passage_id": 8616260,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 11532143,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 7582897,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 11901234,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        },
+        {
+          "relevant_passage_id": 7966296,
+          "bm25_retrieved": false,
+          "dense_retrieved": false,
+          "bm25_rank": null,
+          "dense_rank": null,
+          "rrf_rank": null,
+          "in_corpus": true,
+          "token_overlap": 0.0,
+          "category": "lexical mismatch"
+        }
+      ],
+      "primary_category": "lexical mismatch"
+    }
+  ],
+  "n_missed_relevant_ids": 445,
+  "passage_table": [
+    {
+      "failure_category": "lexical mismatch",
+      "count": 309,
+      "percentage": 0.6943820224719102,
+      "potential_remedy": "Stronger lexical matching / domain synonyms for BM25"
+    },
+    {
+      "failure_category": "dense retrieval failure",
+      "count": 37,
+      "percentage": 0.08314606741573034,
+      "potential_remedy": "Biomedical embeddings; do not rely on MiniLM alone"
+    },
+    {
+      "failure_category": "both BM25 and dense failure",
+      "count": 36,
+      "percentage": 0.08089887640449438,
+      "potential_remedy": "First-stage recall (larger K, domain encoder, or different lexical model)"
+    },
+    {
+      "failure_category": "terminology mismatch",
+      "count": 36,
+      "percentage": 0.08089887640449438,
+      "potential_remedy": "Better BioASQ-specific abbreviation handling"
+    },
+    {
+      "failure_category": "BM25 failure",
+      "count": 22,
+      "percentage": 0.04943820224719101,
+      "potential_remedy": "Query rewriting for lexical gaps; keep dense"
+    },
+    {
+      "failure_category": "query formulation issue",
+      "count": 4,
+      "percentage": 0.008988764044943821,
+      "potential_remedy": "Selective decomposition for multi-part questions"
+    },
+    {
+      "failure_category": "other",
+      "count": 1,
+      "percentage": 0.0022471910112359553,
+      "potential_remedy": "Inspect fusion cutoffs and rank distributions"
+    }
+  ]
+}

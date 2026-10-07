@@ -1,0 +1,18 @@
+{
+  "n_queries": 100,
+  "n_with_variants": 8,
+  "n_new_relevant": 1,
+  "n_displaced_relevant": 3,
+  "original_recall_at_10": 0.42983870441418387,
+  "equal_recall_at_10": 0.42474905794953743,
+  "priority_recall_at_10": 0.42983870441418387,
+  "original_recall_at_50": 0.6243327077327153,
+  "equal_recall_at_50": 0.6193077077327153,
+  "priority_recall_at_50": 0.6243327077327153,
+  "priority_is_default": false,
+  "notes": [
+    "Equal-weight fusion is the previous expansion behaviour.",
+    "Priority fusion keeps original ranking and appends expansion-only IDs.",
+    "Priority is not the production default unless this file shows a gain."
+  ]
+}

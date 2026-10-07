@@ -1,0 +1,15 @@
+{
+  "items": [
+    {
+      "query_id": 5,
+      "question": "Does metformin interfere thyroxine absorption?",
+      "gold_ids": [
+        26191653
+      ],
+      "failure_category": "GOLD_LABEL",
+      "source_experiment": "hybrid-medcpt",
+      "diagnosis": null,
+      "date_added": "2026-10-02"
+    }
+  ]
+}

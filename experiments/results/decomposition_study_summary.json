@@ -1,0 +1,37 @@
+{
+  "n_queries": 100,
+  "n_decomposed": 1,
+  "n_not_decomposed": 99,
+  "selective_activation": true,
+  "all_queries": {
+    "n_queries": 100,
+    "all_recall_at_10": 0.42858748583148304,
+    "all_decomp_recall_at_10": 0.42858748583148304,
+    "all_ndcg_at_10": 0.5654650595595728,
+    "all_decomp_ndcg_at_10": 0.5654650595595728,
+    "all_latency_ms": 61.73222289973637,
+    "all_decomp_latency_ms": 62.129572100384394
+  },
+  "complex_queries": {
+    "n_queries": 1,
+    "complex_recall_at_10": 0.6,
+    "complex_decomp_recall_at_10": 0.6,
+    "complex_ndcg_at_10": 0.9363792118010483,
+    "complex_decomp_ndcg_at_10": 0.9363792118010483,
+    "complex_latency_ms": 45.190415999968536,
+    "complex_decomp_latency_ms": 124.71916699723806
+  },
+  "simple_queries": {
+    "n_queries": 99,
+    "simple_recall_at_10": 0.4268560462944273,
+    "simple_decomp_recall_at_10": 0.4268560462944273,
+    "simple_ndcg_at_10": 0.5617184519611741,
+    "simple_decomp_ndcg_at_10": 0.5617184519611741,
+    "simple_latency_ms": 61.899311858319884,
+    "simple_decomp_latency_ms": 61.497353970113146
+  },
+  "notes": [
+    "Simple queries are not decomposed by the heuristic.",
+    "Decomposition remains default OFF."
+  ]
+}

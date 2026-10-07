@@ -1,0 +1,375 @@
+{
+  "query_id": 5,
+  "question": "Does metformin interfere thyroxine absorption?",
+  "category": "Treatment / intervention",
+  "gold_ids": [
+    26191653
+  ],
+  "inspect_k": 40221,
+  "pool_k": 50,
+  "final_k": 10,
+  "dense_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "rrf_k": 60,
+  "reranker_model": "ncbi/MedCPT-Cross-Encoder",
+  "gold_traces": [
+    {
+      "gold_id": 26191653,
+      "pmid": 26191653,
+      "exists_in_index": true,
+      "failure_point": "DATA / PARSING",
+      "raw_text_preview": "nan",
+      "raw_text_length": 3,
+      "indexed_text_preview": "nan",
+      "indexed_text_length": 3,
+      "text_unchanged": true,
+      "truncated": false,
+      "chunked": false,
+      "n_chunks": 1,
+      "empty_or_nan_text": true,
+      "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split. A source value of 'nan' is preserved as the three-character string 'nan'.",
+      "bm25_rank": 31119,
+      "bm25_score": 0.0,
+      "bm25_in_production_top50": false,
+      "dense_rank": 29314,
+      "dense_score": 0.060771142556200974,
+      "dense_in_production_top50": false,
+      "rrf_rank": null,
+      "rrf_score": null,
+      "in_top50": false,
+      "medcpt_rank": null,
+      "medcpt_score": null,
+      "in_top10": false,
+      "first_loss_label": "DATA / PARSING",
+      "stage_code": "DATA_QUALITY"
+    }
+  ],
+  "bm25_top10": [
+    {
+      "rank": 1,
+      "passage_id": 17725434,
+      "score": 23.354993197490266,
+      "preview": "OBJECTIVE: Medications may sometimes interfere with the intestinal absorption of levothyroxine, primarily by forming an insoluble complex with the thyroid hormo\u2026"
+    },
+    {
+      "rank": 2,
+      "passage_id": 19942153,
+      "score": 20.453109711718625,
+      "preview": "Food, dietary fibre and espresso coffee interfere with the absorption of levothyroxine. Malabsorptive disorders reported to affect the absorption of levothyroxi\u2026"
+    },
+    {
+      "rank": 3,
+      "passage_id": 17446037,
+      "score": 19.84190439053865,
+      "preview": "INTRODUCTION: Thyroxine supplementation of patients with hypothyroidism is usually simple. A few patients, however, continue to present elevated TSH levels desp\u2026"
+    },
+    {
+      "rank": 4,
+      "passage_id": 12796075,
+      "score": 19.29117836624946,
+      "preview": "To our knowledge, raloxifene hydrochloride, a selective estrogen receptor modulator, has never been reported to interfere with absorption of levothyroxine. We d\u2026"
+    },
+    {
+      "rank": 5,
+      "passage_id": 1728914,
+      "score": 16.87009064025849,
+      "preview": "A patient with hypothyroidism who was euthyroid on a fixed-dosage, long-term maintenance regimen of levothyroxine sodium developed persistently elevated serum t\u2026"
+    },
+    {
+      "rank": 6,
+      "passage_id": 14751040,
+      "score": 14.69812241077703,
+      "preview": "The comparative bioavailability of oral doses of levothyroxine (LT(4)) formulation taken as tablets, after being crushed, or chewed before swallowing has not be\u2026"
+    },
+    {
+      "rank": 7,
+      "passage_id": 19733399,
+      "score": 14.133540909546644,
+      "preview": "To analyse the influence of thyroid status on the effect of aluminium (Al) upon intestinal calcium (Ca) absorption, adult male Wistar rats with experimentally a\u2026"
+    },
+    {
+      "rank": 8,
+      "passage_id": 30360725,
+      "score": 13.848758015610795,
+      "preview": "BACKGROUND: Nowadays, ionizing radiation is used for several applications in medicine, industry, agriculture, and nuclear power generation. Besides the benefici\u2026"
+    },
+    {
+      "rank": 9,
+      "passage_id": 15117902,
+      "score": 13.472871426367576,
+      "preview": "BACKGROUND: Our aim was to investigate the effect of pre-treatment with metformin in women with polycystic ovary syndrome (PCOS) scheduled for IVF stimulation.\u2026"
+    },
+    {
+      "rank": 10,
+      "passage_id": 18827867,
+      "score": 13.224473805692938,
+      "preview": "Vildagliptin is a potent and selective inhibitor of dipeptidyl peptidase-IV (DPP-4), orally active, that improves glycemic control in patients with type 2 diabe\u2026"
+    }
+  ],
+  "dense_top10": [
+    {
+      "rank": 1,
+      "passage_id": 17725434,
+      "score": 0.5161402916474354,
+      "preview": "OBJECTIVE: Medications may sometimes interfere with the intestinal absorption of levothyroxine, primarily by forming an insoluble complex with the thyroid hormo\u2026"
+    },
+    {
+      "rank": 2,
+      "passage_id": 14751040,
+      "score": 0.5061372930334661,
+      "preview": "The comparative bioavailability of oral doses of levothyroxine (LT(4)) formulation taken as tablets, after being crushed, or chewed before swallowing has not be\u2026"
+    },
+    {
+      "rank": 3,
+      "passage_id": 10838651,
+      "score": 0.5009063463964297,
+      "preview": "CONTEXT: The effect of calcium carbonate on the absorption of levothyroxine has not been studied systematically. Such a potential drug interaction merits invest\u2026"
+    },
+    {
+      "rank": 4,
+      "passage_id": 12079930,
+      "score": 0.49600396286447757,
+      "preview": "The outcome of coronary bypass surgery was analyzed in 25 patients who were on thyroxin replacement therapy for chronic thyroid disorders at the time of operati\u2026"
+    },
+    {
+      "rank": 5,
+      "passage_id": 17446037,
+      "score": 0.49301402167178987,
+      "preview": "INTRODUCTION: Thyroxine supplementation of patients with hypothyroidism is usually simple. A few patients, however, continue to present elevated TSH levels desp\u2026"
+    },
+    {
+      "rank": 6,
+      "passage_id": 23253948,
+      "score": 0.48739021946565153,
+      "preview": "OBJECTIVE: This open-label study investigated potential drug-drug interactions between empagliflozin and metformin. METHODS: 16 healthy men received treatment A\u2026"
+    },
+    {
+      "rank": 7,
+      "passage_id": 2885829,
+      "score": 0.48155673851872494,
+      "preview": "Known since 1967 and usually familial, the syndrome of tissue resistance to thyroid hormones may take one of two different forms, depending on the receptors inv\u2026"
+    },
+    {
+      "rank": 8,
+      "passage_id": 8333798,
+      "score": 0.47304279405097976,
+      "preview": "In heart failure, cardiac output is insufficient to meet the needs of the body for oxygen delivery. Available data suggest that alterations in thyroid hormone m\u2026"
+    },
+    {
+      "rank": 9,
+      "passage_id": 12796075,
+      "score": 0.4605700578536698,
+      "preview": "To our knowledge, raloxifene hydrochloride, a selective estrogen receptor modulator, has never been reported to interfere with absorption of levothyroxine. We d\u2026"
+    },
+    {
+      "rank": 10,
+      "passage_id": 16042328,
+      "score": 0.45927850099930495,
+      "preview": "Appropriate methimazole dosing for initial treatment of childhood Graves' disease is uncertain. A retrospective chart review was performed on 5 to 17 year-old c\u2026"
+    }
+  ],
+  "rrf_top20": [
+    {
+      "rank": 1,
+      "passage_id": 17725434,
+      "score": 0.03278688524590164,
+      "preview": "OBJECTIVE: Medications may sometimes interfere with the intestinal absorption of levothyroxine, primarily by forming an insoluble complex with the thyroid hormo\u2026"
+    },
+    {
+      "rank": 2,
+      "passage_id": 14751040,
+      "score": 0.03128054740957967,
+      "preview": "The comparative bioavailability of oral doses of levothyroxine (LT(4)) formulation taken as tablets, after being crushed, or chewed before swallowing has not be\u2026"
+    },
+    {
+      "rank": 3,
+      "passage_id": 17446037,
+      "score": 0.03125763125763126,
+      "preview": "INTRODUCTION: Thyroxine supplementation of patients with hypothyroidism is usually simple. A few patients, however, continue to present elevated TSH levels desp\u2026"
+    },
+    {
+      "rank": 4,
+      "passage_id": 19942153,
+      "score": 0.03021353930031804,
+      "preview": "Food, dietary fibre and espresso coffee interfere with the absorption of levothyroxine. Malabsorptive disorders reported to affect the absorption of levothyroxi\u2026"
+    },
+    {
+      "rank": 5,
+      "passage_id": 12796075,
+      "score": 0.030117753623188408,
+      "preview": "To our knowledge, raloxifene hydrochloride, a selective estrogen receptor modulator, has never been reported to interfere with absorption of levothyroxine. We d\u2026"
+    },
+    {
+      "rank": 6,
+      "passage_id": 23253948,
+      "score": 0.02664576802507837,
+      "preview": "OBJECTIVE: This open-label study investigated potential drug-drug interactions between empagliflozin and metformin. METHODS: 16 healthy men received treatment A\u2026"
+    },
+    {
+      "rank": 7,
+      "passage_id": 19733399,
+      "score": 0.025451688923802042,
+      "preview": "To analyse the influence of thyroid status on the effect of aluminium (Al) upon intestinal calcium (Ca) absorption, adult male Wistar rats with experimentally a\u2026"
+    },
+    {
+      "rank": 8,
+      "passage_id": 1728914,
+      "score": 0.025384615384615387,
+      "preview": "A patient with hypothyroidism who was euthyroid on a fixed-dosage, long-term maintenance regimen of levothyroxine sodium developed persistently elevated serum t\u2026"
+    },
+    {
+      "rank": 9,
+      "passage_id": 12643405,
+      "score": 0.02419816723940435,
+      "preview": "BACKGROUND: The impact of thyroid disease on patients undergoing coronary artery bypass grafting has been reported in only small series of selected patients. ME\u2026"
+    },
+    {
+      "rank": 10,
+      "passage_id": 27939359,
+      "score": 0.020253682487725043,
+      "preview": "The most widely prescribed oral anti-diabetic agent today in the world today is a member of the biguanide class of drugs called metformin. Apart from its use in\u2026"
+    },
+    {
+      "rank": 11,
+      "passage_id": 10838651,
+      "score": 0.015873015873015872,
+      "preview": "CONTEXT: The effect of calcium carbonate on the absorption of levothyroxine has not been studied systematically. Such a potential drug interaction merits invest\u2026"
+    },
+    {
+      "rank": 12,
+      "passage_id": 12079930,
+      "score": 0.015625,
+      "preview": "The outcome of coronary bypass surgery was analyzed in 25 patients who were on thyroxin replacement therapy for chronic thyroid disorders at the time of operati\u2026"
+    },
+    {
+      "rank": 13,
+      "passage_id": 2885829,
+      "score": 0.014925373134328358,
+      "preview": "Known since 1967 and usually familial, the syndrome of tissue resistance to thyroid hormones may take one of two different forms, depending on the receptors inv\u2026"
+    },
+    {
+      "rank": 14,
+      "passage_id": 30360725,
+      "score": 0.014705882352941176,
+      "preview": "BACKGROUND: Nowadays, ionizing radiation is used for several applications in medicine, industry, agriculture, and nuclear power generation. Besides the benefici\u2026"
+    },
+    {
+      "rank": 15,
+      "passage_id": 8333798,
+      "score": 0.014705882352941176,
+      "preview": "In heart failure, cardiac output is insufficient to meet the needs of the body for oxygen delivery. Available data suggest that alterations in thyroid hormone m\u2026"
+    },
+    {
+      "rank": 16,
+      "passage_id": 15117902,
+      "score": 0.014492753623188406,
+      "preview": "BACKGROUND: Our aim was to investigate the effect of pre-treatment with metformin in women with polycystic ovary syndrome (PCOS) scheduled for IVF stimulation.\u2026"
+    },
+    {
+      "rank": 17,
+      "passage_id": 18827867,
+      "score": 0.014285714285714285,
+      "preview": "Vildagliptin is a potent and selective inhibitor of dipeptidyl peptidase-IV (DPP-4), orally active, that improves glycemic control in patients with type 2 diabe\u2026"
+    },
+    {
+      "rank": 18,
+      "passage_id": 16042328,
+      "score": 0.014285714285714285,
+      "preview": "Appropriate methimazole dosing for initial treatment of childhood Graves' disease is uncertain. A retrospective chart review was performed on 5 to 17 year-old c\u2026"
+    },
+    {
+      "rank": 19,
+      "passage_id": 21435090,
+      "score": 0.014084507042253521,
+      "preview": "BACKGROUND: Helicobacter pylori infection is a most frequent cause of chronic gastritis. H. pylori may decrease absorption of oral thyroxine by decreasing gastr\u2026"
+    },
+    {
+      "rank": 20,
+      "passage_id": 22325091,
+      "score": 0.013888888888888888,
+      "preview": "Metformin appears to be involved in altering energy expenditure and thermogenesis, and could affect hypothalamic feeding circuits. However, it is not clear whet\u2026"
+    }
+  ],
+  "medcpt_top10": [
+    {
+      "rank": 1,
+      "passage_id": 17446037,
+      "score": 0.4495815634727478,
+      "preview": "INTRODUCTION: Thyroxine supplementation of patients with hypothyroidism is usually simple. A few patients, however, continue to present elevated TSH levels desp\u2026"
+    },
+    {
+      "rank": 2,
+      "passage_id": 17725434,
+      "score": -0.3271970748901367,
+      "preview": "OBJECTIVE: Medications may sometimes interfere with the intestinal absorption of levothyroxine, primarily by forming an insoluble complex with the thyroid hormo\u2026"
+    },
+    {
+      "rank": 3,
+      "passage_id": 19942153,
+      "score": -0.7089878916740417,
+      "preview": "Food, dietary fibre and espresso coffee interfere with the absorption of levothyroxine. Malabsorptive disorders reported to affect the absorption of levothyroxi\u2026"
+    },
+    {
+      "rank": 4,
+      "passage_id": 12796075,
+      "score": -4.3418145179748535,
+      "preview": "To our knowledge, raloxifene hydrochloride, a selective estrogen receptor modulator, has never been reported to interfere with absorption of levothyroxine. We d\u2026"
+    },
+    {
+      "rank": 5,
+      "passage_id": 10838651,
+      "score": -5.66349458694458,
+      "preview": "CONTEXT: The effect of calcium carbonate on the absorption of levothyroxine has not been studied systematically. Such a potential drug interaction merits invest\u2026"
+    },
+    {
+      "rank": 6,
+      "passage_id": 23253948,
+      "score": -9.032621383666992,
+      "preview": "OBJECTIVE: This open-label study investigated potential drug-drug interactions between empagliflozin and metformin. METHODS: 16 healthy men received treatment A\u2026"
+    },
+    {
+      "rank": 7,
+      "passage_id": 1728914,
+      "score": -9.632387161254883,
+      "preview": "A patient with hypothyroidism who was euthyroid on a fixed-dosage, long-term maintenance regimen of levothyroxine sodium developed persistently elevated serum t\u2026"
+    },
+    {
+      "rank": 8,
+      "passage_id": 21633823,
+      "score": -9.65018081665039,
+      "preview": "BACKGROUND: Roux-en-Y gastric bypass (RYGB) modifies the anatomical structure of the upper intestine tract, reduces gastric acid secretion, and may impair LT4 a\u2026"
+    },
+    {
+      "rank": 9,
+      "passage_id": 14751040,
+      "score": -10.283791542053223,
+      "preview": "The comparative bioavailability of oral doses of levothyroxine (LT(4)) formulation taken as tablets, after being crushed, or chewed before swallowing has not be\u2026"
+    },
+    {
+      "rank": 10,
+      "passage_id": 17039422,
+      "score": -11.898065567016602,
+      "preview": "AIMS: Effects of the long acting GLP-1 analogue--liraglutide in subjects with type 2 diabetes. METHODS: 144 type 2 diabetic subjects on metformin treatment (100\u2026"
+    }
+  ],
+  "documents_ranked_above_missed_gold": [],
+  "rerank_ms": 0.04895801248494536,
+  "compact_trace": {
+    "question": "Does metformin interfere thyroxine absorption?",
+    "category": "Treatment / intervention",
+    "raw_gold_ids": [
+      26191653
+    ],
+    "preprocessing": "unchanged full passages; no chunking",
+    "best_bm25_rank": 31119,
+    "best_dense_rank": 29314,
+    "best_rrf_rank": null,
+    "in_top50": false,
+    "best_medcpt_rank": null,
+    "in_top10": false,
+    "first_loss_label": "DATA / PARSING",
+    "stage_code": "DATA_QUALITY",
+    "recall_at_10": 0.0,
+    "candidate_recall_at_50": 0.0
+  },
+  "generation_invoked": false
+}

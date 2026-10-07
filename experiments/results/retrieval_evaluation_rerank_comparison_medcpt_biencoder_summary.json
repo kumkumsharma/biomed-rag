@@ -1,0 +1,1301 @@
+{
+  "experiment": {
+    "a": "Hybrid RRF \u2192 Top 10",
+    "b": "Hybrid RRF \u2192 Top 50",
+    "c": "Hybrid RRF \u2192 Top 50 \u2192 MedCPT \u2192 Top 10",
+    "model_name": "ncbi/MedCPT-Cross-Encoder",
+    "openai_used": false,
+    "baseline_files_preserved": true
+  },
+  "reranker": {
+    "enabled": true,
+    "model_name": "ncbi/MedCPT-Cross-Encoder",
+    "candidate_pool_size": 50,
+    "final_top_k": 10,
+    "device": "auto",
+    "openai_used": false
+  },
+  "index_build_seconds": {
+    "BM25_index_build_seconds": 1.3794768750012736,
+    "Dense_index_build_seconds": 2041.4992303749968,
+    "Hybrid_RRF_wrap_seconds": 0.002157499999157153
+  },
+  "n_passages": 40221,
+  "queries_path": "experiments/configs/evaluation_100.json",
+  "query_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+  ],
+  "n_queries": 100,
+  "configurations": [
+    {
+      "name": "Baseline",
+      "n_queries": 100,
+      "recall_at_5": 0.31312835605788836,
+      "recall_at_10": 0.4448126658239044,
+      "mrr_at_10": 0.8116111111111111,
+      "ndcg_at_10": 0.5858393029870614,
+      "avg_latency_ms": 273.21517207994475,
+      "median_latency_ms": 72.02172899997095
+    },
+    {
+      "name": "Hybrid@50",
+      "n_queries": 100,
+      "recall_at_5": 0.3223267883727,
+      "recall_at_10": 0.47566823766703026,
+      "mrr_at_10": 0.8115396825396826,
+      "ndcg_at_10": 0.6125278167145622,
+      "avg_latency_ms": 70.98301666977932,
+      "median_latency_ms": 70.0259584991727,
+      "candidate_recall_at_50": 0.6465488746521036,
+      "candidate_hit_at_50": 0.99
+    },
+    {
+      "name": "+ MedCPT",
+      "n_queries": 100,
+      "recall_at_5": 0.3672888400940843,
+      "recall_at_10": 0.5061514255467385,
+      "mrr_at_10": 0.8473333333333334,
+      "ndcg_at_10": 0.665995805748954,
+      "avg_latency_ms": 3179.625861280001,
+      "median_latency_ms": 3197.4917295010528,
+      "candidate_recall_at_50": 0.6465488746521036,
+      "candidate_hit_at_50": 0.99,
+      "avg_hybrid_ms": 70.98301666977932,
+      "avg_rerank_ms": 3108.642844610222
+    }
+  ],
+  "rerank_gain": {
+    "recall_at_5": {
+      "baseline": 0.31312835605788836,
+      "reranked": 0.3672888400940843,
+      "absolute": 0.054160484036195944,
+      "relative": 0.1729657598501978
+    },
+    "recall_at_10": {
+      "baseline": 0.4448126658239044,
+      "reranked": 0.5061514255467385,
+      "absolute": 0.061338759722834146,
+      "relative": 0.13789796117702585
+    },
+    "mrr_at_10": {
+      "baseline": 0.8116111111111111,
+      "reranked": 0.8473333333333334,
+      "absolute": 0.03572222222222232,
+      "relative": 0.04401396399479785
+    },
+    "ndcg_at_10": {
+      "baseline": 0.5858393029870614,
+      "reranked": 0.665995805748954,
+      "absolute": 0.08015650276189257,
+      "relative": 0.13682336154845326
+    }
+  },
+  "candidate_ceiling": {
+    "candidate_recall_at_50": 0.6465488746521036,
+    "reranked_recall_at_10": 0.5061514255467385,
+    "gap": 0.1403974491053651
+  },
+  "rerank_recovery": {
+    "n_queries_with_relevant_in_pool": 99,
+    "n_queries": 100,
+    "rerank_recovery_at_10": 1.0
+  },
+  "latency": {
+    "baseline_avg_ms": 273.21517207994475,
+    "hybrid_avg_ms": 70.98301666977932,
+    "rerank_avg_ms": 3108.642844610222,
+    "total_reranked_avg_ms": 3179.625861280001,
+    "overhead_vs_baseline_ms": 2906.4106892000564,
+    "baseline_median_ms": 72.02172899997095,
+    "hybrid_median_ms": 70.0259584991727,
+    "rerank_median_ms": 3127.1145209975657,
+    "total_reranked_median_ms": 3197.4917295010528
+  },
+  "candidate_recall_at_50": 0.6465488746521036,
+  "candidate_hit_at_50": 0.99,
+  "mean_best_rank_delta": 0.35353535353535354,
+  "n_queries_with_rank_delta": 99,
+  "mean_passage_rank_delta": 2.4344422700587085,
+  "n_passages_in_pool_and_reranked": 511,
+  "findings": [
+    "MedCPT improved all four ranking metrics versus Hybrid RRF Top-10 on this set.",
+    "Rerank recovery@10 is 1.0000 on 99 queries with at least one relevant passage in the candidate pool.",
+    "Candidate ceiling: Recall@50 0.6465 vs reranked Recall@10 0.5062 (gap 0.1404).",
+    "Latency: baseline 273.2 ms vs reranked total 3179.6 ms (hybrid 71.0 ms + MedCPT 3108.6 ms)."
+  ],
+  "comparison_table": [
+    {
+      "Metric": "Recall@5",
+      "Baseline": 0.31312835605788836,
+      "Hybrid@50": 0.3223267883727,
+      "+ MedCPT": 0.3672888400940843
+    },
+    {
+      "Metric": "Recall@10",
+      "Baseline": 0.4448126658239044,
+      "Hybrid@50": 0.47566823766703026,
+      "+ MedCPT": 0.5061514255467385
+    },
+    {
+      "Metric": "MRR@10",
+      "Baseline": 0.8116111111111111,
+      "Hybrid@50": 0.8115396825396826,
+      "+ MedCPT": 0.8473333333333334
+    },
+    {
+      "Metric": "nDCG@10",
+      "Baseline": 0.5858393029870614,
+      "Hybrid@50": 0.6125278167145622,
+      "+ MedCPT": 0.665995805748954
+    },
+    {
+      "Metric": "Candidate Recall@50",
+      "Baseline": null,
+      "Hybrid@50": 0.6465488746521036,
+      "+ MedCPT": 0.6465488746521036
+    },
+    {
+      "Metric": "Candidate Hit@50",
+      "Baseline": null,
+      "Hybrid@50": 0.99,
+      "+ MedCPT": 0.99
+    },
+    {
+      "Metric": "Latency (ms)",
+      "Baseline": 273.21517207994475,
+      "Hybrid@50": 70.98301666977932,
+      "+ MedCPT": 3179.625861280001
+    }
+  ],
+  "gain_table": [
+    {
+      "Metric": "Recall@5",
+      "Baseline": 0.31312835605788836,
+      "+ MedCPT": 0.3672888400940843,
+      "Absolute change": 0.054160484036195944,
+      "Relative change": 0.1729657598501978
+    },
+    {
+      "Metric": "Recall@10",
+      "Baseline": 0.4448126658239044,
+      "+ MedCPT": 0.5061514255467385,
+      "Absolute change": 0.061338759722834146,
+      "Relative change": 0.13789796117702585
+    },
+    {
+      "Metric": "MRR@10",
+      "Baseline": 0.8116111111111111,
+      "+ MedCPT": 0.8473333333333334,
+      "Absolute change": 0.03572222222222232,
+      "Relative change": 0.04401396399479785
+    },
+    {
+      "Metric": "nDCG@10",
+      "Baseline": 0.5858393029870614,
+      "+ MedCPT": 0.665995805748954,
+      "Absolute change": 0.08015650276189257,
+      "Relative change": 0.13682336154845326
+    }
+  ],
+  "query_inspection": [
+    {
+      "Query": "Is Hirschsprung disease a mendelian or a multifactorial disorder?",
+      "Query ID": 0,
+      "Relevant passage IDs": "20598273, 6650562, 15829955, 15617541, 23001136, 8896569, 21995290, 12239580, 15858239",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "List signaling molecules (ligands) that interact with the receptor EGFR?",
+      "Query ID": 1,
+      "Relevant passage IDs": "23821377, 24323361, 23382875, 22247333, 23787814, 22260327, 23888072, 23959273, 24124521, 23729230, 23089711, 21514161, 23212918, 23099994, 24204699, 23399900",
+      "Best RRF rank": 1,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": -1
+    },
+    {
+      "Query": "Is the protein Papilin secreted?",
+      "Query ID": 2,
+      "Relevant passage IDs": "21784067, 19297413, 15094122, 7515725, 3320045, 20805556, 19724244, 12666201, 15094110, 11076767",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Are long non coding RNAs spliced?",
+      "Query ID": 3,
+      "Relevant passage IDs": "22955974, 21622663, 22707570, 22955988, 24285305, 24106460",
+      "Best RRF rank": 5,
+      "Best reranked rank": 5,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Is RANKL secreted from the cells?",
+      "Query ID": 4,
+      "Relevant passage IDs": "22867712, 23827649, 21618594, 23835909, 24265865, 23698708, 24267510, 22901753, 22948539, 23632157",
+      "Best RRF rank": 5,
+      "Best reranked rank": 3,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 2
+    },
+    {
+      "Query": "Does metformin interfere thyroxine absorption?",
+      "Query ID": 5,
+      "Relevant passage IDs": "26191653",
+      "Best RRF rank": null,
+      "Best reranked rank": null,
+      "Was candidate retrieved?": "No",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": null
+    },
+    {
+      "Query": "Which miRNAs could be used as potential biomarkers for epithelial ovarian cancer?",
+      "Query ID": 6,
+      "Relevant passage IDs": "23918241, 23621186, 22246341, 23978303, 23888941, 23272653, 21971665, 18954897, 23542579, 19074899, 20035894, 21571355, 21345725, 23836287",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which acetylcholinesterase inhibitors are used for treatment of myasthenia gravis?",
+      "Query ID": 7,
+      "Relevant passage IDs": "21328290, 21133188, 15610702, 20663605, 21815707, 21845054",
+      "Best RRF rank": 2,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Has Denosumab (Prolia) been approved by FDA?",
+      "Query ID": 8,
+      "Relevant passage IDs": "24114694, 22540167, 21129866, 21170699, 23956508, 21942303, 22074657, 23759273, 24308016, 23757624, 22716221, 21785279, 23367751, 21208140, 21470540, 22826702, 24316116, 24126422, 23652187, 21113693, 20811384",
+      "Best RRF rank": 1,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": -1
+    },
+    {
+      "Query": "List the human genes encoding for the dishevelled proteins?",
+      "Query ID": 9,
+      "Relevant passage IDs": "16457155, 12883684, 19618470, 23836490, 8817329, 8856345, 8149913, 24040443, 7958461",
+      "Best RRF rank": 1,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": -1
+    },
+    {
+      "Query": "Name synonym of Acrokeratosis paraneoplastica.",
+      "Query ID": 10,
+      "Relevant passage IDs": "17097409, 18672707, 1433123, 18775590, 1521479, 7796616, 3819049, 16435144, 7640201, 17374318, 22146896, 22470801, 6225397, 8949310, 22252191",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which are the classes of anti-arrhythmic drugs according to Vaughan-Williams classification?",
+      "Query ID": 11,
+      "Relevant passage IDs": "10810787, 9803978, 1290288, 7875632, 11564050",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which are the different isoforms of the mammalian Notch receptor?",
+      "Query ID": 12,
+      "Relevant passage IDs": "23028706, 22842086, 11732008, 16307184, 21356309, 11532344, 21639801",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which are the major characteristics of cellular senescence?",
+      "Query ID": 13,
+      "Relevant passage IDs": "18976161, 9624027, 8824885",
+      "Best RRF rank": 3,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 2
+    },
+    {
+      "Query": "Orteronel was developed for treatment of which cancer?",
+      "Query ID": 14,
+      "Relevant passage IDs": "21978946, 26150028, 25624429, 24100689, 24418642, 25701170, 25264242, 24799061, 25537627",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Is the monoclonal antibody Trastuzumab (Herceptin) of potential use in the treatment of prostate cancer?",
+      "Query ID": 15,
+      "Relevant passage IDs": "22505344, 11502465, 15571968, 12677892, 12173324, 18071949, 10473102, 11331475, 21364123, 20716957, 15046685, 21844010, 17142577, 11786427, 11236029, 21254978, 17211467, 23294030, 11920466, 17210707, 10519379, 21326934, 16163160, 11685722, 19373278, 18038879, 15919200, 11685733, 15036648, 15139054, 23255921, 15264245, 22137850, 22322558, 22977535",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which are the Yamanaka factors?",
+      "Query ID": 16,
+      "Relevant passage IDs": "23527808, 21761058, 22075965, 21640101, 20144262, 22449255, 19030024, 21839145, 24150221, 22357549, 23658991, 23612755, 21249204, 23939864, 23166588, 23704989",
+      "Best RRF rank": 1,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": -1
+    },
+    {
+      "Query": "What is the aim of the Human Chromosome-centric Proteome Project (C-HPP)?",
+      "Query ID": 17,
+      "Relevant passage IDs": "23312004, 23214983, 23259496, 23308364, 23249167, 23234512, 23252913, 23153008, 21742803, 23253012, 23227862, 23205526, 23276153, 22966780, 22443261",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Where is the protein Pannexin1 located?",
+      "Query ID": 18,
+      "Relevant passage IDs": "24782784, 26100513, 24694658, 25007779, 24642372, 25698922, 19409451, 17064878, 25056878, 24194896",
+      "Best RRF rank": 1,
+      "Best reranked rank": 3,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": -2
+    },
+    {
+      "Query": "Which currently known mitochondrial diseases have been attributed to POLG mutations?",
+      "Query ID": 19,
+      "Relevant passage IDs": "20927567, 12825077, 22647225, 15351195, 18546365",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What is the effect of ivabradine in heart failure after myocardial infarction?",
+      "Query ID": 20,
+      "Relevant passage IDs": "18757088, 23536611, 19514618, 14981003, 18621770, 23394554, 19129742, 19074674, 19411283, 20000882, 19664404, 18310678, 20028694, 23096376, 21878041, 22416440, 23067195, 21838751",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What is the mode of inheritance of Wilson's disease?",
+      "Query ID": 21,
+      "Relevant passage IDs": "8186659, 16932613, 838566, 6620327, 12152840, 1248830, 22610954, 2724779, 8615372, 1940586, 6109943, 759736, 14580665, 20662462",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Are transcription and splicing connected?",
+      "Query ID": 22,
+      "Relevant passage IDs": "15905409, 22975042, 15870275, 16921380, 21095588, 23209445, 17189193, 21964334, 23097425, 22156210, 20808788, 22479188, 16172632, 15383674, 23074139, 16769980",
+      "Best RRF rank": 4,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 3
+    },
+    {
+      "Query": "What is the mode of inheritance of Facioscapulohumeral muscular dystrophy (FSHD)?",
+      "Query ID": 23,
+      "Relevant passage IDs": "10864616, 10487912, 21795275, 15307599, 10969520, 23143600, 7739631, 22551571, 19248726, 23573591, 22525183",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Is Alu hypomethylation associated with breast cancer?",
+      "Query ID": 24,
+      "Relevant passage IDs": "20682973, 24971511",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which proteins participate in the formation of the ryanodine receptor quaternary macromolecular complex?",
+      "Query ID": 25,
+      "Relevant passage IDs": "22427521, 12909320, 18620751, 11069905, 15205169, 18206802, 16289269, 14638677, 22298808, 9287354, 15731387, 22025663",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What kind of chromatography is HILIC?",
+      "Query ID": 26,
+      "Relevant passage IDs": "23073287, 22946920, 23217321, 21238772, 21316059, 21737084",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What is the effect of TRH on myocardial contractility?",
+      "Query ID": 27,
+      "Relevant passage IDs": "9088928, 9225129, 15096458, 2848686, 1611701, 1979356",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Proteomic analyses need prior knowledge of the organism complete genome. Is the complete genome of the bacteria of the genus Arthrobacter available?",
+      "Query ID": 28,
+      "Relevant passage IDs": "28904741, 28450506, 28315371, 23039946, 28642378, 28138355, 21677849",
+      "Best RRF rank": 7,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 6
+    },
+    {
+      "Query": "What is the structural fold of bromodomain proteins?",
+      "Query ID": 29,
+      "Relevant passage IDs": "17498659, 17582821, 17274598, 11090279, 17848202, 17694091, 10365964, 10827952, 17148447",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "List the endoscopic diagnoses that have been reported in children with autism",
+      "Query ID": 30,
+      "Relevant passage IDs": "12907332, 9585670, 10547242, 22607127, 16003132, 11007230",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What are the outcomes of Renal sympathetic denervation?",
+      "Query ID": 31,
+      "Relevant passage IDs": "23774592, 23541665, 23890950, 23819768, 24029963, 23176687, 22573363, 21247927, 23514712",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which MAP kinase phosphorylates the transcription factor c-jun?",
+      "Query ID": 32,
+      "Relevant passage IDs": "24113186, 24300195, 24285252, 23385061, 23147205, 8607977, 15228586, 24272171, 24291243, 15637069, 15708845, 24321066, 24252081, 24270002, 24144051, 23028407, 24139673, 24321566",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What is the meaning of the acronym \"TAILS\" used in protein N-terminomics?",
+      "Query ID": 33,
+      "Relevant passage IDs": "21604129, 23667905, 20305284, 22367194, 22577022, 21604127",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Do mutations of AKT1 occur in meningiomas?",
+      "Query ID": 34,
+      "Relevant passage IDs": "25857641, 24096618, 23334667, 23475883, 25146167, 23348505",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What are the main indications of lacosamide?",
+      "Query ID": 35,
+      "Relevant passage IDs": "17461888, 21271304, 20677583, 23648276, 21861814, 17433624, 21301338, 23288091",
+      "Best RRF rank": 2,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 1
+    },
+    {
+      "Query": "Which fusion protein is involved in the development of Ewing sarcoma?",
+      "Query ID": 36,
+      "Relevant passage IDs": "23894528, 25401475, 23750284, 17250957, 18256529, 19718047, 25162919, 21979944, 25483190, 16206264, 22241085, 20691659, 25432018, 21680731, 16697960, 22723308, 17453169, 18485618, 24481407",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "List Hemolytic Uremic Syndrome Triad.",
+      "Query ID": 37,
+      "Relevant passage IDs": "25011592, 24161037, 26265890, 16006690, 25765799, 23380391, 20209841, 7487540, 19227723, 25280590, 17705684, 2831711, 24548192, 8589282, 16387683, 20499172, 24516709, 25345382, 20865638, 19625716, 22956028",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Does physical activity influence gut hormones?",
+      "Query ID": 38,
+      "Relevant passage IDs": "2888163, 21615652, 20690071, 11321513, 16942616, 23111564, 21554896, 19158129, 15795476, 17470516, 21927572, 18987287, 22619704, 20061436, 23402716, 19737911",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What are the effects of depleting protein  km23-1 (DYNLRB1)  in a cell?",
+      "Query ID": 39,
+      "Relevant passage IDs": "19571232, 17420258, 23079622, 22637579, 15925487, 16778097, 19711352",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Treatment of which disease was investigated in the MR CLEAN study?",
+      "Query ID": 40,
+      "Relevant passage IDs": "25432979, 25517348, 25179366, 24330796",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which factors activate zygotic gene expression during the maternal-to-zygotic transition in zebrafish?",
+      "Query ID": 41,
+      "Relevant passage IDs": "24056933",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Is irritable bowel syndrome more common in women with endometriosis?",
+      "Query ID": 42,
+      "Relevant passage IDs": "22134016, 23507008, 15894210, 17701798, 18715239, 18715240, 19694698, 18646315, 21868492, 19832874, 17635599, 22096721, 18478547, 15341718, 14501624, 21527837, 15605531, 17493437",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What is evaluated using the EORTC QLQ \u2013 INFO25 questionnaire?",
+      "Query ID": 43,
+      "Relevant passage IDs": "22638756, 24834120, 21680301, 21671697, 22052786, 25475735, 20674333",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Does BNP increase after intensive exercise in athletes?",
+      "Query ID": 44,
+      "Relevant passage IDs": "12890912, 16125505, 19092706, 22653984, 19638823, 16338248, 14523304, 11320362, 18076361, 17395308, 12417808, 18630737, 18184752, 18248532, 17289431, 16879068, 16446686, 23304255",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What is the association of estrogen replacement therapy and intracranial meningioma risk?",
+      "Query ID": 45,
+      "Relevant passage IDs": "20802020, 16570277, 23101448, 15006250, 17580362, 20730482, 20738039, 22287638, 24138870, 20091865, 25335165, 21067422, 16759391",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Are there web based self management strategies for chronic pain ?",
+      "Query ID": 46,
+      "Relevant passage IDs": "24067267, 24251273, 23859438, 23768119, 23538392",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Is Weaver syndrome similar to Sotos?",
+      "Query ID": 47,
+      "Relevant passage IDs": "12464997, 24852293, 24214728, 19011474, 22287508, 23592277, 9781911, 12807965",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which enzyme is targeted by Evolocumab?",
+      "Query ID": 48,
+      "Relevant passage IDs": "24859266, 24694531, 24691094, 25470376, 24825642, 24953393, 25079474, 24953396, 25002170, 24678979, 25410046, 24598985, 24661068, 24477778, 24481874, 24255061, 25282519, 25282520, 24509273, 25052769, 24284914, 24373748, 24961142, 24662398",
+      "Best RRF rank": 2,
+      "Best reranked rank": 3,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": -1
+    },
+    {
+      "Query": "Are ultraconserved elements often transcribed?",
+      "Query ID": 49,
+      "Relevant passage IDs": "24037088, 21187392, 22328099, 22094949, 23393190, 20202189, 16705037, 24384562, 22617881, 19660540",
+      "Best RRF rank": 2,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 1
+    },
+    {
+      "Query": "What is the methyl donor of DNA (cytosine-5)-methyltransferases?",
+      "Query ID": 50,
+      "Relevant passage IDs": "7578083, 8441638, 8065896, 7607467, 1584813, 11208790, 15273274",
+      "Best RRF rank": 3,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 1
+    },
+    {
+      "Query": "Is peripheral neuroepithelioma related to Ewing sarcoma?",
+      "Query ID": 51,
+      "Relevant passage IDs": "10968707, 3760036, 8204006, 25303625, 3390826, 9825003, 1283315, 7771924, 8644855, 8321753, 7595741, 7513503",
+      "Best RRF rank": 1,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": -1
+    },
+    {
+      "Query": "Which signaling pathway does sonidegib inhibit?",
+      "Query ID": 52,
+      "Relevant passage IDs": "24817600, 24598114, 25646180, 24928708, 25473003, 24613036, 24523439, 25981810",
+      "Best RRF rank": 5,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 4
+    },
+    {
+      "Query": "In which phase of the cell cycle arrest is impaired in Fanconi anemia?",
+      "Query ID": 53,
+      "Relevant passage IDs": "11035915, 9650445, 14988723, 11749045, 9414295",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which DNA sequences are more prone for the formation of R-loops?",
+      "Query ID": 54,
+      "Relevant passage IDs": "20080737, 16793409, 24787137, 25147206, 24843019, 15531884, 18986989, 22464440, 24743386, 25972891, 25296254",
+      "Best RRF rank": 3,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 1
+    },
+    {
+      "Query": "Mutation of which gene is implicated in the familial isolated pituitary adenoma?",
+      "Query ID": 55,
+      "Relevant passage IDs": "22584704, 20669561, 17893250, 22527616, 23286415, 23743763, 23038625, 17993773, 24366639, 21498161, 20616498, 21778740, 24789813, 17961654, 20616502, 24423289, 20833337, 23633209, 21450940, 20570174, 23371967, 23652674, 24996936, 23310926, 22915287, 20506337, 24078436, 22291433, 21454441, 17244780, 24050928, 19883897, 20457215",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "which mutations of troponin C gene have been found to cause hypertrophic cardiomyopathy?",
+      "Query ID": 56,
+      "Relevant passage IDs": "18572189, 24260207, 18285522, 19506933, 19439414, 22489623, 22815480, 20566645, 21262074, 16302972, 23425245, 20459070",
+      "Best RRF rank": 1,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": -1
+    },
+    {
+      "Query": "What is known about the effect of acupuncture in smoking cessation ?",
+      "Query ID": 57,
+      "Relevant passage IDs": "17264832, 17698433, 10024707, 12356614, 18405159, 12416359, 22373002, 11154059, 16566674, 24030452, 15861492, 15004442",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which post-translational histone modifications are characteristic of constitutive heterochromatin?",
+      "Query ID": 58,
+      "Relevant passage IDs": "21541345, 18592385, 22319459, 17891782, 11356363, 18987983, 20532208, 11740497, 21803857, 12581305, 22572731, 17710556",
+      "Best RRF rank": 3,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 1
+    },
+    {
+      "Query": "GV1001 vaccine targets which enzyme?",
+      "Query ID": 59,
+      "Relevant passage IDs": "21586625, 24815142, 20822343, 24919654, 21377838, 19388882, 23827187, 22841437, 24411674, 19072345, 24439482, 24954781",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which is the E3 ubiquitin ligase which ubiquitinates IkB leading to its proteasomal degradation?",
+      "Query ID": 60,
+      "Relevant passage IDs": "17001349, 20028970, 16778892, 10837071, 22435548",
+      "Best RRF rank": 5,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 4
+    },
+    {
+      "Query": "Is c-met involved in the activation of the Akt pathway?",
+      "Query ID": 61,
+      "Relevant passage IDs": "22789825, 17464994, 22820099, 23229794, 14570904, 15522281, 23345546, 20233866, 17942284, 16278380, 18234991, 10714768, 21687953, 21536148, 11821397, 19850646, 18262389, 17258200",
+      "Best RRF rank": 1,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": -1
+    },
+    {
+      "Query": "Is pregnancy an additional risk during during H1N1 infection?",
+      "Query ID": 62,
+      "Relevant passage IDs": "22120858, 22331165, 22482974, 22551713, 22515877, 21756329, 21913391, 21596080, 22859826, 21252793, 22564554, 19643469, 22782418, 22272853, 22411229, 22030045, 20100064, 22851818, 20531946, 22901103, 20148081, 23116790, 24051575",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Are long non coding RNAs as conserved in sequence as protein coding genes?",
+      "Query ID": 63,
+      "Relevant passage IDs": "22708672, 23028352, 20624288, 20587619, 21622663, 21112873, 20428234, 23454638, 22707570, 22955988, 23467124, 23463798, 22844254",
+      "Best RRF rank": 2,
+      "Best reranked rank": 4,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": -2
+    },
+    {
+      "Query": "Mutation of which gene is implicated in the Brain-lung-thyroid syndrome?",
+      "Query ID": 64,
+      "Relevant passage IDs": "22166853, 21867529, 24129101, 24171694, 20020530, 25759798, 23430038, 26196025, 19336474, 22488412",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What is clathrin?",
+      "Query ID": 65,
+      "Relevant passage IDs": "24307937, 19809570, 24257253, 23093191, 12952941, 24280271, 24299503, 21445329, 24322426, 24263003, 22042622",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What are the main results of PRKAR1A Knockdown?",
+      "Query ID": 66,
+      "Relevant passage IDs": "24122441, 23480756, 16937372, 20824711",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Is TENS machine effective in pain?",
+      "Query ID": 67,
+      "Relevant passage IDs": "17333874, 7644247",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Is there any algorithm for enhancer identification from chromatin state?",
+      "Query ID": 68,
+      "Relevant passage IDs": "23526891, 22328731",
+      "Best RRF rank": 3,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 2
+    },
+    {
+      "Query": "Which enzyme is targeted by the drug Imetelstat?",
+      "Query ID": 69,
+      "Relevant passage IDs": "20232321, 19908230, 23727752, 20072842, 21332640, 23326372, 22906540, 23272238, 24327604, 23558965, 23516479, 23467584, 20824134, 21062983, 21208905, 22870217, 23521791, 23386830, 20048334, 22382179, 21845093, 21549308, 23545855",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which interleukins are inhibited by Dupilumab?",
+      "Query ID": 70,
+      "Relevant passage IDs": "23688323, 25645542, 25214796, 25584909, 24275927, 25482871, 25006719",
+      "Best RRF rank": 10,
+      "Best reranked rank": 4,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 6
+    },
+    {
+      "Query": "Which human genes are more commonly related to craniosynostosis?",
+      "Query ID": 71,
+      "Relevant passage IDs": "9934984, 18000908, 20643727, 10914960, 11341328, 11820058, 12407713, 11484208, 9917362, 17042739, 17955513, 8106171, 11197897, 19530187, 16258006, 14672347, 15964893, 10951518, 9042914, 11428324, 9600744, 11746040",
+      "Best RRF rank": 6,
+      "Best reranked rank": 6,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Are transcribed ultraconserved regions involved in cancer?",
+      "Query ID": 72,
+      "Relevant passage IDs": "24037088, 24247010, 22328099, 18323801, 21298224, 22617881, 20383195, 20802525",
+      "Best RRF rank": 4,
+      "Best reranked rank": 5,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": -1
+    },
+    {
+      "Query": "In which breast cancer patients can palbociclib be used?",
+      "Query ID": 73,
+      "Relevant passage IDs": "26236140, 25792301, 25524798",
+      "Best RRF rank": 6,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 5
+    },
+    {
+      "Query": "Do patients with Pendred syndrome present congenital deafness?",
+      "Query ID": 74,
+      "Relevant passage IDs": "10602116, 23459462, 8706311, 8476169, 9585042, 10443670, 8979104, 1810081, 16482981, 22717225, 10502702, 11375792, 14727345, 19318451, 9398842, 21551164, 10700480, 22109890, 17299139, 9070918, 11716048, 21704276, 10037079, 8630498, 16924389, 21274344, 9920104, 18250610, 15320950",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "List side effects of SGLT2 inhibitors?",
+      "Query ID": 75,
+      "Relevant passage IDs": "24400675, 23807940, 25962253, 23042029, 24341330, 24455799, 25488697, 24631482, 24825435, 22977310",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Is CD56 useful in Ewing sarcoma prognosis?",
+      "Query ID": 76,
+      "Relevant passage IDs": "22498946, 21467162, 9692823",
+      "Best RRF rank": 3,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 1
+    },
+    {
+      "Query": "What is the method FASP used for?",
+      "Query ID": 77,
+      "Relevant passage IDs": "24288579, 23126408, 22092713, 24022122, 23784971, 22949036, 24289162, 23436586, 23603217, 24309553, 24051509, 23214492, 22324799",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What is the role of extracellular signal-related kinases 1 and 2 (ERK1/2) proteins in craniosynostosis?",
+      "Query ID": 78,
+      "Relevant passage IDs": "23354439",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Are there any urine biomarkers for chronic kidney disease?",
+      "Query ID": 79,
+      "Relevant passage IDs": "24205707, 24224012, 21816077, 24315007, 23617441, 24133923, 24152229, 23339563, 21151537, 24281781, 23758910, 21286212, 23344473, 21538916, 20425065, 23061738, 22189039, 24065527, 22914685, 24308223",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What is being measured with an accelerometer in back pain patients",
+      "Query ID": 80,
+      "Relevant passage IDs": "21872993, 19945891, 20921030, 19402888, 16437292, 18752975, 15271728, 23560880, 21195646, 19895697, 23865908, 20457489, 11387574, 19945334, 16426878",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "List the releases of JASPAR database",
+      "Query ID": 81,
+      "Relevant passage IDs": "24194598, 18006571, 14681366, 19906716, 16381983",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "List symptoms of the IFAP syndrome.",
+      "Query ID": 82,
+      "Relevant passage IDs": "25685152, 10694306, 21886760, 1456297, 12004300, 14708109, 19689518, 24313295, 16268889, 15370546, 10398262, 21315478, 1915513, 10326971, 24090718",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which gene is required for the efficient function of clopidogrel?",
+      "Query ID": 83,
+      "Relevant passage IDs": "23150151, 15933261, 19463375, 21099121, 21806387, 23506580, 20826260",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Is valproic acid effective for glioblastoma treatment?",
+      "Query ID": 84,
+      "Relevant passage IDs": "21880994, 24874578, 23523186, 26194676, 23680820, 25066904, 24899645",
+      "Best RRF rank": 9,
+      "Best reranked rank": 3,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 6
+    },
+    {
+      "Query": "Which transcription factor is considered as a master regulator of lysosomal genes?",
+      "Query ID": 85,
+      "Relevant passage IDs": "23604321, 23393155, 23609508, 25315655, 22343943, 23830905, 23524842, 23401004, 21617040, 21804531, 25605940, 25060788, 23457305, 21752829, 25750174",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which antibiotics target peptidoglycan biosynthesis?",
+      "Query ID": 86,
+      "Relevant passage IDs": "10801476, 11751110, 25224006, 8891144, 2334153, 20515462, 7590155, 12440876, 18558445, 16832063, 12197711, 9210483, 22280885, 7793878, 21091161, 21867549, 22815801",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Can Levoxyl (levothyroxine sodium) cause insomnia?",
+      "Query ID": 87,
+      "Relevant passage IDs": "19701833",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Is fatigue prevalent in patients receiving treatment for glioblastoma?",
+      "Query ID": 88,
+      "Relevant passage IDs": "18758912, 22832897, 23642624, 19904263, 23422478, 23184145, 20729242, 14649883, 21986722, 20665891, 2168357, 20308655, 23419575, 19593660, 18581057, 21514945, 18477765, 20510539, 18990027, 22090453, 20200024, 23086432, 3008359, 22079725",
+      "Best RRF rank": 2,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "List two common features of Tay syndrome.",
+      "Query ID": 89,
+      "Relevant passage IDs": "10797890, 9050052, 18376101, 20687499, 6538137, 2087835, 17504703",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which cell types are known to be driving Rheumatoid Arthritis?",
+      "Query ID": 90,
+      "Relevant passage IDs": "17875202, 15641091, 19863844, 21160042, 16567358, 23036591, 18613841, 12060849, 20519953, 24276088, 15692990",
+      "Best RRF rank": 3,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 2
+    },
+    {
+      "Query": "What is the association between personality trait of neuroticism and risk for Alzheimer's disease?",
+      "Query ID": 91,
+      "Relevant passage IDs": "12767492, 18694539, 18590355, 23706517, 16974109, 23040035, 10679843, 20973606, 17244848, 21427641, 18079420, 20438208, 22040898, 21905097, 23567438, 23079898, 16314587, 19153372, 7493597, 16252381, 21835104, 25274849, 9924832, 15358438, 10718200",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What is the mode of action of everolimus?",
+      "Query ID": 92,
+      "Relevant passage IDs": "20384580, 19299048, 24183081, 22139982, 18025810, 21279702, 16699448, 17890266, 19620795, 16625599",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Have Quantitative Trait Loci affecting splicing (splicing QTLs) been linked to disease?",
+      "Query ID": 93,
+      "Relevant passage IDs": "20707912, 20856809, 22784570, 21846806",
+      "Best RRF rank": 3,
+      "Best reranked rank": 2,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "Yes",
+      "Rank delta": 1
+    },
+    {
+      "Query": "Which technique is used for detection of EWS/FLI1 fusion transcripts?",
+      "Query ID": 94,
+      "Relevant passage IDs": "16157025, 20231617, 24293381, 10379685, 9135495, 17154184, 15565546, 23475435, 15363317, 9552022",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Does the CTCF protein co-localize with cohesin?",
+      "Query ID": 95,
+      "Relevant passage IDs": "19369356, 19109133, 18550811, 19308701, 22550178, 20219941, 22952237, 21970734, 23295672, 23498937, 21876668, 22780989, 21880767, 24257606, 21106760, 21948239, 23204437, 21606361, 23010778, 18623068, 20133600, 24321385, 21444719, 21628529, 23804403, 22440186, 23945083, 19158269",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What is the application of the Bimolecular Fluorescence Complementation (BiFC) assay in Drosophila embryos?",
+      "Query ID": 96,
+      "Relevant passage IDs": "17534848, 18573091, 25151172, 19771334, 17406412, 23317900, 21276241, 18155474, 21091444, 16454041",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "Which pathological condition of the heart is known as hypertrophic cardiomyopathy (HCM)?",
+      "Query ID": 97,
+      "Relevant passage IDs": "25328416, 25209314, 22665960, 25309450, 25191275, 25044876, 21507890, 25228955, 25081404, 23782526",
+      "Best RRF rank": 2,
+      "Best reranked rank": 3,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": -1
+    },
+    {
+      "Query": "What is the genetic basis of Rubinstein-Taybi syndrome?",
+      "Query ID": 98,
+      "Relevant passage IDs": "7630403, 16359492, 22269667, 14974086, 18773673, 20684013, 23432975, 22303793, 15706485, 20689175, 22991675",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    },
+    {
+      "Query": "What is the function of the viral KP4 protein?",
+      "Query ID": 99,
+      "Relevant passage IDs": "8616260, 17522822, 8145639, 11532143, 7582897, 11901234, 10748529, 8809749, 21116630, 7966296, 17849147, 21303448",
+      "Best RRF rank": 1,
+      "Best reranked rank": 1,
+      "Was candidate retrieved?": "Yes",
+      "Was relevant passage promoted?": "No",
+      "Rank delta": 0
+    }
+  ]
+}

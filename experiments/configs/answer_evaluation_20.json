@@ -1,0 +1,391 @@
+{
+  "n_queries": 20,
+  "source_queries_path": "experiments/configs/evaluation_100.json",
+  "selection_method": "first_20_of_fixed_100_query_evaluation_set",
+  "query_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "queries": [
+    {
+      "question_id": 0,
+      "question": "Is Hirschsprung disease a mendelian or a multifactorial disorder?",
+      "reference_answer": "Coding sequence mutations in RET, GDNF, EDNRB, EDN3, and SOX10 are involved in the development of Hirschsprung disease. The majority of these genes was shown to be related to Mendelian syndromic forms of Hirschsprung's disease, whereas the non-Mendelian inheritance of sporadic non-syndromic Hirschsprung disease proved to be complex; involvement of multiple loci was demonstrated in a multiplicative model.",
+      "relevant_passage_ids": [
+        20598273,
+        6650562,
+        15829955,
+        15617541,
+        23001136,
+        8896569,
+        21995290,
+        12239580,
+        15858239
+      ]
+    },
+    {
+      "question_id": 1,
+      "question": "List signaling molecules (ligands) that interact with the receptor EGFR?",
+      "reference_answer": "The 7 known EGFR ligands  are: epidermal growth factor (EGF), betacellulin (BTC), epiregulin (EPR), heparin-binding EGF (HB-EGF), transforming growth factor-\u03b1 [TGF-\u03b1], amphiregulin (AREG) and epigen (EPG).",
+      "relevant_passage_ids": [
+        23821377,
+        24323361,
+        23382875,
+        22247333,
+        23787814,
+        22260327,
+        23888072,
+        23959273,
+        24124521,
+        23729230,
+        23089711,
+        21514161,
+        23212918,
+        23099994,
+        24204699,
+        23399900
+      ]
+    },
+    {
+      "question_id": 2,
+      "question": "Is the protein Papilin secreted?",
+      "reference_answer": "Yes,  papilin is a secreted protein",
+      "relevant_passage_ids": [
+        21784067,
+        19297413,
+        15094122,
+        7515725,
+        3320045,
+        20805556,
+        19724244,
+        12666201,
+        15094110,
+        11076767
+      ]
+    },
+    {
+      "question_id": 3,
+      "question": "Are long non coding RNAs spliced?",
+      "reference_answer": "Long non coding RNAs appear to be spliced through the same pathway as the mRNAs",
+      "relevant_passage_ids": [
+        22955974,
+        21622663,
+        22707570,
+        22955988,
+        24285305,
+        24106460
+      ]
+    },
+    {
+      "question_id": 4,
+      "question": "Is RANKL secreted from the cells?",
+      "reference_answer": "Receptor activator of nuclear factor \u03baB ligand (RANKL) is a cytokine predominantly secreted by osteoblasts.",
+      "relevant_passage_ids": [
+        22867712,
+        23827649,
+        21618594,
+        23835909,
+        24265865,
+        23698708,
+        24267510,
+        22901753,
+        22948539,
+        23632157
+      ]
+    },
+    {
+      "question_id": 5,
+      "question": "Does metformin interfere thyroxine absorption?",
+      "reference_answer": "No. There are not reported data indicating that metformin reduce with thyroxine absorption.",
+      "relevant_passage_ids": [
+        26191653
+      ]
+    },
+    {
+      "question_id": 6,
+      "question": "Which miRNAs could be used as potential biomarkers for epithelial ovarian cancer?",
+      "reference_answer": "miR-200a, miR-100, miR-141, miR-200b, miR-200c, miR-203, miR-510, miR-509-5p, miR-132, miR-26a, let-7b, miR-145, miR-182, miR-152, miR-148a, let-7a, let-7i, miR-21, miR-92 and miR-93 could be used as potential biomarkers for epithelial ovarian cancer.",
+      "relevant_passage_ids": [
+        23918241,
+        23621186,
+        22246341,
+        23978303,
+        23888941,
+        23272653,
+        21971665,
+        18954897,
+        23542579,
+        19074899,
+        20035894,
+        21571355,
+        21345725,
+        23836287
+      ]
+    },
+    {
+      "question_id": 7,
+      "question": "Which acetylcholinesterase inhibitors are used for treatment of myasthenia gravis?",
+      "reference_answer": "Pyridostigmine and neostygmine are acetylcholinesterase inhibitors that are used as first-line therapy for symptomatic treatment of myasthenia gravis. Pyridostigmine is the most widely used acetylcholinesterase inhibitor. Extended release pyridotsygmine and novel acetylcholinesterase inhibitors inhibitors with oral antisense oligonucleotides are being studied.",
+      "relevant_passage_ids": [
+        21328290,
+        21133188,
+        15610702,
+        20663605,
+        21815707,
+        21845054
+      ]
+    },
+    {
+      "question_id": 8,
+      "question": "Has Denosumab (Prolia) been approved by FDA?",
+      "reference_answer": "Yes, Denosumab was approved by the FDA in 2010.",
+      "relevant_passage_ids": [
+        24114694,
+        22540167,
+        21129866,
+        21170699,
+        23956508,
+        21942303,
+        22074657,
+        23759273,
+        24308016,
+        23757624,
+        22716221,
+        21785279,
+        23367751,
+        21208140,
+        21470540,
+        22826702,
+        24316116,
+        24126422,
+        23652187,
+        21113693,
+        20811384
+      ]
+    },
+    {
+      "question_id": 9,
+      "question": "List the human genes encoding for the dishevelled proteins?",
+      "reference_answer": "DVL-1\nDVL-2\nDVL-3",
+      "relevant_passage_ids": [
+        16457155,
+        12883684,
+        19618470,
+        23836490,
+        8817329,
+        8856345,
+        8149913,
+        24040443,
+        7958461
+      ]
+    },
+    {
+      "question_id": 10,
+      "question": "Name synonym of Acrokeratosis paraneoplastica.",
+      "reference_answer": "Acrokeratosis paraneoplastic (Bazex syndrome) is a rare, but distinctive paraneoplastic dermatosis characterized by erythematosquamous lesions located at the acral sites and is most commonly associated with carcinomas of the upper aerodigestive tract.",
+      "relevant_passage_ids": [
+        17097409,
+        18672707,
+        1433123,
+        18775590,
+        1521479,
+        7796616,
+        3819049,
+        16435144,
+        7640201,
+        17374318,
+        22146896,
+        22470801,
+        6225397,
+        8949310,
+        22252191
+      ]
+    },
+    {
+      "question_id": 11,
+      "question": "Which are the classes of anti-arrhythmic drugs according to Vaughan-Williams classification?",
+      "reference_answer": "Antiarrhythmic drugs can be divided into four Vaughan Williams classes (I-IV). Class I antiarrhythmic agents have as a common action, blockade of the sodium channels. Class II agents are antisympathetic drugs, particularly the beta-adrenoceptor blockers. Class-III antiarrhythmics have as a common action the potassium-channel blockade. Class IV antiarrhythmic drugs are calcium channel blockers.",
+      "relevant_passage_ids": [
+        10810787,
+        9803978,
+        1290288,
+        7875632,
+        11564050
+      ]
+    },
+    {
+      "question_id": 12,
+      "question": "Which are the different isoforms of the mammalian Notch receptor?",
+      "reference_answer": "Notch signaling is an evolutionarily conserved mechanism, used to regulate cell fate decisions. Four Notch receptors have been identified in man: Notch-1, Notch-2, Notch-3 and Notch-4.",
+      "relevant_passage_ids": [
+        23028706,
+        22842086,
+        11732008,
+        16307184,
+        21356309,
+        11532344,
+        21639801
+      ]
+    },
+    {
+      "question_id": 13,
+      "question": "Which are the major characteristics of cellular senescence?",
+      "reference_answer": "The defining characteristics of cellular senescence are altered morphology, arrested cell-cycle progression, development of aberrant gene expression with proinflammatory behavior, and telomere shortening.",
+      "relevant_passage_ids": [
+        18976161,
+        9624027,
+        8824885
+      ]
+    },
+    {
+      "question_id": 14,
+      "question": "Orteronel was developed for treatment of which cancer?",
+      "reference_answer": "Orteronel was developed for treatment of castration-resistant prostate cancer.",
+      "relevant_passage_ids": [
+        21978946,
+        26150028,
+        25624429,
+        24100689,
+        24418642,
+        25701170,
+        25264242,
+        24799061,
+        25537627
+      ]
+    },
+    {
+      "question_id": 15,
+      "question": "Is the monoclonal antibody Trastuzumab (Herceptin) of potential use in the treatment of prostate cancer?",
+      "reference_answer": "Although is still controversial, Trastuzumab (Herceptin) can be of potential use in the treatment of prostate cancer overexpressing HER2, either alone or in combination with other drugs.",
+      "relevant_passage_ids": [
+        22505344,
+        11502465,
+        15571968,
+        12677892,
+        12173324,
+        18071949,
+        10473102,
+        11331475,
+        21364123,
+        20716957,
+        15046685,
+        21844010,
+        17142577,
+        11786427,
+        11236029,
+        21254978,
+        17211467,
+        23294030,
+        11920466,
+        17210707,
+        10519379,
+        21326934,
+        16163160,
+        11685722,
+        19373278,
+        18038879,
+        15919200,
+        11685733,
+        15036648,
+        15139054,
+        23255921,
+        15264245,
+        22137850,
+        22322558,
+        22977535
+      ]
+    },
+    {
+      "question_id": 16,
+      "question": "Which are the Yamanaka factors?",
+      "reference_answer": "The Yamanaka factors are the OCT4, SOX2, MYC, and KLF4 transcription factors",
+      "relevant_passage_ids": [
+        23527808,
+        21761058,
+        22075965,
+        21640101,
+        20144262,
+        22449255,
+        19030024,
+        21839145,
+        24150221,
+        22357549,
+        23658991,
+        23612755,
+        21249204,
+        23939864,
+        23166588,
+        23704989
+      ]
+    },
+    {
+      "question_id": 17,
+      "question": "What is the aim of the Human Chromosome-centric Proteome Project (C-HPP)?",
+      "reference_answer": "The chromosome-centric human proteome project aims to systematically map all human proteins, chromosome by chromosome, in a gene-centric manner through dedicated efforts from national and international teams",
+      "relevant_passage_ids": [
+        23312004,
+        23214983,
+        23259496,
+        23308364,
+        23249167,
+        23234512,
+        23252913,
+        23153008,
+        21742803,
+        23253012,
+        23227862,
+        23205526,
+        23276153,
+        22966780,
+        22443261
+      ]
+    },
+    {
+      "question_id": 18,
+      "question": "Where is the protein Pannexin1 located?",
+      "reference_answer": "The protein Pannexin1 is localized to the plasma membranes.",
+      "relevant_passage_ids": [
+        24782784,
+        26100513,
+        24694658,
+        25007779,
+        24642372,
+        25698922,
+        19409451,
+        17064878,
+        25056878,
+        24194896
+      ]
+    },
+    {
+      "question_id": 19,
+      "question": "Which currently known mitochondrial diseases have been attributed to POLG mutations?",
+      "reference_answer": "Mutations in the POLG gene have emerged as one of the most common causes of inherited mitochondrial disease in children and adults. They are responsible for a heterogeneous group of at least 6 major phenotypes of neurodegenerative disease that include: 1) childhood Myocerebrohepatopathy Spectrum disorders (MCHS), 2) Alpers syndrome, 3) Ataxia Neuropathy Spectrum (ANS) disorders, 4) Myoclonus Epilepsy Myopathy Sensory Ataxia (MEMSA), 5) autosomal recessive Progressive External Ophthalmoplegia (arPEO), and 6) autosomal dominant Progressive External Ophthalmoplegia (adPEO).",
+      "relevant_passage_ids": [
+        20927567,
+        12825077,
+        22647225,
+        15351195,
+        18546365
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "n_reviewed": 3,
+  "sample_size": 20,
+  "selection_method": "first_middle_last_of_answer_sample",
+  "query_ids": [
+    0,
+    10,
+    19
+  ],
+  "reviews": [
+    {
+      "query_id": 0,
+      "question": "Is Hirschsprung disease a mendelian or a multifactorial disorder?",
+      "reference_answer": "Coding sequence mutations in RET, GDNF, EDNRB, EDN3, and SOX10 are involved in the development of Hirschsprung disease. The majority of these genes was shown to be related to Mendelian syndromic forms of Hirschsprung's disease, whereas the non-Mendelian inheritance of sporadic non-syndromic Hirschsprung disease proved to be complex; involvement of multiple loci was demonstrated in a multiplicative model.",
+      "retrieved_passage_ids": [
+        23001136,
+        17965226,
+        1785632,
+        15617541,
+        9727738
+      ],
+      "retrieved_evidence": [
+        "Hirschsprung's disease (HSCR) is a fairly frequent cause of intestinal \nobstruction in children. It is characterized as a sex-linked heterogonous \ndisorder with variable severity and incomplete penetrance giving rise to a \nvariable pattern of inheritance. Although Hirschsprung's disease occurs as an \nisolated phenotype in at least 70% of cases, it is not infrequently associated \nwith a number of congenital abnormalities and associated syndromes, \ndemonstrating a spectrum of congenital anomalies. Certain of these syndromic \nphenotypes have been linked to distinct genetic sites, indicating underlying \ngenetic associations of the disease and probable gene-gene interaction, in its \npathogenesis. These associations with HSCR include Down's syndrome and other \nchromosomal anomalies, Waardenburg syndrome and other Dominant sensorineural \ndeafness, the Congenital Central Hypoventilation and Mowat-Wilson and other \nbrain-related syndromes, as well as the MEN2 and other tumour associations. A \nnumber of other autosomal recessive syndromes include the Shah-Waardenburg, the \nBardet-Biedl and Cartilage-hair hypoplasia, Goldberg-Shprintzen syndromes and \nother syndromes related to cholesterol and fat metabolism among others. The \ngenetics of Hirschsprung's disease are highly complex with the majority of known \ngenetic sites relating to the main susceptibility pathways (RET an EDNRB). \nNon-syndromic non-familial, short-segment HSCR appears to represent a \nnon-Mendelian condition with variable expression and sex-dependent penetrance. \nSyndromic and familial forms, on the other hand, have complex patterns of \ninheritance and being reported as autosomal dominant, recessive and polygenic \npatterns of inheritance. The phenotypic variability and incomplete penetrance \nobserved in Hirschsprung's disease could also be explained by the involvement of \nmodifier genes, especially in its syndromic forms. In this review, we look at \nthe chromosomal and Mendelian associations and their underlying signalling \npathways, to obtain a better understanding of the pathogenetic mechanisms \ninvolved in developing aganglionosis of the distal bowel.",
+        "Hirschsprung disease (HSCR, aganglionic megacolon) represents the main genetic \ncause of functional intestinal obstruction with an incidence of 1/5000 live \nbirths. This developmental disorder is a neurocristopathy and is characterised \nby the absence of the enteric ganglia along a variable length of the intestine. \nIn the last decades, the development of surgical approaches has importantly \ndecreased mortality and morbidity which allowed the emergence of familial cases. \nIsolated HSCR appears to be a non-Mendelian malformation with low, sex-dependent \npenetrance, and variable expression according to the length of the aganglionic \nsegment. While all Mendelian modes of inheritance have been described in \nsyndromic HSCR, isolated HSCR stands as a model for genetic disorders with \ncomplex patterns of inheritance. The tyrosine kinase receptor RET is the major \ngene with both rare coding sequence mutations and/or a frequent variant located \nin an enhancer element predisposing to the disease. Hitherto, 10 genes and five \nloci have been found to be involved in HSCR development.",
+        "We describe a brother and sister with Hirschsprung disease, hypotonia, and \nptosis. Their condition resembles that in 2 sibs reported by Goldberg and \nShprintzen. We conclude that the clinical characteristics in 8 reported cases \nwith similar clinical manifestations represent a distinct autosomal recessive \nsyndrome, Goldberg-Shprintzen syndrome.",
+        "Hirschsprung's disease is characterized by the absence of ganglion cells in the \nmyenteric and submucosal plexuses of the gastrointestinal tract. Genetic \ndissection was successful as nine genes and four loci for Hirschsprung's disease \nsusceptibility were identified. Different approaches were used to find these \nloci such as classical linkage in large families, identity by descent mapping in \nan inbred kindred, candidate gene approaches based on naturally occurring mutant \nmice models, and finally the use of model-free linkage and association analyzes. \nIn this study, we review the identification of genes and loci involved in the \nnon-syndromic common form and syndromic Mendelian forms of Hirschsprung's \ndisease. The majority of the identified genes are related to Mendelian syndromic \nforms of Hirschsprung's disease. The non-Mendelian inheritance of sporadic \nnon-syndromic Hirschsprung's disease proved to be complex; involvement of \nmultiple loci was demonstrated in a multiplicative model. We discuss the \npractical implications of the elucidation of genes associated with \nHirschsprung's disease susceptibility for genetic counseling. Finally, we \nspeculate on possible strategies to identify new genes for Hirschsprung's \ndisease.",
+        "Hirschsprung disease is a congenital malformation, where absence of intramural \nganglia in the hindgut results in a defect in the coordination of peristaltic \nmovement. This leads to ileus in the newborn or, more often, constipation in \nchildren and adults. The disease affects one in 5000 live births. Siblings of \naffected cases are at an increased risk (4%) of developing the disease. Among \ncases. males are affected more often than females. The first major \nsusceptibility gene for Hirschsprung disease is the RET proto-oncogene on \n10q11.2. Germline RET mutations in Hirschsprung disease are mainly inactivating, \nand have been reported to account for up to 20 and 50% of sporadic and familial \ncases, respectively. We have screened Swedish population-based samples from 62 \nsporadic cases and seven familial cases of Hirschsprung disease with single \nstrand conformation polymorphism (SSCP), and found five mutations."
+      ],
+      "generated_answer": "Hirschsprung disease is characterized as a complex genetic disorder with both Mendelian and non-Mendelian inheritance patterns. The evidence indicates that isolated Hirschsprung disease appears to be a non-Mendelian condition with low, sex-dependent penetrance and variable expression, while syndromic forms exhibit Mendelian inheritance patterns, including autosomal dominant, recessive, and polygenic modes. Therefore, Hirschsprung disease can be classified as a multifactorial disorder due to its complex patterns of inheritance and the involvement of multiple genetic factors [PASSAGE_ID: 23001136][PASSAGE_ID: 17965226].",
+      "citation_validation": {
+        "is_valid": true,
+        "cited_ids": [
+          "23001136",
+          "17965226"
+        ],
+        "valid_ids": [
+          23001136,
+          17965226
+        ],
+        "invalid_ids": [],
+        "missing_citations": false
+      },
+      "insufficient_evidence": false,
+      "correctness": 4,
+      "groundedness": 4,
+      "context_relevance": 5,
+      "judge_reason": "The generated answer accurately describes Hirschsprung disease as having both Mendelian and non-Mendelian inheritance patterns, aligning well with the reference answer. It is well-supported by the retrieved evidence, which discusses the complexity of inheritance in Hirschsprung disease. The evidence is highly relevant to the question about the nature of the disorder.",
+      "judge_parsed": true,
+      "generation_latency_ms": 3050.5283750244416,
+      "judge_latency_ms": 1495.2555839554407,
+      "observations": {
+        "supported answer": null,
+        "missing evidence": null,
+        "incorrect answer": null,
+        "citation problem": null,
+        "retrieval problem": null
+      },
+      "notes": ""
+    },
+    {
+      "query_id": 10,
+      "question": "Name synonym of Acrokeratosis paraneoplastica.",
+      "reference_answer": "Acrokeratosis paraneoplastic (Bazex syndrome) is a rare, but distinctive paraneoplastic dermatosis characterized by erythematosquamous lesions located at the acral sites and is most commonly associated with carcinomas of the upper aerodigestive tract.",
+      "retrieved_passage_ids": [
+        16435144,
+        1521479,
+        8949310,
+        17097409,
+        6225397
+      ],
+      "retrieved_evidence": [
+        "PURPOSE: Obligatory cutaneous paraneoplastic disorders comprising acanthosis \nnigricans maligna, erythema gyratum repens, paraneoplastic pemphigus, \nhypertrichosis lanuginosa acquisita, erythema necrolyticum migrans and \nacrokeratosis paraneoplastica are rare. However, as markers of an underlying \ninternal malignancy they are of utmost importance for the patient. Acrokeratosis \nparaneoplastica (first described by Gougerot and Rupp in 1922) was named after \nBazex who had then reported several cases in a French dermatological journal \nsince 1965 (Bazex et al. in Bull Soc Fr Dermatol Syphiligr 72:182, 1965; Bazex \nand Griffiths in Br J Dermatol 102:301-306, 1980).\nMETHOD: The study is a clinical case of a patient with acrokeratosis \nparaneoplastica.\nRESULTS: the patient was later diagnosed with a cervical lymph node metastasis \nand thereafter with a primary squamous cell carcinoma of the left upper lobe and \nupon treatment responded with the clearing of the skin changes.\nCONCLUSION: Identification of a paraneoplastic syndrome may enhance the earlier \ndiagnosis of the associated tumor and may thus enable curative treatment.",
+        "Acrokeratosis paraneoplastica of Bazex is a rare cutaneous syndrome associated \nwith malignant neoplasms of the pulmonary and upper gastrointestinal tract, or \ncervical metastatic adenopathy, usually seen in middle-aged white men. We \npresent a unique case of Bazex syndrome in that the patient was young, black, \nand a woman.",
+        "Bazex syndrome, or acrokeratosis paraneoplastica, is a cutaneous paraneoplastic \nsyndrome characterized by psoriasiform lesions associated with, usually, a \nsquamous cell carcinoma of the upper aerodigestive tract. We present a case of \nBazex syndrome associated with metastatic cervical squamous cell carcinoma with \nan unknown primary. The features of the condition are discussed in the light of \ncurrent knowledge.",
+        "Acrokeratosis paraneoplastica (Bazex's syndrome) is a rare obligate \nparaneoplastic dermatosis characterized by erythematosquamous lesions localized \nsymmetrically at the acral sites. The condition almost exclusively affects \nCaucasian men older than 40 years. It is usually associated with primary \nmalignant neoplasms of the upper aerodigestive tract. In most cases, the skin \nchanges precede the clinical manifestation of the underlying neoplasm. The \ndermatosis can be cured only by removal of the underlying carcinoma. We describe \na case of acrokeratosis paraneoplastica associated with a retroperitoneal \nliposarcoma in a 71-year-old Caucasian man. The liposarcoma was surgically \nremoved but recurred several times, with acrokeratosis paraneoplastica showing a \nparallel development. We, therefore, add liposarcoma to the growing list of \nmalignant neoplasms associated with acrokeratosis paraneoplastica.",
+        "Acrokeratosis paraneoplastica (Bazex' syndrome) is a rare but clinically \ndistinctive dermatosis that has been associated in all reported cases, to our \nknowledge, with either a primary malignant neoplasm of the upper aerodigestive \ntract or metastatic cancer to the lymph nodes of the neck. Acrokeratosis \nparaneoplastica was found in a 53-year-old black man with squamous cell \ncarcinoma of the tonsil. A distinctive series of changes was found on \nhistopathologic examination of biopsy specimens taken from his skin lesions, and \ndirect immunofluorescence microscopy of both lesional and nonlesional skin \nspecimens showed immunoglobulin and complement deposition on the epidermal \nbasement membrane. The skin lesions largely resolved following radiation therapy \nof the neoplasm and of the presumably involved lymph nodes."
+      ],
+      "generated_answer": "The synonym of Acrokeratosis paraneoplastica is Bazex syndrome [PASSAGE_ID: 1521479].",
+      "citation_validation": {
+        "is_valid": true,
+        "cited_ids": [
+          "1521479"
+        ],
+        "valid_ids": [
+          1521479
+        ],
+        "invalid_ids": [],
+        "missing_citations": false
+      },
+      "insufficient_evidence": false,
+      "correctness": 5,
+      "groundedness": 5,
+      "context_relevance": 5,
+      "judge_reason": "The generated answer correctly identifies 'Bazex syndrome' as a synonym for 'Acrokeratosis paraneoplastica', which is supported by multiple pieces of retrieved evidence that confirm this relationship.",
+      "judge_parsed": true,
+      "generation_latency_ms": 1202.0726250484586,
+      "judge_latency_ms": 1369.347708998248,
+      "observations": {
+        "supported answer": null,
+        "missing evidence": null,
+        "incorrect answer": null,
+        "citation problem": null,
+        "retrieval problem": null
+      },
+      "notes": ""
+    },
+    {
+      "query_id": 19,
+      "question": "Which currently known mitochondrial diseases have been attributed to POLG mutations?",
+      "reference_answer": "Mutations in the POLG gene have emerged as one of the most common causes of inherited mitochondrial disease in children and adults. They are responsible for a heterogeneous group of at least 6 major phenotypes of neurodegenerative disease that include: 1) childhood Myocerebrohepatopathy Spectrum disorders (MCHS), 2) Alpers syndrome, 3) Ataxia Neuropathy Spectrum (ANS) disorders, 4) Myoclonus Epilepsy Myopathy Sensory Ataxia (MEMSA), 5) autosomal recessive Progressive External Ophthalmoplegia (arPEO), and 6) autosomal dominant Progressive External Ophthalmoplegia (adPEO).",
+      "retrieved_passage_ids": [
+        20927567,
+        18546365,
+        16181814,
+        15351195,
+        7999980
+      ],
+      "retrieved_evidence": [
+        "DNA polymerase \u03b3 (pol \u03b3), encoded by POLG, is responsible for replicating human \nmitochondrial DNA. About 150 mutations in the human POLG have been identified in \npatients with mitochondrial diseases such as Alpers syndrome, progressive \nexternal ophthalmoplegia, and ataxia-neuropathy syndromes. Because many of the \nmutations are described in single citations with no genotypic family history, it \nis important to ascertain which mutations cause or contribute to mitochondrial \ndisease. The vast majority of data about POLG mutations has been generated from \nbiochemical characterizations of recombinant pol \u03b3. However, recently, the study \nof mitochondrial dysfunction in Saccharomyces cerevisiae and mouse models \nprovides important in vivo evidence for the role of POLG mutations in disease. \nAlso, the published 3D-structure of the human pol \u03b3 assists in explaining some \nof the biochemical and genetic properties of the mutants. This review summarizes \nthe current evidence that identifies and explains disease-causing POLG \nmutations.",
+        "Mutations in the POLG gene have emerged as one of the most common causes of \ninherited mitochondrial disease in children and adults. They are responsible for \na heterogeneous group of at least 6 major phenotypes of neurodegenerative \ndisease that include: 1) childhood Myocerebrohepatopathy Spectrum disorders \n(MCHS), 2) Alpers syndrome, 3) Ataxia Neuropathy Spectrum (ANS) disorders, 4) \nMyoclonus Epilepsy Myopathy Sensory Ataxia (MEMSA), 5) autosomal recessive \nProgressive External Ophthalmoplegia (arPEO), and 6) autosomal dominant \nProgressive External Ophthalmoplegia (adPEO). Due to the clinical heterogeneity, \ntime-dependent evolution of symptoms, overlapping phenotypes, and \ninconsistencies in muscle pathology findings, definitive diagnosis relies on the \nmolecular finding of deleterious mutations. We sequenced the exons and flanking \nintron region from approximately 350 patients displaying a phenotype consistent \nwith POLG related mitochondrial disease and found informative mutations in 61 \n(17%). Two mutant alleles were identified in 31 unrelated index patients with \nautosomal recessive POLG-related disorders. Among them, 20 (67%) had Alpers \nsyndrome, 4 (13%) had arPEO, and 3 (10%) had ANS. In addition, 30 patients \ncarrying one altered POLG allele were found. A total of 25 novel alterations \nwere identified, including 6 null mutations. We describe the predicted \nstructural/functional and clinical importance of the previously unreported \nmissense variants and discuss their likelihood of being pathogenic. In \nconclusion, sequence analysis allows the identification of mutations responsible \nfor POLG-related disorders and, in most of the autosomal recessive cases where \ntwo mutant alleles are found in trans, finding deleterious mutations can provide \nan unequivocal diagnosis of the disease.",
+        "Alpers syndrome is an autosomal recessive mitochondrial DNA depletion disorder \nthat affects children and young adults. It is characterized by a progressive, \nfatal brain and liver disease. This syndrome has been associated with mutations \nin POLG, the gene encoding the mitochondrial DNA polymerase (pol gamma). Most \npatients with Alpers syndrome have been found to be compound heterozygotes, \ncarrying two pathogenic mutations in trans at the POLG locus. POLG is a \nnuclear-encoded gene whose protein product is imported into mitochondria, where \nit is essential for mtDNA replication and repair. We studied the skin \nfibroblasts of a patient with Alpers syndrome having the genotype \nE873stop/A467T. The E873stop mutation produces a premature termination codon \n(TAG) in exon 17. The A467T mutation produces a threonine to alanine \nsubstitution at a highly conserved site in exon 7. The allele bearing the stop \ncodon (E873-TAG) is predicted to produce a truncated, catalytically inactive \npolymerase. However, only full-length pol gamma protein was detected by Western \nblot analysis. Here, we show that transcripts containing this stop codon undergo \nnonsense-associated alternative splicing and nonsense-mediated decay. More than \n95% of the functional POLG mRNA was derived from the allele bearing the A467T \nmutation and less than 5% contained the E873stop mutation. These events ensured \nthat virtually all POLG protein in the cell was expressed from the A467T allele. \nTherefore, the Alpers phenotype in this patient was a consequence of a \nsingle-copy gene dose of the A467T allele, and selective elimination of \ntranscripts bearing the E873stop mutation.",
+        "BACKGROUND: Mutations in the gene encoding mitochondrial DNA polymerase gamma \n(POLG), the enzyme that synthesises mitochondrial DNA (mtDNA), have been \nassociated with a mitochondrial disease-autosomal dominant or recessive \nprogressive external ophthalmoplegia-and multiple deletions of mtDNA. \nMitochondrial dysfunction is also suspected to participate in the pathogenesis \nof Parkinson's disease. However, no primary gene defects affecting mitochondrial \nproteins causing mendelian transmission of parkinsonism have been characterised. \nWe aimed to analyse the gene sequence of POLG in patients with progressive \nexternal ophthalmoplegia and their healthy relatives.\nMETHODS: In seven families of various ethnic origins we assessed patients with \nprogressive external ophthalmoplegia and unaffected individuals by clinical, \nbiochemical, morphological, and molecular genetic characterisation and positron \nemission tomography (PET).\nFINDINGS: We recorded mutations in POLG in members of all seven families. \nClinical assessment showed significant cosegregation of parkinsonism with POLG \nmutations (p<0.0001), and PET findings were consistent with dopaminergic neuron \nloss. Post-mortem examination in two individuals showed loss of pigmented \nneurons and pigment phagocytosis in substantia nigra without Lewy bodies. \nFurthermore, most women with progressive external ophthalmoplegia had early \nmenopause-before age 35 years. The POLG gene defect resulted in secondary \naccumulation of mtDNA deletions in patients' tissues.\nINTERPRETATION: Dysfunction of mitochondrial POLG causes a severe progressive \nmultisystem disorder including parkinsonism and premature menopause, which are \nnot typical of mitochondrial disease. Cosegregation of parkinsonism and POLG \nmutations in our families suggests that when defective, this gene can underlie \nmendelian transmission of parkinsonism.\nRELEVANCE TO PRACTICE: Awareness that mitochondrial POLG mutations can underlie \nparkinsonism is important for clinicians working in diagnosis of movement \ndisorders, as well as for studies of the genetics of Parkinson's disease. \nFurther, progressive external ophthalmoplegia with muscle weakness and \nneuropathy can mask symptoms of parkinsonism, and clinicians should pay special \nattention to detect and treat parkinsonism in those individuals.",
+        "We review the main features of human mitochondrial function and structure, and \nin particular mitochondrial transcription, translation, and replication cycles. \nFurthermore, some pecularities such as mitochondria's high polymorphism, the \nexistence of mitochondrial pseudogenes, and the various considerations to take \ninto account when studying mitochondrial diseases will also be mentioned. \nMitochondrial syndromes mostly affecting the nervous system have, during the \npast few years, been associated with mitochondrial DNA (mt DNA) alterations such \nas deletions, duplications, mutations and depletions. We suggest a possible \nclassification of mitochondrial diseases according to the kind of mt DNA \nmutations: structural mitochondrial gene mutation as in LHON (Leber's Hereditary \nOptic Neuropathy) and NARP (Neurogenic muscle weakness, Ataxia and Retinitis \nPigmentosa) as well as some cases of Leigh's syndrome; transfer RNA and \nribosomal RNA mitochondrial gene mutation as in MELAS (Mitochondrial \nEncephalomyopathy, Lactic Acidosis and Strokelike Episodes) or MERRF (Myoclonic \nEpilepsy with Ragged Red Fibers) or deafness with aminoglycoside; structural \nwith transfer RNA mitochondrial gene mutations as observed in large-scale \ndeletions or duplications in Kearns-Sayre syndrome, Pearson's syndrome, diabetes \nmellitus with deafness, and CPEO (Chronic Progressive External Ophtalmoplegia). \nDepletions of the mt DNA may also be classified in this category. Even though \nmutations are generally maternally inherited, most of the deletions are \nsporadic. However, multiple deletions or depletions may be transmitted in a \nmendelan trait which suggests that nuclear gene products play a primary role in \nthese processes. The relationship between a mutation and a particular phenotype \nis far from being fully understood. Gene dosage and energic threshold, which are \ntissue-specific, appear to be the best indicators. However, the recessive or \ndominant behavior of both the wild type or the mutated genome appears to play a \nsignificant role, which can be verified with in vitro studies."
+      ],
+      "generated_answer": "The currently known mitochondrial diseases attributed to POLG mutations include:\n\n1. Alpers syndrome\n2. Progressive external ophthalmoplegia (both autosomal recessive and autosomal dominant forms)\n3. Ataxia-neuropathy syndromes\n4. Myocerebrohepatopathy Spectrum disorders (MCHS)\n5. Myoclonus Epilepsy Myopathy Sensory Ataxia (MEMSA)\n\nThese diseases are part of a heterogeneous group of phenotypes associated with POLG mutations [PASSAGE_ID: 18546365].",
+      "citation_validation": {
+        "is_valid": true,
+        "cited_ids": [
+          "18546365"
+        ],
+        "valid_ids": [
+          18546365
+        ],
+        "invalid_ids": [],
+        "missing_citations": false
+      },
+      "insufficient_evidence": false,
+      "correctness": 5,
+      "groundedness": 5,
+      "context_relevance": 5,
+      "judge_reason": "The generated answer accurately lists the mitochondrial diseases attributed to POLG mutations as mentioned in the reference answer, and it is well-supported by the retrieved evidence, which discusses the association of POLG mutations with these diseases.",
+      "judge_parsed": true,
+      "generation_latency_ms": 2057.28258297313,
+      "judge_latency_ms": 1326.599708001595,
+      "observations": {
+        "supported answer": null,
+        "missing evidence": null,
+        "incorrect answer": null,
+        "citation problem": null,
+        "retrieval problem": null
+      },
+      "notes": ""
+    }
+  ]
+}

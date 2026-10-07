@@ -1,0 +1,58 @@
+{
+  "queries_path": "experiments/configs/evaluation_100.json",
+  "query_expansion": {
+    "enabled": true,
+    "n_expansions": 3,
+    "model_name": "gpt-4o-mini",
+    "estimated_cost_per_call_usd": 0.0001,
+    "original_query_retained": true
+  },
+  "configurations": [
+    {
+      "name": "BM25",
+      "n_queries": 100,
+      "recall_at_5": 0.30290854569583664,
+      "recall_at_10": 0.41850510934157276,
+      "mrr_at_10": 0.7938452380952381,
+      "ndcg_at_10": 0.5645759227117737,
+      "avg_latency_ms": 53.27583798789419,
+      "median_latency_ms": 51.839520485373214,
+      "retrieval_cost_usd": 0.0
+    },
+    {
+      "name": "Dense",
+      "n_queries": 100,
+      "recall_at_5": 0.25283030067118806,
+      "recall_at_10": 0.3432334092979861,
+      "mrr_at_10": 0.7141944444444445,
+      "ndcg_at_10": 0.47711269941910767,
+      "avg_latency_ms": 7.348667490878142,
+      "median_latency_ms": 7.076520996633917,
+      "retrieval_cost_usd": 0.0
+    },
+    {
+      "name": "Hybrid RRF",
+      "n_queries": 100,
+      "recall_at_5": 0.31271377244761317,
+      "recall_at_10": 0.42858748583148304,
+      "mrr_at_10": 0.8105119047619047,
+      "ndcg_at_10": 0.5654650595595728,
+      "avg_latency_ms": 63.584767448483035,
+      "median_latency_ms": 62.62662497465499,
+      "retrieval_cost_usd": 0.0
+    },
+    {
+      "name": "Hybrid + Query Expansion",
+      "n_queries": 100,
+      "recall_at_5": 0.3153220473145087,
+      "recall_at_10": 0.4451846888862972,
+      "mrr_at_10": 0.8074285714285715,
+      "ndcg_at_10": 0.58339007744673,
+      "avg_latency_ms": 1675.1498958695447,
+      "median_latency_ms": 1501.1281044862699,
+      "retrieval_cost_usd": 0.01,
+      "llm_calls": 100
+    }
+  ],
+  "table": "| Configuration | Recall@5 | Recall@10 | MRR@10 | nDCG@10 | Avg latency (ms) | Median latency (ms) |\n|---|---:|---:|---:|---:|---:|---:|\n| BM25 | 0.3029 | 0.4185 | 0.7938 | 0.5646 | 53.28 | 51.84 |\n| Dense | 0.2528 | 0.3432 | 0.7142 | 0.4771 | 7.35 | 7.08 |\n| Hybrid RRF | 0.3127 | 0.4286 | 0.8105 | 0.5655 | 63.58 | 62.63 |\n| Hybrid + Query Expansion | 0.3153 | 0.4452 | 0.8074 | 0.5834 | 1675.15 | 1501.13 |"
+}

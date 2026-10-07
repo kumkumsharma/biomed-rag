@@ -1,0 +1,443 @@
+{
+  "total_documents": 40221,
+  "valid_documents": 27977,
+  "missing_text": 0,
+  "nan_text": 12220,
+  "empty_text": 0,
+  "whitespace_only": 0,
+  "extremely_short": 24,
+  "invalid_non_string_text": 0,
+  "missing_ids": 0,
+  "duplicate_ids": 0,
+  "duplicate_texts": 27,
+  "rejected_documents": 12244,
+  "silently_deleted": false,
+  "production_index_still_includes_invalid_rows": true,
+  "min_usable_chars": 20,
+  "preprocessing": {
+    "retrieval_unit": "Passage-level retrieval unit; no additional chunking.",
+    "chunking": false,
+    "chunk_size": null,
+    "chunk_overlap": null,
+    "passages_used_directly": true,
+    "text_normalization": "None. Source passage text is stored as-is.",
+    "whitespace_normalization": "None at index time. BM25 tokenizes with [A-Za-z0-9]+ lowercase.",
+    "truncation": false,
+    "filtering": "Classification only. Unusable rows are reported, not dropped from production.",
+    "id_preservation": "Original passage IDs are preserved without remapping."
+  },
+  "statistics": {
+    "document_count": 40221,
+    "rejected_document_count": 12244,
+    "average_text_length": 1032.708087814823,
+    "median_text_length": 1162.0,
+    "p95_text_length": 2199,
+    "minimum_text_length": 3,
+    "maximum_text_length": 33420
+  },
+  "rejected_sample": [
+    {
+      "passage_id": 97949,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 98518,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 100785,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 117628,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 125891,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 227209,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 227871,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 261962,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 355046,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 367436,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 367540,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 378740,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 489960,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 497808,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 508371,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 509687,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 619228,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 619442,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 623681,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 631693,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 750548,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 754871,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 759736,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 776440,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 880738,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 881573,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 889425,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 891079,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 895593,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 904693,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1031540,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1031954,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1147889,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1156726,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1159063,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1163864,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1171419,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1281815,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1281842,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1282192,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1283315,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1286503,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1290288,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1292416,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1293183,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1294876,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1295944,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1296572,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1297177,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    },
+    {
+      "passage_id": 1301951,
+      "reasons": [
+        "nan_text"
+      ],
+      "text_status": "nan_text",
+      "text_length": 3
+    }
+  ],
+  "n_rejected_rows_listed": 50,
+  "n_rejected_rows": 12244,
+  "n_duplicate_text_groups": 5
+}

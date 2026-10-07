@@ -1,0 +1,69 @@
+{
+  "n_passages": 40221,
+  "n_queries": 100,
+  "pool_sizes": [
+    10,
+    20,
+    30,
+    50,
+    75,
+    100
+  ],
+  "index_build_seconds": {},
+  "curve": [
+    {
+      "k": 10,
+      "recall_at_k": 0.43419126851674794,
+      "avg_latency_ms": 62.72015959963028,
+      "candidate_count": 10,
+      "mrr_at_10": 0.7958293650793651,
+      "ndcg_at_10": 0.573017454117515
+    },
+    {
+      "k": 20,
+      "recall_at_k": 0.5261355517591648,
+      "avg_latency_ms": 62.72015959963028,
+      "candidate_count": 20,
+      "mrr_at_10": 0.7958293650793651,
+      "ndcg_at_10": 0.573017454117515
+    },
+    {
+      "k": 30,
+      "recall_at_k": 0.5672025435596272,
+      "avg_latency_ms": 62.72015959963028,
+      "candidate_count": 30,
+      "mrr_at_10": 0.7958293650793651,
+      "ndcg_at_10": 0.573017454117515
+    },
+    {
+      "k": 50,
+      "recall_at_k": 0.6238475678725754,
+      "avg_latency_ms": 62.72015959963028,
+      "candidate_count": 50,
+      "mrr_at_10": 0.7958293650793651,
+      "ndcg_at_10": 0.573017454117515
+    },
+    {
+      "k": 75,
+      "recall_at_k": 0.640242942134329,
+      "avg_latency_ms": 62.72015959963028,
+      "candidate_count": 75,
+      "mrr_at_10": 0.7958293650793651,
+      "ndcg_at_10": 0.573017454117515
+    },
+    {
+      "k": 100,
+      "recall_at_k": 0.6494034823187822,
+      "avg_latency_ms": 62.72015959963028,
+      "candidate_count": 100,
+      "mrr_at_10": 0.7958293650793651,
+      "ndcg_at_10": 0.573017454117515
+    }
+  ],
+  "avg_mrr_at_10": 0.7958293650793651,
+  "avg_ndcg_at_10": 0.573017454117515,
+  "notes": [
+    "One Hybrid search at K=100 per query; smaller K are prefixes of that ranking.",
+    "50 is not assumed optimal."
+  ]
+}

@@ -1,0 +1,1947 @@
+{
+  "production_unchanged": true,
+  "query_expansion": false,
+  "gold_label_data_check": {
+    "n_gold_ids": 1142,
+    "n_missing_or_nan_gold_ids": 337,
+    "n_queries_with_nan_gold": 93,
+    "n_queries": 100
+  },
+  "index_build_seconds": {
+    "BM25_index_build_seconds": 1.3015267079972546,
+    "Dense_index_build_seconds": 57.52854933299386,
+    "Hybrid_RRF_wrap_seconds": 0.0020380830028443597
+  },
+  "categories": {
+    "table": [
+      {
+        "category": "Treatment / intervention",
+        "n_queries": 24,
+        "recall_at_10": 0.5192409995399127,
+        "n_complete_misses": 1,
+        "n_recall_below_0_30": 6,
+        "query_ids": [
+          5,
+          7,
+          8,
+          11,
+          14,
+          15,
+          20,
+          31,
+          35,
+          40,
+          46,
+          48,
+          52,
+          57,
+          59,
+          67,
+          69,
+          70,
+          73,
+          75,
+          83,
+          84,
+          87,
+          92
+        ]
+      },
+      {
+        "category": "Diagnosis / disease identification",
+        "n_queries": 10,
+        "recall_at_10": 0.5536576354679803,
+        "n_complete_misses": 0,
+        "n_recall_below_0_30": 1,
+        "query_ids": [
+          6,
+          10,
+          30,
+          37,
+          47,
+          74,
+          79,
+          82,
+          89,
+          97
+        ]
+      },
+      {
+        "category": "Cause / mechanism / pathophysiology",
+        "n_queries": 28,
+        "recall_at_10": 0.4934221375950699,
+        "n_complete_misses": 0,
+        "n_recall_below_0_30": 7,
+        "query_ids": [
+          0,
+          19,
+          21,
+          22,
+          23,
+          25,
+          27,
+          32,
+          34,
+          36,
+          39,
+          41,
+          53,
+          54,
+          55,
+          56,
+          58,
+          60,
+          61,
+          64,
+          66,
+          71,
+          78,
+          85,
+          90,
+          95,
+          98,
+          99
+        ]
+      },
+      {
+        "category": "Risk / association / prognosis",
+        "n_queries": 8,
+        "recall_at_10": 0.4572196674098848,
+        "n_complete_misses": 0,
+        "n_recall_below_0_30": 1,
+        "query_ids": [
+          24,
+          42,
+          45,
+          62,
+          76,
+          88,
+          91,
+          93
+        ]
+      },
+      {
+        "category": "Fact / definition / biological relationship",
+        "n_queries": 23,
+        "recall_at_10": 0.5067843991757035,
+        "n_complete_misses": 0,
+        "n_recall_below_0_30": 3,
+        "query_ids": [
+          1,
+          2,
+          3,
+          4,
+          9,
+          12,
+          16,
+          17,
+          18,
+          26,
+          28,
+          29,
+          33,
+          43,
+          49,
+          50,
+          65,
+          72,
+          77,
+          80,
+          81,
+          94,
+          96
+        ]
+      },
+      {
+        "category": "Other / unclear",
+        "n_queries": 7,
+        "recall_at_10": 0.5267812253106371,
+        "n_complete_misses": 0,
+        "n_recall_below_0_30": 1,
+        "query_ids": [
+          13,
+          38,
+          44,
+          51,
+          63,
+          68,
+          86
+        ]
+      }
+    ],
+    "most_complete_misses_category": "Treatment / intervention",
+    "lowest_mean_recall_category": "Risk / association / prognosis",
+    "n_complete_misses": 1,
+    "note": "Category is assigned from question wording only. A lower mean Recall@10 is a diagnostic observation, not a demonstrated cause.",
+    "assignments": [
+      {
+        "query_id": 0,
+        "question": "Is Hirschsprung disease a mendelian or a multifactorial disorder?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.3333333333333333,
+        "n_gold": 9
+      },
+      {
+        "query_id": 1,
+        "question": "List signaling molecules (ligands) that interact with the receptor EGFR?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.1875,
+        "n_gold": 16
+      },
+      {
+        "query_id": 2,
+        "question": "Is the protein Papilin secreted?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.8,
+        "n_gold": 10
+      },
+      {
+        "query_id": 3,
+        "question": "Are long non coding RNAs spliced?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.5,
+        "n_gold": 6
+      },
+      {
+        "query_id": 4,
+        "question": "Is RANKL secreted from the cells?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.3,
+        "n_gold": 10
+      },
+      {
+        "query_id": 5,
+        "question": "Does metformin interfere thyroxine absorption?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.0,
+        "n_gold": 1
+      },
+      {
+        "query_id": 6,
+        "question": "Which miRNAs could be used as potential biomarkers for epithelial ovarian cancer?",
+        "category": "Diagnosis / disease identification",
+        "recall_at_10": 0.5714285714285714,
+        "n_gold": 14
+      },
+      {
+        "query_id": 7,
+        "question": "Which acetylcholinesterase inhibitors are used for treatment of myasthenia gravis?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.8333333333333334,
+        "n_gold": 6
+      },
+      {
+        "query_id": 8,
+        "question": "Has Denosumab (Prolia) been approved by FDA?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.2857142857142857,
+        "n_gold": 21
+      },
+      {
+        "query_id": 9,
+        "question": "List the human genes encoding for the dishevelled proteins?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.4444444444444444,
+        "n_gold": 9
+      },
+      {
+        "query_id": 10,
+        "question": "Name synonym of Acrokeratosis paraneoplastica.",
+        "category": "Diagnosis / disease identification",
+        "recall_at_10": 0.6666666666666666,
+        "n_gold": 15
+      },
+      {
+        "query_id": 11,
+        "question": "Which are the classes of anti-arrhythmic drugs according to Vaughan-Williams classification?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.6,
+        "n_gold": 5
+      },
+      {
+        "query_id": 12,
+        "question": "Which are the different isoforms of the mammalian Notch receptor?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.2857142857142857,
+        "n_gold": 7
+      },
+      {
+        "query_id": 13,
+        "question": "Which are the major characteristics of cellular senescence?",
+        "category": "Other / unclear",
+        "recall_at_10": 0.3333333333333333,
+        "n_gold": 3
+      },
+      {
+        "query_id": 14,
+        "question": "Orteronel was developed for treatment of which cancer?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.4444444444444444,
+        "n_gold": 9
+      },
+      {
+        "query_id": 15,
+        "question": "Is the monoclonal antibody Trastuzumab (Herceptin) of potential use in the treatment of prostate cancer?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.2857142857142857,
+        "n_gold": 35
+      },
+      {
+        "query_id": 16,
+        "question": "Which are the Yamanaka factors?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.4375,
+        "n_gold": 16
+      },
+      {
+        "query_id": 17,
+        "question": "What is the aim of the Human Chromosome-centric Proteome Project (C-HPP)?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.6666666666666666,
+        "n_gold": 15
+      },
+      {
+        "query_id": 18,
+        "question": "Where is the protein Pannexin1 located?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.6,
+        "n_gold": 10
+      },
+      {
+        "query_id": 19,
+        "question": "Which currently known mitochondrial diseases have been attributed to POLG mutations?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.6,
+        "n_gold": 5
+      },
+      {
+        "query_id": 20,
+        "question": "What is the effect of ivabradine in heart failure after myocardial infarction?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.5,
+        "n_gold": 18
+      },
+      {
+        "query_id": 21,
+        "question": "What is the mode of inheritance of Wilson's disease?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.6428571428571429,
+        "n_gold": 14
+      },
+      {
+        "query_id": 22,
+        "question": "Are transcription and splicing connected?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.25,
+        "n_gold": 16
+      },
+      {
+        "query_id": 23,
+        "question": "What is the mode of inheritance of Facioscapulohumeral muscular dystrophy (FSHD)?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.36363636363636365,
+        "n_gold": 11
+      },
+      {
+        "query_id": 24,
+        "question": "Is Alu hypomethylation associated with breast cancer?",
+        "category": "Risk / association / prognosis",
+        "recall_at_10": 0.5,
+        "n_gold": 2
+      },
+      {
+        "query_id": 25,
+        "question": "Which proteins participate in the formation of the ryanodine receptor quaternary macromolecular complex?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.6666666666666666,
+        "n_gold": 12
+      },
+      {
+        "query_id": 26,
+        "question": "What kind of chromatography is HILIC?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.8333333333333334,
+        "n_gold": 6
+      },
+      {
+        "query_id": 27,
+        "question": "What is the effect of TRH on myocardial contractility?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.8333333333333334,
+        "n_gold": 6
+      },
+      {
+        "query_id": 28,
+        "question": "Proteomic analyses need prior knowledge of the organism complete genome. Is the complete genome of the bacteria of the genus Arthrobacter available?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.42857142857142855,
+        "n_gold": 7
+      },
+      {
+        "query_id": 29,
+        "question": "What is the structural fold of bromodomain proteins?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.6666666666666666,
+        "n_gold": 9
+      },
+      {
+        "query_id": 30,
+        "question": "List the endoscopic diagnoses that have been reported in children with autism",
+        "category": "Diagnosis / disease identification",
+        "recall_at_10": 0.8333333333333334,
+        "n_gold": 6
+      },
+      {
+        "query_id": 31,
+        "question": "What are the outcomes of Renal sympathetic denervation?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.6666666666666666,
+        "n_gold": 9
+      },
+      {
+        "query_id": 32,
+        "question": "Which MAP kinase phosphorylates the transcription factor c-jun?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.2222222222222222,
+        "n_gold": 18
+      },
+      {
+        "query_id": 33,
+        "question": "What is the meaning of the acronym \"TAILS\" used in protein N-terminomics?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.3333333333333333,
+        "n_gold": 6
+      },
+      {
+        "query_id": 34,
+        "question": "Do mutations of AKT1 occur in meningiomas?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.5,
+        "n_gold": 6
+      },
+      {
+        "query_id": 35,
+        "question": "What are the main indications of lacosamide?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.5,
+        "n_gold": 8
+      },
+      {
+        "query_id": 36,
+        "question": "Which fusion protein is involved in the development of Ewing sarcoma?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.47368421052631576,
+        "n_gold": 19
+      },
+      {
+        "query_id": 37,
+        "question": "List Hemolytic Uremic Syndrome Triad.",
+        "category": "Diagnosis / disease identification",
+        "recall_at_10": 0.47619047619047616,
+        "n_gold": 21
+      },
+      {
+        "query_id": 38,
+        "question": "Does physical activity influence gut hormones?",
+        "category": "Other / unclear",
+        "recall_at_10": 0.625,
+        "n_gold": 16
+      },
+      {
+        "query_id": 39,
+        "question": "What are the effects of depleting protein  km23-1 (DYNLRB1)  in a cell?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.7142857142857143,
+        "n_gold": 7
+      },
+      {
+        "query_id": 40,
+        "question": "Treatment of which disease was investigated in the MR CLEAN study?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.75,
+        "n_gold": 4
+      },
+      {
+        "query_id": 41,
+        "question": "Which factors activate zygotic gene expression during the maternal-to-zygotic transition in zebrafish?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 1.0,
+        "n_gold": 1
+      },
+      {
+        "query_id": 42,
+        "question": "Is irritable bowel syndrome more common in women with endometriosis?",
+        "category": "Risk / association / prognosis",
+        "recall_at_10": 0.5555555555555556,
+        "n_gold": 18
+      },
+      {
+        "query_id": 43,
+        "question": "What is evaluated using the EORTC QLQ \u2013 INFO25 questionnaire?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.7142857142857143,
+        "n_gold": 7
+      },
+      {
+        "query_id": 44,
+        "question": "Does BNP increase after intensive exercise in athletes?",
+        "category": "Other / unclear",
+        "recall_at_10": 0.4444444444444444,
+        "n_gold": 18
+      },
+      {
+        "query_id": 45,
+        "question": "What is the association of estrogen replacement therapy and intracranial meningioma risk?",
+        "category": "Risk / association / prognosis",
+        "recall_at_10": 0.7692307692307693,
+        "n_gold": 13
+      },
+      {
+        "query_id": 46,
+        "question": "Are there web based self management strategies for chronic pain ?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 1.0,
+        "n_gold": 5
+      },
+      {
+        "query_id": 47,
+        "question": "Is Weaver syndrome similar to Sotos?",
+        "category": "Diagnosis / disease identification",
+        "recall_at_10": 0.625,
+        "n_gold": 8
+      },
+      {
+        "query_id": 48,
+        "question": "Which enzyme is targeted by Evolocumab?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.375,
+        "n_gold": 24
+      },
+      {
+        "query_id": 49,
+        "question": "Are ultraconserved elements often transcribed?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.4,
+        "n_gold": 10
+      },
+      {
+        "query_id": 50,
+        "question": "What is the methyl donor of DNA (cytosine-5)-methyltransferases?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.5714285714285714,
+        "n_gold": 7
+      },
+      {
+        "query_id": 51,
+        "question": "Is peripheral neuroepithelioma related to Ewing sarcoma?",
+        "category": "Other / unclear",
+        "recall_at_10": 0.5833333333333334,
+        "n_gold": 12
+      },
+      {
+        "query_id": 52,
+        "question": "Which signaling pathway does sonidegib inhibit?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.5,
+        "n_gold": 8
+      },
+      {
+        "query_id": 53,
+        "question": "In which phase of the cell cycle arrest is impaired in Fanconi anemia?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.8,
+        "n_gold": 5
+      },
+      {
+        "query_id": 54,
+        "question": "Which DNA sequences are more prone for the formation of R-loops?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.2727272727272727,
+        "n_gold": 11
+      },
+      {
+        "query_id": 55,
+        "question": "Mutation of which gene is implicated in the familial isolated pituitary adenoma?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.30303030303030304,
+        "n_gold": 33
+      },
+      {
+        "query_id": 56,
+        "question": "which mutations of troponin C gene have been found to cause hypertrophic cardiomyopathy?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.5,
+        "n_gold": 12
+      },
+      {
+        "query_id": 57,
+        "question": "What is known about the effect of acupuncture in smoking cessation ?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.8333333333333334,
+        "n_gold": 12
+      },
+      {
+        "query_id": 58,
+        "question": "Which post-translational histone modifications are characteristic of constitutive heterochromatin?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.16666666666666666,
+        "n_gold": 12
+      },
+      {
+        "query_id": 59,
+        "question": "GV1001 vaccine targets which enzyme?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.6666666666666666,
+        "n_gold": 12
+      },
+      {
+        "query_id": 60,
+        "question": "Which is the E3 ubiquitin ligase which ubiquitinates IkB leading to its proteasomal degradation?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.2,
+        "n_gold": 5
+      },
+      {
+        "query_id": 61,
+        "question": "Is c-met involved in the activation of the Akt pathway?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.5,
+        "n_gold": 18
+      },
+      {
+        "query_id": 62,
+        "question": "Is pregnancy an additional risk during during H1N1 infection?",
+        "category": "Risk / association / prognosis",
+        "recall_at_10": 0.391304347826087,
+        "n_gold": 23
+      },
+      {
+        "query_id": 63,
+        "question": "Are long non coding RNAs as conserved in sequence as protein coding genes?",
+        "category": "Other / unclear",
+        "recall_at_10": 0.23076923076923078,
+        "n_gold": 13
+      },
+      {
+        "query_id": 64,
+        "question": "Mutation of which gene is implicated in the Brain-lung-thyroid syndrome?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.6,
+        "n_gold": 10
+      },
+      {
+        "query_id": 65,
+        "question": "What is clathrin?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.45454545454545453,
+        "n_gold": 11
+      },
+      {
+        "query_id": 66,
+        "question": "What are the main results of PRKAR1A Knockdown?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.5,
+        "n_gold": 4
+      },
+      {
+        "query_id": 67,
+        "question": "Is TENS machine effective in pain?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 1.0,
+        "n_gold": 2
+      },
+      {
+        "query_id": 68,
+        "question": "Is there any algorithm for enhancer identification from chromatin state?",
+        "category": "Other / unclear",
+        "recall_at_10": 1.0,
+        "n_gold": 2
+      },
+      {
+        "query_id": 69,
+        "question": "Which enzyme is targeted by the drug Imetelstat?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.13043478260869565,
+        "n_gold": 23
+      },
+      {
+        "query_id": 70,
+        "question": "Which interleukins are inhibited by Dupilumab?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.14285714285714285,
+        "n_gold": 7
+      },
+      {
+        "query_id": 71,
+        "question": "Which human genes are more commonly related to craniosynostosis?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.09090909090909091,
+        "n_gold": 22
+      },
+      {
+        "query_id": 72,
+        "question": "Are transcribed ultraconserved regions involved in cancer?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.25,
+        "n_gold": 8
+      },
+      {
+        "query_id": 73,
+        "question": "In which breast cancer patients can palbociclib be used?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.3333333333333333,
+        "n_gold": 3
+      },
+      {
+        "query_id": 74,
+        "question": "Do patients with Pendred syndrome present congenital deafness?",
+        "category": "Diagnosis / disease identification",
+        "recall_at_10": 0.27586206896551724,
+        "n_gold": 29
+      },
+      {
+        "query_id": 75,
+        "question": "List side effects of SGLT2 inhibitors?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.4,
+        "n_gold": 10
+      },
+      {
+        "query_id": 76,
+        "question": "Is CD56 useful in Ewing sarcoma prognosis?",
+        "category": "Risk / association / prognosis",
+        "recall_at_10": 0.3333333333333333,
+        "n_gold": 3
+      },
+      {
+        "query_id": 77,
+        "question": "What is the method FASP used for?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.6153846153846154,
+        "n_gold": 13
+      },
+      {
+        "query_id": 78,
+        "question": "What is the role of extracellular signal-related kinases 1 and 2 (ERK1/2) proteins in craniosynostosis?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 1.0,
+        "n_gold": 1
+      },
+      {
+        "query_id": 79,
+        "question": "Are there any urine biomarkers for chronic kidney disease?",
+        "category": "Diagnosis / disease identification",
+        "recall_at_10": 0.35,
+        "n_gold": 20
+      },
+      {
+        "query_id": 80,
+        "question": "What is being measured with an accelerometer in back pain patients",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.6666666666666666,
+        "n_gold": 15
+      },
+      {
+        "query_id": 81,
+        "question": "List the releases of JASPAR database",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.6,
+        "n_gold": 5
+      },
+      {
+        "query_id": 82,
+        "question": "List symptoms of the IFAP syndrome.",
+        "category": "Diagnosis / disease identification",
+        "recall_at_10": 0.6666666666666666,
+        "n_gold": 15
+      },
+      {
+        "query_id": 83,
+        "question": "Which gene is required for the efficient function of clopidogrel?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.42857142857142855,
+        "n_gold": 7
+      },
+      {
+        "query_id": 84,
+        "question": "Is valproic acid effective for glioblastoma treatment?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.2857142857142857,
+        "n_gold": 7
+      },
+      {
+        "query_id": 85,
+        "question": "Which transcription factor is considered as a master regulator of lysosomal genes?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.6666666666666666,
+        "n_gold": 15
+      },
+      {
+        "query_id": 86,
+        "question": "Which antibiotics target peptidoglycan biosynthesis?",
+        "category": "Other / unclear",
+        "recall_at_10": 0.47058823529411764,
+        "n_gold": 17
+      },
+      {
+        "query_id": 87,
+        "question": "Can Levoxyl (levothyroxine sodium) cause insomnia?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 1.0,
+        "n_gold": 1
+      },
+      {
+        "query_id": 88,
+        "question": "Is fatigue prevalent in patients receiving treatment for glioblastoma?",
+        "category": "Risk / association / prognosis",
+        "recall_at_10": 0.20833333333333334,
+        "n_gold": 24
+      },
+      {
+        "query_id": 89,
+        "question": "List two common features of Tay syndrome.",
+        "category": "Diagnosis / disease identification",
+        "recall_at_10": 0.5714285714285714,
+        "n_gold": 7
+      },
+      {
+        "query_id": 90,
+        "question": "Which cell types are known to be driving Rheumatoid Arthritis?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.36363636363636365,
+        "n_gold": 11
+      },
+      {
+        "query_id": 91,
+        "question": "What is the association between personality trait of neuroticism and risk for Alzheimer's disease?",
+        "category": "Risk / association / prognosis",
+        "recall_at_10": 0.4,
+        "n_gold": 25
+      },
+      {
+        "query_id": 92,
+        "question": "What is the mode of action of everolimus?",
+        "category": "Treatment / intervention",
+        "recall_at_10": 0.5,
+        "n_gold": 10
+      },
+      {
+        "query_id": 93,
+        "question": "Have Quantitative Trait Loci affecting splicing (splicing QTLs) been linked to disease?",
+        "category": "Risk / association / prognosis",
+        "recall_at_10": 0.5,
+        "n_gold": 4
+      },
+      {
+        "query_id": 94,
+        "question": "Which technique is used for detection of EWS/FLI1 fusion transcripts?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.6,
+        "n_gold": 10
+      },
+      {
+        "query_id": 95,
+        "question": "Does the CTCF protein co-localize with cohesin?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.21428571428571427,
+        "n_gold": 28
+      },
+      {
+        "query_id": 96,
+        "question": "What is the application of the Bimolecular Fluorescence Complementation (BiFC) assay in Drosophila embryos?",
+        "category": "Fact / definition / biological relationship",
+        "recall_at_10": 0.3,
+        "n_gold": 10
+      },
+      {
+        "query_id": 97,
+        "question": "Which pathological condition of the heart is known as hypertrophic cardiomyopathy (HCM)?",
+        "category": "Diagnosis / disease identification",
+        "recall_at_10": 0.5,
+        "n_gold": 10
+      },
+      {
+        "query_id": 98,
+        "question": "What is the genetic basis of Rubinstein-Taybi syndrome?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.45454545454545453,
+        "n_gold": 11
+      },
+      {
+        "query_id": 99,
+        "question": "What is the function of the viral KP4 protein?",
+        "category": "Cause / mechanism / pathophysiology",
+        "recall_at_10": 0.5833333333333334,
+        "n_gold": 12
+      }
+    ]
+  },
+  "selected": {
+    "query_a": {
+      "query_id": 2,
+      "question": "Is the protein Papilin secreted?",
+      "category": "Fact / definition / biological relationship",
+      "n_gold": 10,
+      "gold_passage_ids": [
+        21784067,
+        19297413,
+        15094122,
+        7515725,
+        3320045,
+        20805556,
+        19724244,
+        12666201,
+        15094110,
+        11076767
+      ],
+      "recall_at_10": 0.8,
+      "candidate_recall_at_50": 0.8,
+      "candidate_hit_at_50": true,
+      "best_rrf_rank": 1,
+      "best_reranked_rank": 1
+    },
+    "query_b": {
+      "query_id": 5,
+      "question": "Does metformin interfere thyroxine absorption?",
+      "category": "Treatment / intervention",
+      "n_gold": 1,
+      "gold_passage_ids": [
+        26191653
+      ],
+      "recall_at_10": 0.0,
+      "candidate_recall_at_50": 0.0,
+      "candidate_hit_at_50": false,
+      "best_rrf_rank": null,
+      "best_reranked_rank": null
+    },
+    "reason_a": "Simple yes/no fact question; MedCPT Recall@10=0.80 with gold at rank 1.",
+    "reason_b": "The only complete miss in the 100-query MedCPT run: one gold passage, Candidate Recall@50=0 and Final Recall@10=0."
+  },
+  "traces": [
+    {
+      "query_id": 2,
+      "question": "Is the protein Papilin secreted?",
+      "category": "Fact / definition / biological relationship",
+      "gold_ids": [
+        21784067,
+        19297413,
+        15094122,
+        7515725,
+        3320045,
+        20805556,
+        19724244,
+        12666201,
+        15094110,
+        11076767
+      ],
+      "inspect_k": 40221,
+      "pool_k": 50,
+      "final_k": 10,
+      "dense_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "rrf_k": 60,
+      "reranker_model": "ncbi/MedCPT-Cross-Encoder",
+      "gold_traces": [
+        {
+          "gold_id": 21784067,
+          "pmid": 21784067,
+          "exists_in_index": true,
+          "failure_point": null,
+          "raw_text_preview": "Cell invasion through basement membrane is a specialized cellular behavior critical for many developmental processes and leukocyte trafficking. Invasive cellular behavior is also inappropriately co-opted during cancer progression. Acquisition of an invasive phenotype is accompanied by changes in gene expression that are thought to coordinate the steps of invasion. The transcription factors responsible for these changes in gene expression, however, are largely unknown. C. elegans anchor cell (AC) invasion is a genetically tractable in vivo model of invasion through basement membrane. AC invasion requires the conserved transcription factor FOS-1A, but other transcription factors are thought to act in parallel to FOS-1A to control invasion. Here we identify the transcription factor HLH-2, the\u2026",
+          "raw_text_length": 1707,
+          "indexed_text_preview": "Cell invasion through basement membrane is a specialized cellular behavior critical for many developmental processes and leukocyte trafficking. Invasive cellular behavior is also inappropriately co-opted during cancer progression. Acquisition of an invasive phenotype is accompanied by changes in gene expression that are thought to coordinate the steps of invasion. The transcription factors responsible for these changes in gene expression, however, are largely unknown. C. elegans anchor cell (AC) invasion is a genetically tractable in vivo model of invasion through basement membrane. AC invasion requires the conserved transcription factor FOS-1A, but other transcription factors are thought to act in parallel to FOS-1A to control invasion. Here we identify the transcription factor HLH-2, the\u2026",
+          "indexed_text_length": 1707,
+          "text_unchanged": true,
+          "truncated": false,
+          "chunked": false,
+          "n_chunks": 1,
+          "empty_or_nan_text": false,
+          "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+          "bm25_rank": 6,
+          "bm25_score": 18.944976178059935,
+          "bm25_in_production_top50": true,
+          "dense_rank": 12107,
+          "dense_score": 0.14521636395288962,
+          "dense_in_production_top50": false,
+          "rrf_rank": 10,
+          "rrf_score": 0.015151515151515152,
+          "in_top50": true,
+          "medcpt_rank": 7,
+          "medcpt_score": 7.988259792327881,
+          "in_top10": true,
+          "first_loss_label": "NOT LOST"
+        },
+        {
+          "gold_id": 19297413,
+          "pmid": 19297413,
+          "exists_in_index": true,
+          "failure_point": null,
+          "raw_text_preview": "The gonad arms of C. elegans hermaphrodites acquire invariant shapes by guided migrations of distal tip cells (DTCs), which occur in three phases that differ in the direction and basement membrane substrata used for movement. We found that mig-6 encodes long (MIG-6L) and short (MIG-6S) isoforms of the extracellular matrix protein papilin, each required for distinct aspects of DTC migration. Both MIG-6 isoforms have a predicted N-terminal papilin cassette, lagrin repeats and C-terminal Kunitz-type serine proteinase inhibitory domains. We show that mutations affecting MIG-6L specifically and cell-autonomously decrease the rate of post-embryonic DTC migration, mimicking a post-embryonic collagen IV deficit. We also show that MIG-6S has two separable functions - one in embryogenesis and one in\u2026",
+          "raw_text_length": 1188,
+          "indexed_text_preview": "The gonad arms of C. elegans hermaphrodites acquire invariant shapes by guided migrations of distal tip cells (DTCs), which occur in three phases that differ in the direction and basement membrane substrata used for movement. We found that mig-6 encodes long (MIG-6L) and short (MIG-6S) isoforms of the extracellular matrix protein papilin, each required for distinct aspects of DTC migration. Both MIG-6 isoforms have a predicted N-terminal papilin cassette, lagrin repeats and C-terminal Kunitz-type serine proteinase inhibitory domains. We show that mutations affecting MIG-6L specifically and cell-autonomously decrease the rate of post-embryonic DTC migration, mimicking a post-embryonic collagen IV deficit. We also show that MIG-6S has two separable functions - one in embryogenesis and one in\u2026",
+          "indexed_text_length": 1188,
+          "text_unchanged": true,
+          "truncated": false,
+          "chunked": false,
+          "n_chunks": 1,
+          "empty_or_nan_text": false,
+          "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+          "bm25_rank": 5,
+          "bm25_score": 19.4351698822328,
+          "bm25_in_production_top50": true,
+          "dense_rank": 819,
+          "dense_score": 0.29585192357807,
+          "dense_in_production_top50": false,
+          "rrf_rank": 9,
+          "rrf_score": 0.015384615384615385,
+          "in_top50": true,
+          "medcpt_rank": 8,
+          "medcpt_score": 6.499888896942139,
+          "in_top10": true,
+          "first_loss_label": "NOT LOST"
+        },
+        {
+          "gold_id": 15094122,
+          "pmid": 15094122,
+          "exists_in_index": true,
+          "failure_point": null,
+          "raw_text_preview": "Papilins are homologous, secreted extracellular matrix proteins which share a common order of protein domains. They occur widely, from nematodes to man, and can differ in the number of repeats of a given type of domain. Within one species the number of repeats can vary by differential RNA splicing. A distinctly conserved cassette of domains at the amino-end of papilins is homologous with a cassette of protein domains at the carboxyl-end of the ADAMTS subgroup of secreted, matrix-associated metalloproteases. Papilins primarily occur in basement membranes. Papilins interact with several extracellular matrix components and ADAMTS enzymes. Papilins are essential for embryonic development of Drosophila melanogaster and Caenorhabditis elegans.",
+          "raw_text_length": 756,
+          "indexed_text_preview": "Papilins are homologous, secreted extracellular matrix proteins which share a common order of protein domains. They occur widely, from nematodes to man, and can differ in the number of repeats of a given type of domain. Within one species the number of repeats can vary by differential RNA splicing. A distinctly conserved cassette of domains at the amino-end of papilins is homologous with a cassette of protein domains at the carboxyl-end of the ADAMTS subgroup of secreted, matrix-associated metalloproteases. Papilins primarily occur in basement membranes. Papilins interact with several extracellular matrix components and ADAMTS enzymes. Papilins are essential for embryonic development of Drosophila melanogaster and Caenorhabditis elegans.",
+          "indexed_text_length": 756,
+          "text_unchanged": true,
+          "truncated": false,
+          "chunked": false,
+          "n_chunks": 1,
+          "empty_or_nan_text": false,
+          "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+          "bm25_rank": 8,
+          "bm25_score": 17.592222788931007,
+          "bm25_in_production_top50": true,
+          "dense_rank": 1,
+          "dense_score": 0.6181926160747795,
+          "dense_in_production_top50": true,
+          "rrf_rank": 4,
+          "rrf_score": 0.031099324975891997,
+          "in_top50": true,
+          "medcpt_rank": 1,
+          "medcpt_score": 15.855929374694824,
+          "in_top10": true,
+          "first_loss_label": "NOT LOST"
+        },
+        {
+          "gold_id": 7515725,
+          "pmid": 7515725,
+          "exists_in_index": true,
+          "failure_point": null,
+          "raw_text_preview": "Two contrasting substrates, Drosophila laminin and human vitronectin, caused determined primary Drosophila embryo cells to follow alternate intermediate differentiation steps without affecting the final outcome of differentiation. Integrin alpha PS2 beta PS3 was essential for the initial spreading of myocytes on vitronectin: focal contacts rich in beta PS3 integrins formed and were connected by actin- and myosin-containing stress fibers. While alpha PS2 beta PS3 was unnecessary for myotube formation on laminin, it was required for the subsequent change to a sarcomeric cytoarchitecture. The differentiating primary cultures synthesized integrins and assembled them into detergent-insoluble, cytoskeleton-associated complexes. Collagen IV, laminin, glutactin, papilin, and other extracellular ma\u2026",
+          "raw_text_length": 1266,
+          "indexed_text_preview": "Two contrasting substrates, Drosophila laminin and human vitronectin, caused determined primary Drosophila embryo cells to follow alternate intermediate differentiation steps without affecting the final outcome of differentiation. Integrin alpha PS2 beta PS3 was essential for the initial spreading of myocytes on vitronectin: focal contacts rich in beta PS3 integrins formed and were connected by actin- and myosin-containing stress fibers. While alpha PS2 beta PS3 was unnecessary for myotube formation on laminin, it was required for the subsequent change to a sarcomeric cytoarchitecture. The differentiating primary cultures synthesized integrins and assembled them into detergent-insoluble, cytoskeleton-associated complexes. Collagen IV, laminin, glutactin, papilin, and other extracellular ma\u2026",
+          "indexed_text_length": 1266,
+          "text_unchanged": true,
+          "truncated": false,
+          "chunked": false,
+          "n_chunks": 1,
+          "empty_or_nan_text": false,
+          "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+          "bm25_rank": 4,
+          "bm25_score": 19.778166995948567,
+          "bm25_in_production_top50": true,
+          "dense_rank": 104,
+          "dense_score": 0.362512302912377,
+          "dense_in_production_top50": false,
+          "rrf_rank": 7,
+          "rrf_score": 0.015625,
+          "in_top50": true,
+          "medcpt_rank": 6,
+          "medcpt_score": 9.626675605773926,
+          "in_top10": true,
+          "first_loss_label": "NOT LOST"
+        },
+        {
+          "gold_id": 3320045,
+          "pmid": 3320045,
+          "exists_in_index": true,
+          "failure_point": null,
+          "raw_text_preview": "A sulfated glycoprotein was isolated from the culture media of Drosophila Kc cells and named papilin. Affinity purified antibodies against this protein localized it primarily to the basement membranes of embryos. The antibodies cross-reacted with another material which was not sulfated and appeared to be the core protein of papilin, which is proteoglycan-like. After reduction, papilin electrophoresed in sodium dodecyl sulfate-polyacrylamide gel electrophoresis as a broad band of about 900,000 apparent molecular weight and the core protein as a narrow band of approximately 400,000. The core protein was formed by some cell lines and by other cells on incubation with 1 mM 4-methylumbelliferyl xyloside, which inhibited formation of the proteoglycan-like form. The buoyant density of papilin in\u2026",
+          "raw_text_length": 2018,
+          "indexed_text_preview": "A sulfated glycoprotein was isolated from the culture media of Drosophila Kc cells and named papilin. Affinity purified antibodies against this protein localized it primarily to the basement membranes of embryos. The antibodies cross-reacted with another material which was not sulfated and appeared to be the core protein of papilin, which is proteoglycan-like. After reduction, papilin electrophoresed in sodium dodecyl sulfate-polyacrylamide gel electrophoresis as a broad band of about 900,000 apparent molecular weight and the core protein as a narrow band of approximately 400,000. The core protein was formed by some cell lines and by other cells on incubation with 1 mM 4-methylumbelliferyl xyloside, which inhibited formation of the proteoglycan-like form. The buoyant density of papilin in\u2026",
+          "indexed_text_length": 2018,
+          "text_unchanged": true,
+          "truncated": false,
+          "chunked": false,
+          "n_chunks": 1,
+          "empty_or_nan_text": false,
+          "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+          "bm25_rank": 2,
+          "bm25_score": 26.95228945366012,
+          "bm25_in_production_top50": true,
+          "dense_rank": 2,
+          "dense_score": 0.5982092076824537,
+          "dense_in_production_top50": true,
+          "rrf_rank": 2,
+          "rrf_score": 0.03225806451612903,
+          "in_top50": true,
+          "medcpt_rank": 5,
+          "medcpt_score": 9.626688957214355,
+          "in_top10": true,
+          "first_loss_label": "NOT LOST"
+        },
+        {
+          "gold_id": 20805556,
+          "pmid": 20805556,
+          "exists_in_index": true,
+          "failure_point": "DATA / PARSING",
+          "raw_text_preview": "nan",
+          "raw_text_length": 3,
+          "indexed_text_preview": "nan",
+          "indexed_text_length": 3,
+          "text_unchanged": true,
+          "truncated": false,
+          "chunked": false,
+          "n_chunks": 1,
+          "empty_or_nan_text": true,
+          "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split. A source value of 'nan' is preserved as the three-character string 'nan'.",
+          "bm25_rank": 32556,
+          "bm25_score": 0.0,
+          "bm25_in_production_top50": false,
+          "dense_rank": 27754,
+          "dense_score": 0.05185515661104774,
+          "dense_in_production_top50": false,
+          "rrf_rank": null,
+          "rrf_score": null,
+          "in_top50": false,
+          "medcpt_rank": null,
+          "medcpt_score": null,
+          "in_top10": false,
+          "first_loss_label": "DATA / PARSING"
+        },
+        {
+          "gold_id": 19724244,
+          "pmid": 19724244,
+          "exists_in_index": true,
+          "failure_point": null,
+          "raw_text_preview": "OBJECTIVES: Suicidal ideation is an uncommon but worrisome symptom than can emerge during antidepressant treatment. We have described earlier the association between treatment-emergent suicidal ideation (TESI) and markers in genes encoding glutamate receptor subunits GRIK2 and GRIA3. The present genome-wide association study was conducted to identify additional genetic markers associated with TESI that may help identify individuals at high risk who may benefit from closer monitoring, alternative treatments, and/or specialty care. METHODS: A clinically representative cohort of outpatients with nonpsychotic major depressive disorder enrolled in the Sequenced Treatment Alternatives to Relieve Depression (STAR*D) trial were treated with citalopram under a standard protocol for up to 14 weeks.\u2026",
+          "raw_text_length": 1812,
+          "indexed_text_preview": "OBJECTIVES: Suicidal ideation is an uncommon but worrisome symptom than can emerge during antidepressant treatment. We have described earlier the association between treatment-emergent suicidal ideation (TESI) and markers in genes encoding glutamate receptor subunits GRIK2 and GRIA3. The present genome-wide association study was conducted to identify additional genetic markers associated with TESI that may help identify individuals at high risk who may benefit from closer monitoring, alternative treatments, and/or specialty care. METHODS: A clinically representative cohort of outpatients with nonpsychotic major depressive disorder enrolled in the Sequenced Treatment Alternatives to Relieve Depression (STAR*D) trial were treated with citalopram under a standard protocol for up to 14 weeks.\u2026",
+          "indexed_text_length": 1812,
+          "text_unchanged": true,
+          "truncated": false,
+          "chunked": false,
+          "n_chunks": 1,
+          "empty_or_nan_text": false,
+          "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+          "bm25_rank": 163,
+          "bm25_score": 12.565024374207596,
+          "bm25_in_production_top50": false,
+          "dense_rank": 21713,
+          "dense_score": 0.06373585381975255,
+          "dense_in_production_top50": false,
+          "rrf_rank": null,
+          "rrf_score": null,
+          "in_top50": false,
+          "medcpt_rank": null,
+          "medcpt_score": null,
+          "in_top10": false,
+          "first_loss_label": "FIRST-STAGE RETRIEVAL / FUSION"
+        },
+        {
+          "gold_id": 12666201,
+          "pmid": 12666201,
+          "exists_in_index": true,
+          "failure_point": null,
+          "raw_text_preview": "Papilins are extracellular matrix proteins that share a particular, common order of types of protein domains. They occur widely, from nematodes to man, and can differ in the number of repeats of a given type of domain. Protein variety is increased by differential splicing of pre-mRNA. We report that Drosophila, which has a compact genome, expresses three splice variants of papilin during embryogenesis in developmentally defined patterns. These isoforms have different numbers of Kunitz and IgC2 domains. The papilin isoforms are expressed in specific cell types and contribute to different extracellular matrices in gastrulation folds, early mesoderm, heart formation, basement membranes, and elaboration of the excorporeal peritrophic membrane that lines the gut. This finding indicates an unexp\u2026",
+          "raw_text_length": 1108,
+          "indexed_text_preview": "Papilins are extracellular matrix proteins that share a particular, common order of types of protein domains. They occur widely, from nematodes to man, and can differ in the number of repeats of a given type of domain. Protein variety is increased by differential splicing of pre-mRNA. We report that Drosophila, which has a compact genome, expresses three splice variants of papilin during embryogenesis in developmentally defined patterns. These isoforms have different numbers of Kunitz and IgC2 domains. The papilin isoforms are expressed in specific cell types and contribute to different extracellular matrices in gastrulation folds, early mesoderm, heart formation, basement membranes, and elaboration of the excorporeal peritrophic membrane that lines the gut. This finding indicates an unexp\u2026",
+          "indexed_text_length": 1108,
+          "text_unchanged": true,
+          "truncated": false,
+          "chunked": false,
+          "n_chunks": 1,
+          "empty_or_nan_text": false,
+          "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+          "bm25_rank": 3,
+          "bm25_score": 24.25128645587319,
+          "bm25_in_production_top50": true,
+          "dense_rank": 5,
+          "dense_score": 0.45271408337635266,
+          "dense_in_production_top50": true,
+          "rrf_rank": 3,
+          "rrf_score": 0.03125763125763126,
+          "in_top50": true,
+          "medcpt_rank": 3,
+          "medcpt_score": 13.70813274383545,
+          "in_top10": true,
+          "first_loss_label": "NOT LOST"
+        },
+        {
+          "gold_id": 15094110,
+          "pmid": 15094110,
+          "exists_in_index": true,
+          "failure_point": null,
+          "raw_text_preview": "The TSR superfamily is a diverse family of extracellular matrix and transmembrane proteins, many of which have functions related to regulating matrix organization, cell-cell interactions and cell guidance. This review samples some of the contemporary literature regarding TSR superfamily members (e.g. F-spondin, UNC-5, ADAMTS, papilin, and TRAP) where specific functions are assigned to the TSR domains. Combining these observations with the published crystal structure of the TSRs of thrombospondin-1 may hold a key to the development of therapeutic agents for fighting parasitic infection and tumor growth.",
+          "raw_text_length": 617,
+          "indexed_text_preview": "The TSR superfamily is a diverse family of extracellular matrix and transmembrane proteins, many of which have functions related to regulating matrix organization, cell-cell interactions and cell guidance. This review samples some of the contemporary literature regarding TSR superfamily members (e.g. F-spondin, UNC-5, ADAMTS, papilin, and TRAP) where specific functions are assigned to the TSR domains. Combining these observations with the published crystal structure of the TSRs of thrombospondin-1 may hold a key to the development of therapeutic agents for fighting parasitic infection and tumor growth.",
+          "indexed_text_length": 617,
+          "text_unchanged": true,
+          "truncated": false,
+          "chunked": false,
+          "n_chunks": 1,
+          "empty_or_nan_text": false,
+          "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+          "bm25_rank": 7,
+          "bm25_score": 18.221222943422717,
+          "bm25_in_production_top50": true,
+          "dense_rank": 338,
+          "dense_score": 0.32577266813011774,
+          "dense_in_production_top50": false,
+          "rrf_rank": 12,
+          "rrf_score": 0.014925373134328358,
+          "in_top50": true,
+          "medcpt_rank": 4,
+          "medcpt_score": 10.000514030456543,
+          "in_top10": true,
+          "first_loss_label": "NOT LOST"
+        },
+        {
+          "gold_id": 11076767,
+          "pmid": 11076767,
+          "exists_in_index": true,
+          "failure_point": null,
+          "raw_text_preview": "Papilin is an extracellular matrix glycoprotein that we have found to be involved in, (1) thin matrix layers during gastrulation, (2) matrix associated with wandering, phagocytic hemocytes, (3) basement membranes and (4) space-filling matrix during Drosophila development. Determination of its cDNA sequence led to the identification of Caenorhabditis and mammalian papilins. A distinctly conserved 'papilin cassette' of domains at the amino-end of papilins is also the carboxyl-end of the ADAMTS subgroup of secreted, matrix-associated metalloproteinases; this cassette contains one thrombospondin type 1 (TSR) domain, a specific cysteine-rich domain and several partial TSR domains. In vitro, papilin non-competitively inhibits procollagen N-proteinase, an ADAMTS metalloproteinase. Inhibiting papi\u2026",
+          "raw_text_length": 1152,
+          "indexed_text_preview": "Papilin is an extracellular matrix glycoprotein that we have found to be involved in, (1) thin matrix layers during gastrulation, (2) matrix associated with wandering, phagocytic hemocytes, (3) basement membranes and (4) space-filling matrix during Drosophila development. Determination of its cDNA sequence led to the identification of Caenorhabditis and mammalian papilins. A distinctly conserved 'papilin cassette' of domains at the amino-end of papilins is also the carboxyl-end of the ADAMTS subgroup of secreted, matrix-associated metalloproteinases; this cassette contains one thrombospondin type 1 (TSR) domain, a specific cysteine-rich domain and several partial TSR domains. In vitro, papilin non-competitively inhibits procollagen N-proteinase, an ADAMTS metalloproteinase. Inhibiting papi\u2026",
+          "indexed_text_length": 1152,
+          "text_unchanged": true,
+          "truncated": false,
+          "chunked": false,
+          "n_chunks": 1,
+          "empty_or_nan_text": false,
+          "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+          "bm25_rank": 1,
+          "bm25_score": 29.435233905303598,
+          "bm25_in_production_top50": true,
+          "dense_rank": 3,
+          "dense_score": 0.5524873201718516,
+          "dense_in_production_top50": true,
+          "rrf_rank": 1,
+          "rrf_score": 0.032266458495966696,
+          "in_top50": true,
+          "medcpt_rank": 2,
+          "medcpt_score": 15.355941772460938,
+          "in_top10": true,
+          "first_loss_label": "NOT LOST"
+        }
+      ],
+      "bm25_top10": [
+        {
+          "rank": 1,
+          "passage_id": 11076767,
+          "score": 29.435233905303598,
+          "preview": "Papilin is an extracellular matrix glycoprotein that we have found to be involved in, (1) thin matrix layers during gastrulation, (2) matrix associated with wan\u2026"
+        },
+        {
+          "rank": 2,
+          "passage_id": 3320045,
+          "score": 26.95228945366012,
+          "preview": "A sulfated glycoprotein was isolated from the culture media of Drosophila Kc cells and named papilin. Affinity purified antibodies against this protein localize\u2026"
+        },
+        {
+          "rank": 3,
+          "passage_id": 12666201,
+          "score": 24.25128645587319,
+          "preview": "Papilins are extracellular matrix proteins that share a particular, common order of types of protein domains. They occur widely, from nematodes to man, and can\u2026"
+        },
+        {
+          "rank": 4,
+          "passage_id": 7515725,
+          "score": 19.778166995948567,
+          "preview": "Two contrasting substrates, Drosophila laminin and human vitronectin, caused determined primary Drosophila embryo cells to follow alternate intermediate differe\u2026"
+        },
+        {
+          "rank": 5,
+          "passage_id": 19297413,
+          "score": 19.4351698822328,
+          "preview": "The gonad arms of C. elegans hermaphrodites acquire invariant shapes by guided migrations of distal tip cells (DTCs), which occur in three phases that differ in\u2026"
+        },
+        {
+          "rank": 6,
+          "passage_id": 21784067,
+          "score": 18.944976178059935,
+          "preview": "Cell invasion through basement membrane is a specialized cellular behavior critical for many developmental processes and leukocyte trafficking. Invasive cellula\u2026"
+        },
+        {
+          "rank": 7,
+          "passage_id": 15094110,
+          "score": 18.221222943422717,
+          "preview": "The TSR superfamily is a diverse family of extracellular matrix and transmembrane proteins, many of which have functions related to regulating matrix organizati\u2026"
+        },
+        {
+          "rank": 8,
+          "passage_id": 15094122,
+          "score": 17.592222788931007,
+          "preview": "Papilins are homologous, secreted extracellular matrix proteins which share a common order of protein domains. They occur widely, from nematodes to man, and can\u2026"
+        },
+        {
+          "rank": 9,
+          "passage_id": 11979056,
+          "score": 16.74434189851909,
+          "preview": "Leptin, primarily secreted by adipocytes, is a peripheral hormonal signal involved in the hypothalamic integration of energy homeostasis. We report that plasma\u2026"
+        },
+        {
+          "rank": 10,
+          "passage_id": 8662546,
+          "score": 16.374347474306933,
+          "preview": "Proper regulation of chondrocyte differentiation is necessary for the morphogenesis of skeletal elements, yet little is known about the molecular regulation of\u2026"
+        }
+      ],
+      "dense_top10": [
+        {
+          "rank": 1,
+          "passage_id": 15094122,
+          "score": 0.6181926160747795,
+          "preview": "Papilins are homologous, secreted extracellular matrix proteins which share a common order of protein domains. They occur widely, from nematodes to man, and can\u2026"
+        },
+        {
+          "rank": 2,
+          "passage_id": 3320045,
+          "score": 0.5982092076824537,
+          "preview": "A sulfated glycoprotein was isolated from the culture media of Drosophila Kc cells and named papilin. Affinity purified antibodies against this protein localize\u2026"
+        },
+        {
+          "rank": 3,
+          "passage_id": 11076767,
+          "score": 0.5524873201718516,
+          "preview": "Papilin is an extracellular matrix glycoprotein that we have found to be involved in, (1) thin matrix layers during gastrulation, (2) matrix associated with wan\u2026"
+        },
+        {
+          "rank": 4,
+          "passage_id": 34489718,
+          "score": 0.4759328048927297,
+          "preview": "Tear lipocalin is a primate protein that was recognized as a lipocalin from the homology of the primary sequence. The protein is most concentrated in tears and\u2026"
+        },
+        {
+          "rank": 5,
+          "passage_id": 12666201,
+          "score": 0.45271408337635266,
+          "preview": "Papilins are extracellular matrix proteins that share a particular, common order of types of protein domains. They occur widely, from nematodes to man, and can\u2026"
+        },
+        {
+          "rank": 6,
+          "passage_id": 1334264,
+          "score": 0.4517636167064881,
+          "preview": "In eukaryotic cells, protein secretion provides a complex organizational problem. Secretory proteins are first transported, in an unfolded state, across the mem\u2026"
+        },
+        {
+          "rank": 7,
+          "passage_id": 16440601,
+          "score": 0.45121482652890027,
+          "preview": "Recent characterization of the whole saliva proteome led to contradictory pictures concerning the complexity of its proteome. In this work, 110 proteins were an\u2026"
+        },
+        {
+          "rank": 8,
+          "passage_id": 6853716,
+          "score": 0.44286432374644746,
+          "preview": "We have investigated the molecular basis of hypoxanthine-guanine phosphoribosyltransferase (HPRT) deficiency in a patient who presented with the Lesch-Nyhan syn\u2026"
+        },
+        {
+          "rank": 9,
+          "passage_id": 18393798,
+          "score": 0.4422767285187953,
+          "preview": "In this review, we discuss the biology of gamma-secretase, an enigmatic enzyme complex that is responsible for the generation of the amyloid-beta peptide that c\u2026"
+        },
+        {
+          "rank": 10,
+          "passage_id": 11419941,
+          "score": 0.43724008724881386,
+          "preview": "Multiple extracellular factors are hypothesized to promote the differentiation of unstimulated and/or stimulated secretory pathways in exocrine secretory cells,\u2026"
+        }
+      ],
+      "rrf_top20": [
+        {
+          "rank": 1,
+          "passage_id": 11076767,
+          "score": 0.032266458495966696,
+          "preview": "Papilin is an extracellular matrix glycoprotein that we have found to be involved in, (1) thin matrix layers during gastrulation, (2) matrix associated with wan\u2026"
+        },
+        {
+          "rank": 2,
+          "passage_id": 3320045,
+          "score": 0.03225806451612903,
+          "preview": "A sulfated glycoprotein was isolated from the culture media of Drosophila Kc cells and named papilin. Affinity purified antibodies against this protein localize\u2026"
+        },
+        {
+          "rank": 3,
+          "passage_id": 12666201,
+          "score": 0.03125763125763126,
+          "preview": "Papilins are extracellular matrix proteins that share a particular, common order of types of protein domains. They occur widely, from nematodes to man, and can\u2026"
+        },
+        {
+          "rank": 4,
+          "passage_id": 15094122,
+          "score": 0.031099324975891997,
+          "preview": "Papilins are homologous, secreted extracellular matrix proteins which share a common order of protein domains. They occur widely, from nematodes to man, and can\u2026"
+        },
+        {
+          "rank": 5,
+          "passage_id": 20056606,
+          "score": 0.025849212924606464,
+          "preview": "To invade its definitive host, the mosquito, the malaria parasite must cross the midgut peritrophic matrix that is composed of chitin cross-linked by chitin-bin\u2026"
+        },
+        {
+          "rank": 6,
+          "passage_id": 18370023,
+          "score": 0.020634920634920638,
+          "preview": "This chapter describes the process of production, purification, separation, and mass spectrometry identification of soluble lysosomal proteins. The rationale fo\u2026"
+        },
+        {
+          "rank": 7,
+          "passage_id": 7515725,
+          "score": 0.015625,
+          "preview": "Two contrasting substrates, Drosophila laminin and human vitronectin, caused determined primary Drosophila embryo cells to follow alternate intermediate differe\u2026"
+        },
+        {
+          "rank": 8,
+          "passage_id": 34489718,
+          "score": 0.015625,
+          "preview": "Tear lipocalin is a primate protein that was recognized as a lipocalin from the homology of the primary sequence. The protein is most concentrated in tears and\u2026"
+        },
+        {
+          "rank": 9,
+          "passage_id": 19297413,
+          "score": 0.015384615384615385,
+          "preview": "The gonad arms of C. elegans hermaphrodites acquire invariant shapes by guided migrations of distal tip cells (DTCs), which occur in three phases that differ in\u2026"
+        },
+        {
+          "rank": 10,
+          "passage_id": 21784067,
+          "score": 0.015151515151515152,
+          "preview": "Cell invasion through basement membrane is a specialized cellular behavior critical for many developmental processes and leukocyte trafficking. Invasive cellula\u2026"
+        },
+        {
+          "rank": 11,
+          "passage_id": 1334264,
+          "score": 0.015151515151515152,
+          "preview": "In eukaryotic cells, protein secretion provides a complex organizational problem. Secretory proteins are first transported, in an unfolded state, across the mem\u2026"
+        },
+        {
+          "rank": 12,
+          "passage_id": 15094110,
+          "score": 0.014925373134328358,
+          "preview": "The TSR superfamily is a diverse family of extracellular matrix and transmembrane proteins, many of which have functions related to regulating matrix organizati\u2026"
+        },
+        {
+          "rank": 13,
+          "passage_id": 16440601,
+          "score": 0.014925373134328358,
+          "preview": "Recent characterization of the whole saliva proteome led to contradictory pictures concerning the complexity of its proteome. In this work, 110 proteins were an\u2026"
+        },
+        {
+          "rank": 14,
+          "passage_id": 6853716,
+          "score": 0.014705882352941176,
+          "preview": "We have investigated the molecular basis of hypoxanthine-guanine phosphoribosyltransferase (HPRT) deficiency in a patient who presented with the Lesch-Nyhan syn\u2026"
+        },
+        {
+          "rank": 15,
+          "passage_id": 11979056,
+          "score": 0.014492753623188406,
+          "preview": "Leptin, primarily secreted by adipocytes, is a peripheral hormonal signal involved in the hypothalamic integration of energy homeostasis. We report that plasma\u2026"
+        },
+        {
+          "rank": 16,
+          "passage_id": 18393798,
+          "score": 0.014492753623188406,
+          "preview": "In this review, we discuss the biology of gamma-secretase, an enigmatic enzyme complex that is responsible for the generation of the amyloid-beta peptide that c\u2026"
+        },
+        {
+          "rank": 17,
+          "passage_id": 8662546,
+          "score": 0.014285714285714285,
+          "preview": "Proper regulation of chondrocyte differentiation is necessary for the morphogenesis of skeletal elements, yet little is known about the molecular regulation of\u2026"
+        },
+        {
+          "rank": 18,
+          "passage_id": 11419941,
+          "score": 0.014285714285714285,
+          "preview": "Multiple extracellular factors are hypothesized to promote the differentiation of unstimulated and/or stimulated secretory pathways in exocrine secretory cells,\u2026"
+        },
+        {
+          "rank": 19,
+          "passage_id": 14570063,
+          "score": 0.014084507042253521,
+          "preview": "Recent data support the view that transcription factors - in particular, homeoproteins - can be transferred from cell to cell and have direct non-cell-autonomou\u2026"
+        },
+        {
+          "rank": 20,
+          "passage_id": 24184233,
+          "score": 0.013888888888888888,
+          "preview": "Protein A from Staphylococcus aureus plays one key role as an immobilized affinity ligand for the purification of antibodies. A simple method for its extracellu\u2026"
+        }
+      ],
+      "medcpt_top10": [
+        {
+          "rank": 1,
+          "passage_id": 15094122,
+          "score": 15.855929374694824,
+          "preview": "Papilins are homologous, secreted extracellular matrix proteins which share a common order of protein domains. They occur widely, from nematodes to man, and can\u2026"
+        },
+        {
+          "rank": 2,
+          "passage_id": 11076767,
+          "score": 15.355941772460938,
+          "preview": "Papilin is an extracellular matrix glycoprotein that we have found to be involved in, (1) thin matrix layers during gastrulation, (2) matrix associated with wan\u2026"
+        },
+        {
+          "rank": 3,
+          "passage_id": 12666201,
+          "score": 13.70813274383545,
+          "preview": "Papilins are extracellular matrix proteins that share a particular, common order of types of protein domains. They occur widely, from nematodes to man, and can\u2026"
+        },
+        {
+          "rank": 4,
+          "passage_id": 15094110,
+          "score": 10.000514030456543,
+          "preview": "The TSR superfamily is a diverse family of extracellular matrix and transmembrane proteins, many of which have functions related to regulating matrix organizati\u2026"
+        },
+        {
+          "rank": 5,
+          "passage_id": 3320045,
+          "score": 9.626688957214355,
+          "preview": "A sulfated glycoprotein was isolated from the culture media of Drosophila Kc cells and named papilin. Affinity purified antibodies against this protein localize\u2026"
+        },
+        {
+          "rank": 6,
+          "passage_id": 7515725,
+          "score": 9.626675605773926,
+          "preview": "Two contrasting substrates, Drosophila laminin and human vitronectin, caused determined primary Drosophila embryo cells to follow alternate intermediate differe\u2026"
+        },
+        {
+          "rank": 7,
+          "passage_id": 21784067,
+          "score": 7.988259792327881,
+          "preview": "Cell invasion through basement membrane is a specialized cellular behavior critical for many developmental processes and leukocyte trafficking. Invasive cellula\u2026"
+        },
+        {
+          "rank": 8,
+          "passage_id": 19297413,
+          "score": 6.499888896942139,
+          "preview": "The gonad arms of C. elegans hermaphrodites acquire invariant shapes by guided migrations of distal tip cells (DTCs), which occur in three phases that differ in\u2026"
+        },
+        {
+          "rank": 9,
+          "passage_id": 1334264,
+          "score": -4.855637550354004,
+          "preview": "In eukaryotic cells, protein secretion provides a complex organizational problem. Secretory proteins are first transported, in an unfolded state, across the mem\u2026"
+        },
+        {
+          "rank": 10,
+          "passage_id": 18370023,
+          "score": -7.670407772064209,
+          "preview": "This chapter describes the process of production, purification, separation, and mass spectrometry identification of soluble lysosomal proteins. The rationale fo\u2026"
+        }
+      ],
+      "documents_ranked_above_missed_gold": [],
+      "rerank_ms": 3094.8567500017816,
+      "compact_trace": {
+        "question": "Is the protein Papilin secreted?",
+        "category": "Fact / definition / biological relationship",
+        "raw_gold_ids": [
+          21784067,
+          19297413,
+          15094122,
+          7515725,
+          3320045,
+          20805556,
+          19724244,
+          12666201,
+          15094110,
+          11076767
+        ],
+        "preprocessing": "unchanged full passages; no chunking",
+        "best_bm25_rank": 1,
+        "best_dense_rank": 1,
+        "best_rrf_rank": 1,
+        "in_top50": true,
+        "best_medcpt_rank": 1,
+        "in_top10": true,
+        "first_loss_label": "DATA / PARSING",
+        "recall_at_10": 0.8,
+        "candidate_recall_at_50": 0.8
+      },
+      "generation_invoked": false
+    },
+    {
+      "query_id": 5,
+      "question": "Does metformin interfere thyroxine absorption?",
+      "category": "Treatment / intervention",
+      "gold_ids": [
+        26191653
+      ],
+      "inspect_k": 40221,
+      "pool_k": 50,
+      "final_k": 10,
+      "dense_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "rrf_k": 60,
+      "reranker_model": "ncbi/MedCPT-Cross-Encoder",
+      "gold_traces": [
+        {
+          "gold_id": 26191653,
+          "pmid": 26191653,
+          "exists_in_index": true,
+          "failure_point": "DATA / PARSING",
+          "raw_text_preview": "nan",
+          "raw_text_length": 3,
+          "indexed_text_preview": "nan",
+          "indexed_text_length": 3,
+          "text_unchanged": true,
+          "truncated": false,
+          "chunked": false,
+          "n_chunks": 1,
+          "empty_or_nan_text": true,
+          "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split. A source value of 'nan' is preserved as the three-character string 'nan'.",
+          "bm25_rank": 31119,
+          "bm25_score": 0.0,
+          "bm25_in_production_top50": false,
+          "dense_rank": 29314,
+          "dense_score": 0.060771142556200974,
+          "dense_in_production_top50": false,
+          "rrf_rank": null,
+          "rrf_score": null,
+          "in_top50": false,
+          "medcpt_rank": null,
+          "medcpt_score": null,
+          "in_top10": false,
+          "first_loss_label": "DATA / PARSING"
+        }
+      ],
+      "bm25_top10": [
+        {
+          "rank": 1,
+          "passage_id": 17725434,
+          "score": 23.354993197490266,
+          "preview": "OBJECTIVE: Medications may sometimes interfere with the intestinal absorption of levothyroxine, primarily by forming an insoluble complex with the thyroid hormo\u2026"
+        },
+        {
+          "rank": 2,
+          "passage_id": 19942153,
+          "score": 20.453109711718625,
+          "preview": "Food, dietary fibre and espresso coffee interfere with the absorption of levothyroxine. Malabsorptive disorders reported to affect the absorption of levothyroxi\u2026"
+        },
+        {
+          "rank": 3,
+          "passage_id": 17446037,
+          "score": 19.84190439053865,
+          "preview": "INTRODUCTION: Thyroxine supplementation of patients with hypothyroidism is usually simple. A few patients, however, continue to present elevated TSH levels desp\u2026"
+        },
+        {
+          "rank": 4,
+          "passage_id": 12796075,
+          "score": 19.29117836624946,
+          "preview": "To our knowledge, raloxifene hydrochloride, a selective estrogen receptor modulator, has never been reported to interfere with absorption of levothyroxine. We d\u2026"
+        },
+        {
+          "rank": 5,
+          "passage_id": 1728914,
+          "score": 16.87009064025849,
+          "preview": "A patient with hypothyroidism who was euthyroid on a fixed-dosage, long-term maintenance regimen of levothyroxine sodium developed persistently elevated serum t\u2026"
+        },
+        {
+          "rank": 6,
+          "passage_id": 14751040,
+          "score": 14.69812241077703,
+          "preview": "The comparative bioavailability of oral doses of levothyroxine (LT(4)) formulation taken as tablets, after being crushed, or chewed before swallowing has not be\u2026"
+        },
+        {
+          "rank": 7,
+          "passage_id": 19733399,
+          "score": 14.133540909546644,
+          "preview": "To analyse the influence of thyroid status on the effect of aluminium (Al) upon intestinal calcium (Ca) absorption, adult male Wistar rats with experimentally a\u2026"
+        },
+        {
+          "rank": 8,
+          "passage_id": 30360725,
+          "score": 13.848758015610795,
+          "preview": "BACKGROUND: Nowadays, ionizing radiation is used for several applications in medicine, industry, agriculture, and nuclear power generation. Besides the benefici\u2026"
+        },
+        {
+          "rank": 9,
+          "passage_id": 15117902,
+          "score": 13.472871426367576,
+          "preview": "BACKGROUND: Our aim was to investigate the effect of pre-treatment with metformin in women with polycystic ovary syndrome (PCOS) scheduled for IVF stimulation.\u2026"
+        },
+        {
+          "rank": 10,
+          "passage_id": 18827867,
+          "score": 13.224473805692938,
+          "preview": "Vildagliptin is a potent and selective inhibitor of dipeptidyl peptidase-IV (DPP-4), orally active, that improves glycemic control in patients with type 2 diabe\u2026"
+        }
+      ],
+      "dense_top10": [
+        {
+          "rank": 1,
+          "passage_id": 17725434,
+          "score": 0.5161402916474354,
+          "preview": "OBJECTIVE: Medications may sometimes interfere with the intestinal absorption of levothyroxine, primarily by forming an insoluble complex with the thyroid hormo\u2026"
+        },
+        {
+          "rank": 2,
+          "passage_id": 14751040,
+          "score": 0.5061372930334661,
+          "preview": "The comparative bioavailability of oral doses of levothyroxine (LT(4)) formulation taken as tablets, after being crushed, or chewed before swallowing has not be\u2026"
+        },
+        {
+          "rank": 3,
+          "passage_id": 10838651,
+          "score": 0.5009063463964297,
+          "preview": "CONTEXT: The effect of calcium carbonate on the absorption of levothyroxine has not been studied systematically. Such a potential drug interaction merits invest\u2026"
+        },
+        {
+          "rank": 4,
+          "passage_id": 12079930,
+          "score": 0.49600396286447757,
+          "preview": "The outcome of coronary bypass surgery was analyzed in 25 patients who were on thyroxin replacement therapy for chronic thyroid disorders at the time of operati\u2026"
+        },
+        {
+          "rank": 5,
+          "passage_id": 17446037,
+          "score": 0.49301402167178987,
+          "preview": "INTRODUCTION: Thyroxine supplementation of patients with hypothyroidism is usually simple. A few patients, however, continue to present elevated TSH levels desp\u2026"
+        },
+        {
+          "rank": 6,
+          "passage_id": 23253948,
+          "score": 0.48739021946565153,
+          "preview": "OBJECTIVE: This open-label study investigated potential drug-drug interactions between empagliflozin and metformin. METHODS: 16 healthy men received treatment A\u2026"
+        },
+        {
+          "rank": 7,
+          "passage_id": 2885829,
+          "score": 0.48155673851872494,
+          "preview": "Known since 1967 and usually familial, the syndrome of tissue resistance to thyroid hormones may take one of two different forms, depending on the receptors inv\u2026"
+        },
+        {
+          "rank": 8,
+          "passage_id": 8333798,
+          "score": 0.47304279405097976,
+          "preview": "In heart failure, cardiac output is insufficient to meet the needs of the body for oxygen delivery. Available data suggest that alterations in thyroid hormone m\u2026"
+        },
+        {
+          "rank": 9,
+          "passage_id": 12796075,
+          "score": 0.4605700578536698,
+          "preview": "To our knowledge, raloxifene hydrochloride, a selective estrogen receptor modulator, has never been reported to interfere with absorption of levothyroxine. We d\u2026"
+        },
+        {
+          "rank": 10,
+          "passage_id": 16042328,
+          "score": 0.45927850099930495,
+          "preview": "Appropriate methimazole dosing for initial treatment of childhood Graves' disease is uncertain. A retrospective chart review was performed on 5 to 17 year-old c\u2026"
+        }
+      ],
+      "rrf_top20": [
+        {
+          "rank": 1,
+          "passage_id": 17725434,
+          "score": 0.03278688524590164,
+          "preview": "OBJECTIVE: Medications may sometimes interfere with the intestinal absorption of levothyroxine, primarily by forming an insoluble complex with the thyroid hormo\u2026"
+        },
+        {
+          "rank": 2,
+          "passage_id": 14751040,
+          "score": 0.03128054740957967,
+          "preview": "The comparative bioavailability of oral doses of levothyroxine (LT(4)) formulation taken as tablets, after being crushed, or chewed before swallowing has not be\u2026"
+        },
+        {
+          "rank": 3,
+          "passage_id": 17446037,
+          "score": 0.03125763125763126,
+          "preview": "INTRODUCTION: Thyroxine supplementation of patients with hypothyroidism is usually simple. A few patients, however, continue to present elevated TSH levels desp\u2026"
+        },
+        {
+          "rank": 4,
+          "passage_id": 19942153,
+          "score": 0.03021353930031804,
+          "preview": "Food, dietary fibre and espresso coffee interfere with the absorption of levothyroxine. Malabsorptive disorders reported to affect the absorption of levothyroxi\u2026"
+        },
+        {
+          "rank": 5,
+          "passage_id": 12796075,
+          "score": 0.030117753623188408,
+          "preview": "To our knowledge, raloxifene hydrochloride, a selective estrogen receptor modulator, has never been reported to interfere with absorption of levothyroxine. We d\u2026"
+        },
+        {
+          "rank": 6,
+          "passage_id": 23253948,
+          "score": 0.02664576802507837,
+          "preview": "OBJECTIVE: This open-label study investigated potential drug-drug interactions between empagliflozin and metformin. METHODS: 16 healthy men received treatment A\u2026"
+        },
+        {
+          "rank": 7,
+          "passage_id": 19733399,
+          "score": 0.025451688923802042,
+          "preview": "To analyse the influence of thyroid status on the effect of aluminium (Al) upon intestinal calcium (Ca) absorption, adult male Wistar rats with experimentally a\u2026"
+        },
+        {
+          "rank": 8,
+          "passage_id": 1728914,
+          "score": 0.025384615384615387,
+          "preview": "A patient with hypothyroidism who was euthyroid on a fixed-dosage, long-term maintenance regimen of levothyroxine sodium developed persistently elevated serum t\u2026"
+        },
+        {
+          "rank": 9,
+          "passage_id": 12643405,
+          "score": 0.02419816723940435,
+          "preview": "BACKGROUND: The impact of thyroid disease on patients undergoing coronary artery bypass grafting has been reported in only small series of selected patients. ME\u2026"
+        },
+        {
+          "rank": 10,
+          "passage_id": 27939359,
+          "score": 0.020253682487725043,
+          "preview": "The most widely prescribed oral anti-diabetic agent today in the world today is a member of the biguanide class of drugs called metformin. Apart from its use in\u2026"
+        },
+        {
+          "rank": 11,
+          "passage_id": 10838651,
+          "score": 0.015873015873015872,
+          "preview": "CONTEXT: The effect of calcium carbonate on the absorption of levothyroxine has not been studied systematically. Such a potential drug interaction merits invest\u2026"
+        },
+        {
+          "rank": 12,
+          "passage_id": 12079930,
+          "score": 0.015625,
+          "preview": "The outcome of coronary bypass surgery was analyzed in 25 patients who were on thyroxin replacement therapy for chronic thyroid disorders at the time of operati\u2026"
+        },
+        {
+          "rank": 13,
+          "passage_id": 2885829,
+          "score": 0.014925373134328358,
+          "preview": "Known since 1967 and usually familial, the syndrome of tissue resistance to thyroid hormones may take one of two different forms, depending on the receptors inv\u2026"
+        },
+        {
+          "rank": 14,
+          "passage_id": 30360725,
+          "score": 0.014705882352941176,
+          "preview": "BACKGROUND: Nowadays, ionizing radiation is used for several applications in medicine, industry, agriculture, and nuclear power generation. Besides the benefici\u2026"
+        },
+        {
+          "rank": 15,
+          "passage_id": 8333798,
+          "score": 0.014705882352941176,
+          "preview": "In heart failure, cardiac output is insufficient to meet the needs of the body for oxygen delivery. Available data suggest that alterations in thyroid hormone m\u2026"
+        },
+        {
+          "rank": 16,
+          "passage_id": 15117902,
+          "score": 0.014492753623188406,
+          "preview": "BACKGROUND: Our aim was to investigate the effect of pre-treatment with metformin in women with polycystic ovary syndrome (PCOS) scheduled for IVF stimulation.\u2026"
+        },
+        {
+          "rank": 17,
+          "passage_id": 18827867,
+          "score": 0.014285714285714285,
+          "preview": "Vildagliptin is a potent and selective inhibitor of dipeptidyl peptidase-IV (DPP-4), orally active, that improves glycemic control in patients with type 2 diabe\u2026"
+        },
+        {
+          "rank": 18,
+          "passage_id": 16042328,
+          "score": 0.014285714285714285,
+          "preview": "Appropriate methimazole dosing for initial treatment of childhood Graves' disease is uncertain. A retrospective chart review was performed on 5 to 17 year-old c\u2026"
+        },
+        {
+          "rank": 19,
+          "passage_id": 21435090,
+          "score": 0.014084507042253521,
+          "preview": "BACKGROUND: Helicobacter pylori infection is a most frequent cause of chronic gastritis. H. pylori may decrease absorption of oral thyroxine by decreasing gastr\u2026"
+        },
+        {
+          "rank": 20,
+          "passage_id": 22325091,
+          "score": 0.013888888888888888,
+          "preview": "Metformin appears to be involved in altering energy expenditure and thermogenesis, and could affect hypothalamic feeding circuits. However, it is not clear whet\u2026"
+        }
+      ],
+      "medcpt_top10": [
+        {
+          "rank": 1,
+          "passage_id": 17446037,
+          "score": 0.4495815634727478,
+          "preview": "INTRODUCTION: Thyroxine supplementation of patients with hypothyroidism is usually simple. A few patients, however, continue to present elevated TSH levels desp\u2026"
+        },
+        {
+          "rank": 2,
+          "passage_id": 17725434,
+          "score": -0.3271970748901367,
+          "preview": "OBJECTIVE: Medications may sometimes interfere with the intestinal absorption of levothyroxine, primarily by forming an insoluble complex with the thyroid hormo\u2026"
+        },
+        {
+          "rank": 3,
+          "passage_id": 19942153,
+          "score": -0.7089878916740417,
+          "preview": "Food, dietary fibre and espresso coffee interfere with the absorption of levothyroxine. Malabsorptive disorders reported to affect the absorption of levothyroxi\u2026"
+        },
+        {
+          "rank": 4,
+          "passage_id": 12796075,
+          "score": -4.3418145179748535,
+          "preview": "To our knowledge, raloxifene hydrochloride, a selective estrogen receptor modulator, has never been reported to interfere with absorption of levothyroxine. We d\u2026"
+        },
+        {
+          "rank": 5,
+          "passage_id": 10838651,
+          "score": -5.66349458694458,
+          "preview": "CONTEXT: The effect of calcium carbonate on the absorption of levothyroxine has not been studied systematically. Such a potential drug interaction merits invest\u2026"
+        },
+        {
+          "rank": 6,
+          "passage_id": 23253948,
+          "score": -9.032621383666992,
+          "preview": "OBJECTIVE: This open-label study investigated potential drug-drug interactions between empagliflozin and metformin. METHODS: 16 healthy men received treatment A\u2026"
+        },
+        {
+          "rank": 7,
+          "passage_id": 1728914,
+          "score": -9.632387161254883,
+          "preview": "A patient with hypothyroidism who was euthyroid on a fixed-dosage, long-term maintenance regimen of levothyroxine sodium developed persistently elevated serum t\u2026"
+        },
+        {
+          "rank": 8,
+          "passage_id": 21633823,
+          "score": -9.65018081665039,
+          "preview": "BACKGROUND: Roux-en-Y gastric bypass (RYGB) modifies the anatomical structure of the upper intestine tract, reduces gastric acid secretion, and may impair LT4 a\u2026"
+        },
+        {
+          "rank": 9,
+          "passage_id": 14751040,
+          "score": -10.283791542053223,
+          "preview": "The comparative bioavailability of oral doses of levothyroxine (LT(4)) formulation taken as tablets, after being crushed, or chewed before swallowing has not be\u2026"
+        },
+        {
+          "rank": 10,
+          "passage_id": 17039422,
+          "score": -11.898065567016602,
+          "preview": "AIMS: Effects of the long acting GLP-1 analogue--liraglutide in subjects with type 2 diabetes. METHODS: 144 type 2 diabetic subjects on metformin treatment (100\u2026"
+        }
+      ],
+      "documents_ranked_above_missed_gold": [],
+      "rerank_ms": 3402.4322500044946,
+      "compact_trace": {
+        "question": "Does metformin interfere thyroxine absorption?",
+        "category": "Treatment / intervention",
+        "raw_gold_ids": [
+          26191653
+        ],
+        "preprocessing": "unchanged full passages; no chunking",
+        "best_bm25_rank": 31119,
+        "best_dense_rank": 29314,
+        "best_rrf_rank": null,
+        "in_top50": false,
+        "best_medcpt_rank": null,
+        "in_top10": false,
+        "first_loss_label": "DATA / PARSING",
+        "recall_at_10": 0.0,
+        "candidate_recall_at_50": 0.0
+      },
+      "generation_invoked": false
+    }
+  ]
+}

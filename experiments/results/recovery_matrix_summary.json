@@ -1,0 +1,52 @@
+{
+  "n_hybrid50_failures": 445,
+  "counts": {
+    "BM25": 38,
+    "MiniLM Dense": 22,
+    "PubMedBERT Dense": 9,
+    "Controlled lexical variant": 0,
+    "Deterministic expansion": 0,
+    "Decomposition subquery": 0,
+    "never_recovered": 376
+  },
+  "notes": [
+    "hit/miss is at probe_k=100 for each mechanism.",
+    "earliest_recovery uses a fixed mechanism order and is not a production ranking."
+  ],
+  "biomedical_dense_recovery": {
+    "denominator_definition": "Gold IDs in this set whose MiniLM Dense rank is None at probe_k (absent from MiniLM Dense@100).",
+    "numerator_definition": "Subset of the denominator whose PubMedBERT Dense rank is not None at probe_k.",
+    "minilm_dense_misses": 422,
+    "newly_recovered_by_pubmedbert": 21,
+    "still_missed_by_pubmedbert": 401,
+    "lost_vs_minilm": 9,
+    "biomedical_dense_recovery_rate": 0.04976303317535545
+  },
+  "lexical_recovery": {
+    "n_hybrid50_misses_already_in_original_bm25_also_hit_by_transform": 38,
+    "n_bm25_misses_newly_recovered_by_transform": 0,
+    "n_both_miss_recovered_by_transform": 0,
+    "by_transformation_for_new_bm25_recoveries": {},
+    "fraction_of_hybrid50_misses_newly_recovered": 0.0,
+    "note": "A transform hit on an ID already in original BM25@100 is not a new recovery. n_bm25_misses_newly_recovered_by_transform is the evidence-backed count."
+  },
+  "expansion_recovery": {
+    "n_hybrid50_misses_in_any_expansion_search": 3,
+    "n_both_miss_recovered_by_expansion": 0,
+    "n_queries_with_equal_weight_displacement": 10,
+    "kept_experimental": true,
+    "not_production_default": true
+  },
+  "decomposition_recovery": {
+    "n_hybrid50_misses_recovered_by_subquery": 0,
+    "kept_off": true
+  },
+  "dense_recall_on_hybrid50_misses": {
+    "pubmedbert_hybrid_recall_at_50": 0.05393258426966292,
+    "pubmedbert_hybrid_recall_at_100": 0.10337078651685393
+  },
+  "pubmedbert_hybrid_on_minilm_hybrid50_misses": {
+    "n_minilm_hybrid50_misses_in_pubmedbert_hybrid50": 24,
+    "n_minilm_hybrid50_misses_in_pubmedbert_hybrid100": 46
+  }
+}

@@ -1,0 +1,663 @@
+{
+  "query_id": 2,
+  "question": "Is the protein Papilin secreted?",
+  "category": "Fact / definition / biological relationship",
+  "gold_ids": [
+    21784067,
+    19297413,
+    15094122,
+    7515725,
+    3320045,
+    20805556,
+    19724244,
+    12666201,
+    15094110,
+    11076767
+  ],
+  "inspect_k": 40221,
+  "pool_k": 50,
+  "final_k": 10,
+  "dense_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "rrf_k": 60,
+  "reranker_model": "ncbi/MedCPT-Cross-Encoder",
+  "gold_traces": [
+    {
+      "gold_id": 21784067,
+      "pmid": 21784067,
+      "exists_in_index": true,
+      "failure_point": null,
+      "raw_text_preview": "Cell invasion through basement membrane is a specialized cellular behavior critical for many developmental processes and leukocyte trafficking. Invasive cellular behavior is also inappropriately co-opted during cancer progression. Acquisition of an invasive phenotype is accompanied by changes in gene expression that are thought to coordinate the steps of invasion. The transcription factors responsible for these changes in gene expression, however, are largely unknown. C. elegans anchor cell (AC) invasion is a genetically tractable in vivo model of invasion through basement membrane. AC invasion requires the conserved transcription factor FOS-1A, but other transcription factors are thought to act in parallel to FOS-1A to control invasion. Here we identify the transcription factor HLH-2, the\u2026",
+      "raw_text_length": 1707,
+      "indexed_text_preview": "Cell invasion through basement membrane is a specialized cellular behavior critical for many developmental processes and leukocyte trafficking. Invasive cellular behavior is also inappropriately co-opted during cancer progression. Acquisition of an invasive phenotype is accompanied by changes in gene expression that are thought to coordinate the steps of invasion. The transcription factors responsible for these changes in gene expression, however, are largely unknown. C. elegans anchor cell (AC) invasion is a genetically tractable in vivo model of invasion through basement membrane. AC invasion requires the conserved transcription factor FOS-1A, but other transcription factors are thought to act in parallel to FOS-1A to control invasion. Here we identify the transcription factor HLH-2, the\u2026",
+      "indexed_text_length": 1707,
+      "text_unchanged": true,
+      "truncated": false,
+      "chunked": false,
+      "n_chunks": 1,
+      "empty_or_nan_text": false,
+      "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+      "bm25_rank": 6,
+      "bm25_score": 18.944976178059935,
+      "bm25_in_production_top50": true,
+      "dense_rank": 12107,
+      "dense_score": 0.14521636395288962,
+      "dense_in_production_top50": false,
+      "rrf_rank": 10,
+      "rrf_score": 0.015151515151515152,
+      "in_top50": true,
+      "medcpt_rank": 7,
+      "medcpt_score": 7.988259792327881,
+      "in_top10": true,
+      "first_loss_label": "NOT LOST",
+      "stage_code": "NOT_LOST"
+    },
+    {
+      "gold_id": 19297413,
+      "pmid": 19297413,
+      "exists_in_index": true,
+      "failure_point": null,
+      "raw_text_preview": "The gonad arms of C. elegans hermaphrodites acquire invariant shapes by guided migrations of distal tip cells (DTCs), which occur in three phases that differ in the direction and basement membrane substrata used for movement. We found that mig-6 encodes long (MIG-6L) and short (MIG-6S) isoforms of the extracellular matrix protein papilin, each required for distinct aspects of DTC migration. Both MIG-6 isoforms have a predicted N-terminal papilin cassette, lagrin repeats and C-terminal Kunitz-type serine proteinase inhibitory domains. We show that mutations affecting MIG-6L specifically and cell-autonomously decrease the rate of post-embryonic DTC migration, mimicking a post-embryonic collagen IV deficit. We also show that MIG-6S has two separable functions - one in embryogenesis and one in\u2026",
+      "raw_text_length": 1188,
+      "indexed_text_preview": "The gonad arms of C. elegans hermaphrodites acquire invariant shapes by guided migrations of distal tip cells (DTCs), which occur in three phases that differ in the direction and basement membrane substrata used for movement. We found that mig-6 encodes long (MIG-6L) and short (MIG-6S) isoforms of the extracellular matrix protein papilin, each required for distinct aspects of DTC migration. Both MIG-6 isoforms have a predicted N-terminal papilin cassette, lagrin repeats and C-terminal Kunitz-type serine proteinase inhibitory domains. We show that mutations affecting MIG-6L specifically and cell-autonomously decrease the rate of post-embryonic DTC migration, mimicking a post-embryonic collagen IV deficit. We also show that MIG-6S has two separable functions - one in embryogenesis and one in\u2026",
+      "indexed_text_length": 1188,
+      "text_unchanged": true,
+      "truncated": false,
+      "chunked": false,
+      "n_chunks": 1,
+      "empty_or_nan_text": false,
+      "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+      "bm25_rank": 5,
+      "bm25_score": 19.4351698822328,
+      "bm25_in_production_top50": true,
+      "dense_rank": 819,
+      "dense_score": 0.29585192357807,
+      "dense_in_production_top50": false,
+      "rrf_rank": 9,
+      "rrf_score": 0.015384615384615385,
+      "in_top50": true,
+      "medcpt_rank": 8,
+      "medcpt_score": 6.499888896942139,
+      "in_top10": true,
+      "first_loss_label": "NOT LOST",
+      "stage_code": "NOT_LOST"
+    },
+    {
+      "gold_id": 15094122,
+      "pmid": 15094122,
+      "exists_in_index": true,
+      "failure_point": null,
+      "raw_text_preview": "Papilins are homologous, secreted extracellular matrix proteins which share a common order of protein domains. They occur widely, from nematodes to man, and can differ in the number of repeats of a given type of domain. Within one species the number of repeats can vary by differential RNA splicing. A distinctly conserved cassette of domains at the amino-end of papilins is homologous with a cassette of protein domains at the carboxyl-end of the ADAMTS subgroup of secreted, matrix-associated metalloproteases. Papilins primarily occur in basement membranes. Papilins interact with several extracellular matrix components and ADAMTS enzymes. Papilins are essential for embryonic development of Drosophila melanogaster and Caenorhabditis elegans.",
+      "raw_text_length": 756,
+      "indexed_text_preview": "Papilins are homologous, secreted extracellular matrix proteins which share a common order of protein domains. They occur widely, from nematodes to man, and can differ in the number of repeats of a given type of domain. Within one species the number of repeats can vary by differential RNA splicing. A distinctly conserved cassette of domains at the amino-end of papilins is homologous with a cassette of protein domains at the carboxyl-end of the ADAMTS subgroup of secreted, matrix-associated metalloproteases. Papilins primarily occur in basement membranes. Papilins interact with several extracellular matrix components and ADAMTS enzymes. Papilins are essential for embryonic development of Drosophila melanogaster and Caenorhabditis elegans.",
+      "indexed_text_length": 756,
+      "text_unchanged": true,
+      "truncated": false,
+      "chunked": false,
+      "n_chunks": 1,
+      "empty_or_nan_text": false,
+      "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+      "bm25_rank": 8,
+      "bm25_score": 17.592222788931007,
+      "bm25_in_production_top50": true,
+      "dense_rank": 1,
+      "dense_score": 0.6181926160747795,
+      "dense_in_production_top50": true,
+      "rrf_rank": 4,
+      "rrf_score": 0.031099324975891997,
+      "in_top50": true,
+      "medcpt_rank": 1,
+      "medcpt_score": 15.855929374694824,
+      "in_top10": true,
+      "first_loss_label": "NOT LOST",
+      "stage_code": "NOT_LOST"
+    },
+    {
+      "gold_id": 7515725,
+      "pmid": 7515725,
+      "exists_in_index": true,
+      "failure_point": null,
+      "raw_text_preview": "Two contrasting substrates, Drosophila laminin and human vitronectin, caused determined primary Drosophila embryo cells to follow alternate intermediate differentiation steps without affecting the final outcome of differentiation. Integrin alpha PS2 beta PS3 was essential for the initial spreading of myocytes on vitronectin: focal contacts rich in beta PS3 integrins formed and were connected by actin- and myosin-containing stress fibers. While alpha PS2 beta PS3 was unnecessary for myotube formation on laminin, it was required for the subsequent change to a sarcomeric cytoarchitecture. The differentiating primary cultures synthesized integrins and assembled them into detergent-insoluble, cytoskeleton-associated complexes. Collagen IV, laminin, glutactin, papilin, and other extracellular ma\u2026",
+      "raw_text_length": 1266,
+      "indexed_text_preview": "Two contrasting substrates, Drosophila laminin and human vitronectin, caused determined primary Drosophila embryo cells to follow alternate intermediate differentiation steps without affecting the final outcome of differentiation. Integrin alpha PS2 beta PS3 was essential for the initial spreading of myocytes on vitronectin: focal contacts rich in beta PS3 integrins formed and were connected by actin- and myosin-containing stress fibers. While alpha PS2 beta PS3 was unnecessary for myotube formation on laminin, it was required for the subsequent change to a sarcomeric cytoarchitecture. The differentiating primary cultures synthesized integrins and assembled them into detergent-insoluble, cytoskeleton-associated complexes. Collagen IV, laminin, glutactin, papilin, and other extracellular ma\u2026",
+      "indexed_text_length": 1266,
+      "text_unchanged": true,
+      "truncated": false,
+      "chunked": false,
+      "n_chunks": 1,
+      "empty_or_nan_text": false,
+      "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+      "bm25_rank": 4,
+      "bm25_score": 19.778166995948567,
+      "bm25_in_production_top50": true,
+      "dense_rank": 104,
+      "dense_score": 0.362512302912377,
+      "dense_in_production_top50": false,
+      "rrf_rank": 7,
+      "rrf_score": 0.015625,
+      "in_top50": true,
+      "medcpt_rank": 6,
+      "medcpt_score": 9.626675605773926,
+      "in_top10": true,
+      "first_loss_label": "NOT LOST",
+      "stage_code": "NOT_LOST"
+    },
+    {
+      "gold_id": 3320045,
+      "pmid": 3320045,
+      "exists_in_index": true,
+      "failure_point": null,
+      "raw_text_preview": "A sulfated glycoprotein was isolated from the culture media of Drosophila Kc cells and named papilin. Affinity purified antibodies against this protein localized it primarily to the basement membranes of embryos. The antibodies cross-reacted with another material which was not sulfated and appeared to be the core protein of papilin, which is proteoglycan-like. After reduction, papilin electrophoresed in sodium dodecyl sulfate-polyacrylamide gel electrophoresis as a broad band of about 900,000 apparent molecular weight and the core protein as a narrow band of approximately 400,000. The core protein was formed by some cell lines and by other cells on incubation with 1 mM 4-methylumbelliferyl xyloside, which inhibited formation of the proteoglycan-like form. The buoyant density of papilin in\u2026",
+      "raw_text_length": 2018,
+      "indexed_text_preview": "A sulfated glycoprotein was isolated from the culture media of Drosophila Kc cells and named papilin. Affinity purified antibodies against this protein localized it primarily to the basement membranes of embryos. The antibodies cross-reacted with another material which was not sulfated and appeared to be the core protein of papilin, which is proteoglycan-like. After reduction, papilin electrophoresed in sodium dodecyl sulfate-polyacrylamide gel electrophoresis as a broad band of about 900,000 apparent molecular weight and the core protein as a narrow band of approximately 400,000. The core protein was formed by some cell lines and by other cells on incubation with 1 mM 4-methylumbelliferyl xyloside, which inhibited formation of the proteoglycan-like form. The buoyant density of papilin in\u2026",
+      "indexed_text_length": 2018,
+      "text_unchanged": true,
+      "truncated": false,
+      "chunked": false,
+      "n_chunks": 1,
+      "empty_or_nan_text": false,
+      "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+      "bm25_rank": 2,
+      "bm25_score": 26.95228945366012,
+      "bm25_in_production_top50": true,
+      "dense_rank": 2,
+      "dense_score": 0.5982092076824537,
+      "dense_in_production_top50": true,
+      "rrf_rank": 2,
+      "rrf_score": 0.03225806451612903,
+      "in_top50": true,
+      "medcpt_rank": 5,
+      "medcpt_score": 9.626688957214355,
+      "in_top10": true,
+      "first_loss_label": "NOT LOST",
+      "stage_code": "NOT_LOST"
+    },
+    {
+      "gold_id": 20805556,
+      "pmid": 20805556,
+      "exists_in_index": true,
+      "failure_point": "DATA / PARSING",
+      "raw_text_preview": "nan",
+      "raw_text_length": 3,
+      "indexed_text_preview": "nan",
+      "indexed_text_length": 3,
+      "text_unchanged": true,
+      "truncated": false,
+      "chunked": false,
+      "n_chunks": 1,
+      "empty_or_nan_text": true,
+      "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split. A source value of 'nan' is preserved as the three-character string 'nan'.",
+      "bm25_rank": 32556,
+      "bm25_score": 0.0,
+      "bm25_in_production_top50": false,
+      "dense_rank": 27754,
+      "dense_score": 0.05185515661104774,
+      "dense_in_production_top50": false,
+      "rrf_rank": null,
+      "rrf_score": null,
+      "in_top50": false,
+      "medcpt_rank": null,
+      "medcpt_score": null,
+      "in_top10": false,
+      "first_loss_label": "DATA / PARSING",
+      "stage_code": "DATA_QUALITY"
+    },
+    {
+      "gold_id": 19724244,
+      "pmid": 19724244,
+      "exists_in_index": true,
+      "failure_point": null,
+      "raw_text_preview": "OBJECTIVES: Suicidal ideation is an uncommon but worrisome symptom than can emerge during antidepressant treatment. We have described earlier the association between treatment-emergent suicidal ideation (TESI) and markers in genes encoding glutamate receptor subunits GRIK2 and GRIA3. The present genome-wide association study was conducted to identify additional genetic markers associated with TESI that may help identify individuals at high risk who may benefit from closer monitoring, alternative treatments, and/or specialty care. METHODS: A clinically representative cohort of outpatients with nonpsychotic major depressive disorder enrolled in the Sequenced Treatment Alternatives to Relieve Depression (STAR*D) trial were treated with citalopram under a standard protocol for up to 14 weeks.\u2026",
+      "raw_text_length": 1812,
+      "indexed_text_preview": "OBJECTIVES: Suicidal ideation is an uncommon but worrisome symptom than can emerge during antidepressant treatment. We have described earlier the association between treatment-emergent suicidal ideation (TESI) and markers in genes encoding glutamate receptor subunits GRIK2 and GRIA3. The present genome-wide association study was conducted to identify additional genetic markers associated with TESI that may help identify individuals at high risk who may benefit from closer monitoring, alternative treatments, and/or specialty care. METHODS: A clinically representative cohort of outpatients with nonpsychotic major depressive disorder enrolled in the Sequenced Treatment Alternatives to Relieve Depression (STAR*D) trial were treated with citalopram under a standard protocol for up to 14 weeks.\u2026",
+      "indexed_text_length": 1812,
+      "text_unchanged": true,
+      "truncated": false,
+      "chunked": false,
+      "n_chunks": 1,
+      "empty_or_nan_text": false,
+      "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+      "bm25_rank": 163,
+      "bm25_score": 12.565024374207596,
+      "bm25_in_production_top50": false,
+      "dense_rank": 21713,
+      "dense_score": 0.06373585381975255,
+      "dense_in_production_top50": false,
+      "rrf_rank": null,
+      "rrf_score": null,
+      "in_top50": false,
+      "medcpt_rank": null,
+      "medcpt_score": null,
+      "in_top10": false,
+      "first_loss_label": "FIRST-STAGE RETRIEVAL / FUSION",
+      "stage_code": "RRF"
+    },
+    {
+      "gold_id": 12666201,
+      "pmid": 12666201,
+      "exists_in_index": true,
+      "failure_point": null,
+      "raw_text_preview": "Papilins are extracellular matrix proteins that share a particular, common order of types of protein domains. They occur widely, from nematodes to man, and can differ in the number of repeats of a given type of domain. Protein variety is increased by differential splicing of pre-mRNA. We report that Drosophila, which has a compact genome, expresses three splice variants of papilin during embryogenesis in developmentally defined patterns. These isoforms have different numbers of Kunitz and IgC2 domains. The papilin isoforms are expressed in specific cell types and contribute to different extracellular matrices in gastrulation folds, early mesoderm, heart formation, basement membranes, and elaboration of the excorporeal peritrophic membrane that lines the gut. This finding indicates an unexp\u2026",
+      "raw_text_length": 1108,
+      "indexed_text_preview": "Papilins are extracellular matrix proteins that share a particular, common order of types of protein domains. They occur widely, from nematodes to man, and can differ in the number of repeats of a given type of domain. Protein variety is increased by differential splicing of pre-mRNA. We report that Drosophila, which has a compact genome, expresses three splice variants of papilin during embryogenesis in developmentally defined patterns. These isoforms have different numbers of Kunitz and IgC2 domains. The papilin isoforms are expressed in specific cell types and contribute to different extracellular matrices in gastrulation folds, early mesoderm, heart formation, basement membranes, and elaboration of the excorporeal peritrophic membrane that lines the gut. This finding indicates an unexp\u2026",
+      "indexed_text_length": 1108,
+      "text_unchanged": true,
+      "truncated": false,
+      "chunked": false,
+      "n_chunks": 1,
+      "empty_or_nan_text": false,
+      "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+      "bm25_rank": 3,
+      "bm25_score": 24.25128645587319,
+      "bm25_in_production_top50": true,
+      "dense_rank": 5,
+      "dense_score": 0.45271408337635266,
+      "dense_in_production_top50": true,
+      "rrf_rank": 3,
+      "rrf_score": 0.03125763125763126,
+      "in_top50": true,
+      "medcpt_rank": 3,
+      "medcpt_score": 13.70813274383545,
+      "in_top10": true,
+      "first_loss_label": "NOT LOST",
+      "stage_code": "NOT_LOST"
+    },
+    {
+      "gold_id": 15094110,
+      "pmid": 15094110,
+      "exists_in_index": true,
+      "failure_point": null,
+      "raw_text_preview": "The TSR superfamily is a diverse family of extracellular matrix and transmembrane proteins, many of which have functions related to regulating matrix organization, cell-cell interactions and cell guidance. This review samples some of the contemporary literature regarding TSR superfamily members (e.g. F-spondin, UNC-5, ADAMTS, papilin, and TRAP) where specific functions are assigned to the TSR domains. Combining these observations with the published crystal structure of the TSRs of thrombospondin-1 may hold a key to the development of therapeutic agents for fighting parasitic infection and tumor growth.",
+      "raw_text_length": 617,
+      "indexed_text_preview": "The TSR superfamily is a diverse family of extracellular matrix and transmembrane proteins, many of which have functions related to regulating matrix organization, cell-cell interactions and cell guidance. This review samples some of the contemporary literature regarding TSR superfamily members (e.g. F-spondin, UNC-5, ADAMTS, papilin, and TRAP) where specific functions are assigned to the TSR domains. Combining these observations with the published crystal structure of the TSRs of thrombospondin-1 may hold a key to the development of therapeutic agents for fighting parasitic infection and tumor growth.",
+      "indexed_text_length": 617,
+      "text_unchanged": true,
+      "truncated": false,
+      "chunked": false,
+      "n_chunks": 1,
+      "empty_or_nan_text": false,
+      "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+      "bm25_rank": 7,
+      "bm25_score": 18.221222943422717,
+      "bm25_in_production_top50": true,
+      "dense_rank": 338,
+      "dense_score": 0.32577266813011774,
+      "dense_in_production_top50": false,
+      "rrf_rank": 12,
+      "rrf_score": 0.014925373134328358,
+      "in_top50": true,
+      "medcpt_rank": 4,
+      "medcpt_score": 10.000514030456543,
+      "in_top10": true,
+      "first_loss_label": "NOT LOST",
+      "stage_code": "NOT_LOST"
+    },
+    {
+      "gold_id": 11076767,
+      "pmid": 11076767,
+      "exists_in_index": true,
+      "failure_point": null,
+      "raw_text_preview": "Papilin is an extracellular matrix glycoprotein that we have found to be involved in, (1) thin matrix layers during gastrulation, (2) matrix associated with wandering, phagocytic hemocytes, (3) basement membranes and (4) space-filling matrix during Drosophila development. Determination of its cDNA sequence led to the identification of Caenorhabditis and mammalian papilins. A distinctly conserved 'papilin cassette' of domains at the amino-end of papilins is also the carboxyl-end of the ADAMTS subgroup of secreted, matrix-associated metalloproteinases; this cassette contains one thrombospondin type 1 (TSR) domain, a specific cysteine-rich domain and several partial TSR domains. In vitro, papilin non-competitively inhibits procollagen N-proteinase, an ADAMTS metalloproteinase. Inhibiting papi\u2026",
+      "raw_text_length": 1152,
+      "indexed_text_preview": "Papilin is an extracellular matrix glycoprotein that we have found to be involved in, (1) thin matrix layers during gastrulation, (2) matrix associated with wandering, phagocytic hemocytes, (3) basement membranes and (4) space-filling matrix during Drosophila development. Determination of its cDNA sequence led to the identification of Caenorhabditis and mammalian papilins. A distinctly conserved 'papilin cassette' of domains at the amino-end of papilins is also the carboxyl-end of the ADAMTS subgroup of secreted, matrix-associated metalloproteinases; this cassette contains one thrombospondin type 1 (TSR) domain, a specific cysteine-rich domain and several partial TSR domains. In vitro, papilin non-competitively inhibits procollagen N-proteinase, an ADAMTS metalloproteinase. Inhibiting papi\u2026",
+      "indexed_text_length": 1152,
+      "text_unchanged": true,
+      "truncated": false,
+      "chunked": false,
+      "n_chunks": 1,
+      "empty_or_nan_text": false,
+      "note": "This corpus stores one full passage per ID. prepare_passage keeps the original ID and text; there is no extra cleaning or chunk split.",
+      "bm25_rank": 1,
+      "bm25_score": 29.435233905303598,
+      "bm25_in_production_top50": true,
+      "dense_rank": 3,
+      "dense_score": 0.5524873201718516,
+      "dense_in_production_top50": true,
+      "rrf_rank": 1,
+      "rrf_score": 0.032266458495966696,
+      "in_top50": true,
+      "medcpt_rank": 2,
+      "medcpt_score": 15.355941772460938,
+      "in_top10": true,
+      "first_loss_label": "NOT LOST",
+      "stage_code": "NOT_LOST"
+    }
+  ],
+  "bm25_top10": [
+    {
+      "rank": 1,
+      "passage_id": 11076767,
+      "score": 29.435233905303598,
+      "preview": "Papilin is an extracellular matrix glycoprotein that we have found to be involved in, (1) thin matrix layers during gastrulation, (2) matrix associated with wan\u2026"
+    },
+    {
+      "rank": 2,
+      "passage_id": 3320045,
+      "score": 26.95228945366012,
+      "preview": "A sulfated glycoprotein was isolated from the culture media of Drosophila Kc cells and named papilin. Affinity purified antibodies against this protein localize\u2026"
+    },
+    {
+      "rank": 3,
+      "passage_id": 12666201,
+      "score": 24.25128645587319,
+      "preview": "Papilins are extracellular matrix proteins that share a particular, common order of types of protein domains. They occur widely, from nematodes to man, and can\u2026"
+    },
+    {
+      "rank": 4,
+      "passage_id": 7515725,
+      "score": 19.778166995948567,
+      "preview": "Two contrasting substrates, Drosophila laminin and human vitronectin, caused determined primary Drosophila embryo cells to follow alternate intermediate differe\u2026"
+    },
+    {
+      "rank": 5,
+      "passage_id": 19297413,
+      "score": 19.4351698822328,
+      "preview": "The gonad arms of C. elegans hermaphrodites acquire invariant shapes by guided migrations of distal tip cells (DTCs), which occur in three phases that differ in\u2026"
+    },
+    {
+      "rank": 6,
+      "passage_id": 21784067,
+      "score": 18.944976178059935,
+      "preview": "Cell invasion through basement membrane is a specialized cellular behavior critical for many developmental processes and leukocyte trafficking. Invasive cellula\u2026"
+    },
+    {
+      "rank": 7,
+      "passage_id": 15094110,
+      "score": 18.221222943422717,
+      "preview": "The TSR superfamily is a diverse family of extracellular matrix and transmembrane proteins, many of which have functions related to regulating matrix organizati\u2026"
+    },
+    {
+      "rank": 8,
+      "passage_id": 15094122,
+      "score": 17.592222788931007,
+      "preview": "Papilins are homologous, secreted extracellular matrix proteins which share a common order of protein domains. They occur widely, from nematodes to man, and can\u2026"
+    },
+    {
+      "rank": 9,
+      "passage_id": 11979056,
+      "score": 16.74434189851909,
+      "preview": "Leptin, primarily secreted by adipocytes, is a peripheral hormonal signal involved in the hypothalamic integration of energy homeostasis. We report that plasma\u2026"
+    },
+    {
+      "rank": 10,
+      "passage_id": 8662546,
+      "score": 16.374347474306933,
+      "preview": "Proper regulation of chondrocyte differentiation is necessary for the morphogenesis of skeletal elements, yet little is known about the molecular regulation of\u2026"
+    }
+  ],
+  "dense_top10": [
+    {
+      "rank": 1,
+      "passage_id": 15094122,
+      "score": 0.6181926160747795,
+      "preview": "Papilins are homologous, secreted extracellular matrix proteins which share a common order of protein domains. They occur widely, from nematodes to man, and can\u2026"
+    },
+    {
+      "rank": 2,
+      "passage_id": 3320045,
+      "score": 0.5982092076824537,
+      "preview": "A sulfated glycoprotein was isolated from the culture media of Drosophila Kc cells and named papilin. Affinity purified antibodies against this protein localize\u2026"
+    },
+    {
+      "rank": 3,
+      "passage_id": 11076767,
+      "score": 0.5524873201718516,
+      "preview": "Papilin is an extracellular matrix glycoprotein that we have found to be involved in, (1) thin matrix layers during gastrulation, (2) matrix associated with wan\u2026"
+    },
+    {
+      "rank": 4,
+      "passage_id": 34489718,
+      "score": 0.4759328048927297,
+      "preview": "Tear lipocalin is a primate protein that was recognized as a lipocalin from the homology of the primary sequence. The protein is most concentrated in tears and\u2026"
+    },
+    {
+      "rank": 5,
+      "passage_id": 12666201,
+      "score": 0.45271408337635266,
+      "preview": "Papilins are extracellular matrix proteins that share a particular, common order of types of protein domains. They occur widely, from nematodes to man, and can\u2026"
+    },
+    {
+      "rank": 6,
+      "passage_id": 1334264,
+      "score": 0.4517636167064881,
+      "preview": "In eukaryotic cells, protein secretion provides a complex organizational problem. Secretory proteins are first transported, in an unfolded state, across the mem\u2026"
+    },
+    {
+      "rank": 7,
+      "passage_id": 16440601,
+      "score": 0.45121482652890027,
+      "preview": "Recent characterization of the whole saliva proteome led to contradictory pictures concerning the complexity of its proteome. In this work, 110 proteins were an\u2026"
+    },
+    {
+      "rank": 8,
+      "passage_id": 6853716,
+      "score": 0.44286432374644746,
+      "preview": "We have investigated the molecular basis of hypoxanthine-guanine phosphoribosyltransferase (HPRT) deficiency in a patient who presented with the Lesch-Nyhan syn\u2026"
+    },
+    {
+      "rank": 9,
+      "passage_id": 18393798,
+      "score": 0.4422767285187953,
+      "preview": "In this review, we discuss the biology of gamma-secretase, an enigmatic enzyme complex that is responsible for the generation of the amyloid-beta peptide that c\u2026"
+    },
+    {
+      "rank": 10,
+      "passage_id": 11419941,
+      "score": 0.43724008724881386,
+      "preview": "Multiple extracellular factors are hypothesized to promote the differentiation of unstimulated and/or stimulated secretory pathways in exocrine secretory cells,\u2026"
+    }
+  ],
+  "rrf_top20": [
+    {
+      "rank": 1,
+      "passage_id": 11076767,
+      "score": 0.032266458495966696,
+      "preview": "Papilin is an extracellular matrix glycoprotein that we have found to be involved in, (1) thin matrix layers during gastrulation, (2) matrix associated with wan\u2026"
+    },
+    {
+      "rank": 2,
+      "passage_id": 3320045,
+      "score": 0.03225806451612903,
+      "preview": "A sulfated glycoprotein was isolated from the culture media of Drosophila Kc cells and named papilin. Affinity purified antibodies against this protein localize\u2026"
+    },
+    {
+      "rank": 3,
+      "passage_id": 12666201,
+      "score": 0.03125763125763126,
+      "preview": "Papilins are extracellular matrix proteins that share a particular, common order of types of protein domains. They occur widely, from nematodes to man, and can\u2026"
+    },
+    {
+      "rank": 4,
+      "passage_id": 15094122,
+      "score": 0.031099324975891997,
+      "preview": "Papilins are homologous, secreted extracellular matrix proteins which share a common order of protein domains. They occur widely, from nematodes to man, and can\u2026"
+    },
+    {
+      "rank": 5,
+      "passage_id": 20056606,
+      "score": 0.025849212924606464,
+      "preview": "To invade its definitive host, the mosquito, the malaria parasite must cross the midgut peritrophic matrix that is composed of chitin cross-linked by chitin-bin\u2026"
+    },
+    {
+      "rank": 6,
+      "passage_id": 18370023,
+      "score": 0.020634920634920638,
+      "preview": "This chapter describes the process of production, purification, separation, and mass spectrometry identification of soluble lysosomal proteins. The rationale fo\u2026"
+    },
+    {
+      "rank": 7,
+      "passage_id": 7515725,
+      "score": 0.015625,
+      "preview": "Two contrasting substrates, Drosophila laminin and human vitronectin, caused determined primary Drosophila embryo cells to follow alternate intermediate differe\u2026"
+    },
+    {
+      "rank": 8,
+      "passage_id": 34489718,
+      "score": 0.015625,
+      "preview": "Tear lipocalin is a primate protein that was recognized as a lipocalin from the homology of the primary sequence. The protein is most concentrated in tears and\u2026"
+    },
+    {
+      "rank": 9,
+      "passage_id": 19297413,
+      "score": 0.015384615384615385,
+      "preview": "The gonad arms of C. elegans hermaphrodites acquire invariant shapes by guided migrations of distal tip cells (DTCs), which occur in three phases that differ in\u2026"
+    },
+    {
+      "rank": 10,
+      "passage_id": 21784067,
+      "score": 0.015151515151515152,
+      "preview": "Cell invasion through basement membrane is a specialized cellular behavior critical for many developmental processes and leukocyte trafficking. Invasive cellula\u2026"
+    },
+    {
+      "rank": 11,
+      "passage_id": 1334264,
+      "score": 0.015151515151515152,
+      "preview": "In eukaryotic cells, protein secretion provides a complex organizational problem. Secretory proteins are first transported, in an unfolded state, across the mem\u2026"
+    },
+    {
+      "rank": 12,
+      "passage_id": 15094110,
+      "score": 0.014925373134328358,
+      "preview": "The TSR superfamily is a diverse family of extracellular matrix and transmembrane proteins, many of which have functions related to regulating matrix organizati\u2026"
+    },
+    {
+      "rank": 13,
+      "passage_id": 16440601,
+      "score": 0.014925373134328358,
+      "preview": "Recent characterization of the whole saliva proteome led to contradictory pictures concerning the complexity of its proteome. In this work, 110 proteins were an\u2026"
+    },
+    {
+      "rank": 14,
+      "passage_id": 6853716,
+      "score": 0.014705882352941176,
+      "preview": "We have investigated the molecular basis of hypoxanthine-guanine phosphoribosyltransferase (HPRT) deficiency in a patient who presented with the Lesch-Nyhan syn\u2026"
+    },
+    {
+      "rank": 15,
+      "passage_id": 11979056,
+      "score": 0.014492753623188406,
+      "preview": "Leptin, primarily secreted by adipocytes, is a peripheral hormonal signal involved in the hypothalamic integration of energy homeostasis. We report that plasma\u2026"
+    },
+    {
+      "rank": 16,
+      "passage_id": 18393798,
+      "score": 0.014492753623188406,
+      "preview": "In this review, we discuss the biology of gamma-secretase, an enigmatic enzyme complex that is responsible for the generation of the amyloid-beta peptide that c\u2026"
+    },
+    {
+      "rank": 17,
+      "passage_id": 8662546,
+      "score": 0.014285714285714285,
+      "preview": "Proper regulation of chondrocyte differentiation is necessary for the morphogenesis of skeletal elements, yet little is known about the molecular regulation of\u2026"
+    },
+    {
+      "rank": 18,
+      "passage_id": 11419941,
+      "score": 0.014285714285714285,
+      "preview": "Multiple extracellular factors are hypothesized to promote the differentiation of unstimulated and/or stimulated secretory pathways in exocrine secretory cells,\u2026"
+    },
+    {
+      "rank": 19,
+      "passage_id": 14570063,
+      "score": 0.014084507042253521,
+      "preview": "Recent data support the view that transcription factors - in particular, homeoproteins - can be transferred from cell to cell and have direct non-cell-autonomou\u2026"
+    },
+    {
+      "rank": 20,
+      "passage_id": 24184233,
+      "score": 0.013888888888888888,
+      "preview": "Protein A from Staphylococcus aureus plays one key role as an immobilized affinity ligand for the purification of antibodies. A simple method for its extracellu\u2026"
+    }
+  ],
+  "medcpt_top10": [
+    {
+      "rank": 1,
+      "passage_id": 15094122,
+      "score": 15.855929374694824,
+      "preview": "Papilins are homologous, secreted extracellular matrix proteins which share a common order of protein domains. They occur widely, from nematodes to man, and can\u2026"
+    },
+    {
+      "rank": 2,
+      "passage_id": 11076767,
+      "score": 15.355941772460938,
+      "preview": "Papilin is an extracellular matrix glycoprotein that we have found to be involved in, (1) thin matrix layers during gastrulation, (2) matrix associated with wan\u2026"
+    },
+    {
+      "rank": 3,
+      "passage_id": 12666201,
+      "score": 13.70813274383545,
+      "preview": "Papilins are extracellular matrix proteins that share a particular, common order of types of protein domains. They occur widely, from nematodes to man, and can\u2026"
+    },
+    {
+      "rank": 4,
+      "passage_id": 15094110,
+      "score": 10.000514030456543,
+      "preview": "The TSR superfamily is a diverse family of extracellular matrix and transmembrane proteins, many of which have functions related to regulating matrix organizati\u2026"
+    },
+    {
+      "rank": 5,
+      "passage_id": 3320045,
+      "score": 9.626688957214355,
+      "preview": "A sulfated glycoprotein was isolated from the culture media of Drosophila Kc cells and named papilin. Affinity purified antibodies against this protein localize\u2026"
+    },
+    {
+      "rank": 6,
+      "passage_id": 7515725,
+      "score": 9.626675605773926,
+      "preview": "Two contrasting substrates, Drosophila laminin and human vitronectin, caused determined primary Drosophila embryo cells to follow alternate intermediate differe\u2026"
+    },
+    {
+      "rank": 7,
+      "passage_id": 21784067,
+      "score": 7.988259792327881,
+      "preview": "Cell invasion through basement membrane is a specialized cellular behavior critical for many developmental processes and leukocyte trafficking. Invasive cellula\u2026"
+    },
+    {
+      "rank": 8,
+      "passage_id": 19297413,
+      "score": 6.499888896942139,
+      "preview": "The gonad arms of C. elegans hermaphrodites acquire invariant shapes by guided migrations of distal tip cells (DTCs), which occur in three phases that differ in\u2026"
+    },
+    {
+      "rank": 9,
+      "passage_id": 1334264,
+      "score": -4.855637550354004,
+      "preview": "In eukaryotic cells, protein secretion provides a complex organizational problem. Secretory proteins are first transported, in an unfolded state, across the mem\u2026"
+    },
+    {
+      "rank": 10,
+      "passage_id": 18370023,
+      "score": -7.670407772064209,
+      "preview": "This chapter describes the process of production, purification, separation, and mass spectrometry identification of soluble lysosomal proteins. The rationale fo\u2026"
+    }
+  ],
+  "documents_ranked_above_missed_gold": [],
+  "rerank_ms": 0.04962499951943755,
+  "compact_trace": {
+    "question": "Is the protein Papilin secreted?",
+    "category": "Fact / definition / biological relationship",
+    "raw_gold_ids": [
+      21784067,
+      19297413,
+      15094122,
+      7515725,
+      3320045,
+      20805556,
+      19724244,
+      12666201,
+      15094110,
+      11076767
+    ],
+    "preprocessing": "unchanged full passages; no chunking",
+    "best_bm25_rank": 1,
+    "best_dense_rank": 1,
+    "best_rrf_rank": 1,
+    "in_top50": true,
+    "best_medcpt_rank": 1,
+    "in_top10": true,
+    "first_loss_label": "DATA / PARSING",
+    "stage_code": "DATA_QUALITY",
+    "recall_at_10": 0.8,
+    "candidate_recall_at_50": 0.8
+  },
+  "generation_invoked": false
+}

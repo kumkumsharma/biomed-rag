@@ -1,0 +1,30 @@
+{
+  "corpus_document_count": 40221,
+  "bm25_document_count": 40221,
+  "bm25_corpus_size": 40221,
+  "embedding_count": 40221,
+  "embedding_dimension": 384,
+  "embedding_shape": [
+    40221,
+    384
+  ],
+  "missing_embeddings": 0,
+  "nan_embeddings": 0,
+  "duplicate_ids": 0,
+  "id_embedding_alignment": true,
+  "id_bm25_alignment": true,
+  "dense_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "aligned": true,
+  "index_size": {
+    "passages": 40221,
+    "bm25_docs": 40221,
+    "dense_docs": 40221,
+    "embeddings": 40221
+  },
+  "pipeline": "corpus \u2192 preprocessing (identity) \u2192 BM25 tokens + MiniLM embeddings \u2192 in-memory index",
+  "index_build_seconds": {
+    "BM25_index_build_seconds": 1.2399284999992233,
+    "Dense_index_build_seconds": 59.611737625004025,
+    "Hybrid_RRF_wrap_seconds": 0.0020297080045565963
+  }
+}

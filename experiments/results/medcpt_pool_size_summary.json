@@ -1,0 +1,74 @@
+{
+  "n_passages": 40221,
+  "n_queries": 100,
+  "index_build_seconds": {},
+  "scoring_note": "Pairs were scored once on Hybrid@100. Pool-k quality uses the first k candidates reordered by those scores. estimated_medcpt_ms scales the 100-pair scoring time by k/100; it is not a separate timed run of each pool.",
+  "configurations": [
+    {
+      "candidate_pool": 20,
+      "recall_at_5": 0.35205058800800615,
+      "recall_at_10": 0.4739580770864463,
+      "mrr_at_10": 0.8575,
+      "ndcg_at_10": 0.6420492399272695,
+      "candidate_recall": 0.5261355517591648,
+      "rerank_recovery_at_10": 1.0,
+      "avg_hybrid_ms": 78.0223013197974,
+      "avg_score_ms_for_100": 6324.840680759953,
+      "estimated_medcpt_ms": 1264.9681361519906,
+      "estimated_total_ms": 1342.990437471788
+    },
+    {
+      "candidate_pool": 30,
+      "recall_at_5": 0.357546517802849,
+      "recall_at_10": 0.4864612594326594,
+      "mrr_at_10": 0.8565,
+      "ndcg_at_10": 0.6529783083511638,
+      "candidate_recall": 0.5672025435596272,
+      "rerank_recovery_at_10": 1.0,
+      "avg_hybrid_ms": 78.0223013197974,
+      "avg_score_ms_for_100": 6324.840680759953,
+      "estimated_medcpt_ms": 1897.452204227986,
+      "estimated_total_ms": 1975.4745055477833
+    },
+    {
+      "candidate_pool": 50,
+      "recall_at_5": 0.3612590781893224,
+      "recall_at_10": 0.5026128062712771,
+      "mrr_at_10": 0.8495,
+      "ndcg_at_10": 0.6658320585958866,
+      "candidate_recall": 0.6238475678725754,
+      "rerank_recovery_at_10": 1.0,
+      "avg_hybrid_ms": 78.0223013197974,
+      "avg_score_ms_for_100": 6324.840680759953,
+      "estimated_medcpt_ms": 3162.4203403799766,
+      "estimated_total_ms": 3240.442641699774
+    },
+    {
+      "candidate_pool": 75,
+      "recall_at_5": 0.3621757448559891,
+      "recall_at_10": 0.5030443747028456,
+      "mrr_at_10": 0.8486666666666666,
+      "ndcg_at_10": 0.663272364317752,
+      "candidate_recall": 0.640242942134329,
+      "rerank_recovery_at_10": 1.0,
+      "avg_hybrid_ms": 78.0223013197974,
+      "avg_score_ms_for_100": 6324.840680759953,
+      "estimated_medcpt_ms": 4743.630510569965,
+      "estimated_total_ms": 4821.652811889762
+    },
+    {
+      "candidate_pool": 100,
+      "recall_at_5": 0.36074717342741763,
+      "recall_at_10": 0.5047291573115412,
+      "mrr_at_10": 0.8486666666666666,
+      "ndcg_at_10": 0.664615267571951,
+      "candidate_recall": 0.6494034823187822,
+      "rerank_recovery_at_10": 1.0,
+      "avg_hybrid_ms": 78.0223013197974,
+      "avg_score_ms_for_100": 6324.840680759953,
+      "estimated_medcpt_ms": 6324.840680759953,
+      "estimated_total_ms": 6402.86298207975
+    }
+  ],
+  "default_pool_unchanged": 50
+}

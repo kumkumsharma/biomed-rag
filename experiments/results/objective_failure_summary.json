@@ -1,0 +1,105 @@
+{
+  "n_queries": 100,
+  "n_gold_ids": 1142,
+  "n_hybrid50_failures": 445,
+  "hybrid_k": 50,
+  "probe_k": 100,
+  "notes": [
+    "Objective categories use BM25/Dense/RRF ranks at probe_k only.",
+    "diagnostic_signals and hypotheses are not treated as proven causes.",
+    "Production retrieval defaults are unchanged.",
+    "Rank None means absent from top probe_k, not unranked in the full collection."
+  ],
+  "objective_counts_all_gold": {
+    "NOT_IN_CORPUS": 0,
+    "TOP50_RETRIEVED": 697,
+    "BM25_ONLY_MISS": 22,
+    "DENSE_ONLY_MISS": 37,
+    "BOTH_RETRIEVERS_MISS": 385,
+    "FUSION_CUTOFF": 1
+  },
+  "objective_failure_counts": {
+    "NOT_IN_CORPUS": 0,
+    "BM25_ONLY_MISS": 22,
+    "DENSE_ONLY_MISS": 37,
+    "BOTH_RETRIEVERS_MISS": 385,
+    "FUSION_CUTOFF": 1
+  },
+  "objective_failure_percent_of_misses": {
+    "NOT_IN_CORPUS": 0.0,
+    "BM25_ONLY_MISS": 0.04943820224719101,
+    "DENSE_ONLY_MISS": 0.08314606741573034,
+    "BOTH_RETRIEVERS_MISS": 0.8651685393258427,
+    "FUSION_CUTOFF": 0.0022471910112359553
+  },
+  "diagnostic_signal_summary": {
+    "both_retrievers_miss": 385,
+    "both_miss_with_token_overlap_lt_0_15": 347,
+    "both_miss_with_term_map_match": 36,
+    "both_miss_multi_part_signal": 4,
+    "mean_token_overlap_both_miss": 0.04509917931995854
+  },
+  "biomedical": {
+    "model": "pritamdeka/S-PubMedBert-MS-MARCO",
+    "available": true,
+    "source": "cache"
+  },
+  "biomedical_dense_recovery": {
+    "denominator_definition": "Gold IDs in this set whose MiniLM Dense rank is None at probe_k (absent from MiniLM Dense@100).",
+    "numerator_definition": "Subset of the denominator whose PubMedBERT Dense rank is not None at probe_k.",
+    "minilm_dense_misses": 422,
+    "newly_recovered_by_pubmedbert": 21,
+    "still_missed_by_pubmedbert": 401,
+    "lost_vs_minilm": 9,
+    "biomedical_dense_recovery_rate": 0.04976303317535545
+  },
+  "dense_recall_on_hybrid50_misses": {
+    "minilm_dense_recall_at_50": 0.02696629213483146,
+    "minilm_dense_recall_at_100": 0.051685393258426963,
+    "pubmedbert_dense_recall_at_50": 0.06292134831460675,
+    "pubmedbert_dense_recall_at_100": 0.07865168539325842,
+    "pubmedbert_hybrid_recall_at_50": 0.05393258426966292,
+    "pubmedbert_hybrid_recall_at_100": 0.10337078651685393
+  },
+  "dense_recall_on_all_gold": {
+    "minilm_dense_recall_at_50": 0.4956217162872154,
+    "minilm_dense_recall_at_100": 0.5455341506129597,
+    "pubmedbert_dense_recall_at_50": 0.5455341506129597,
+    "pubmedbert_dense_recall_at_100": 0.5893169877408057,
+    "pubmedbert_hybrid_recall_at_50": 0.6182136602451839,
+    "pubmedbert_hybrid_recall_at_100": 0.6444833625218914
+  },
+  "lexical_recovery": {
+    "n_hybrid50_misses_already_in_original_bm25_also_hit_by_transform": 38,
+    "n_bm25_misses_newly_recovered_by_transform": 0,
+    "n_both_miss_recovered_by_transform": 0,
+    "by_transformation_for_new_bm25_recoveries": {},
+    "fraction_of_hybrid50_misses_newly_recovered": 0.0,
+    "note": "A transform hit on an ID already in original BM25@100 is not a new recovery. n_bm25_misses_newly_recovered_by_transform is the evidence-backed count."
+  },
+  "expansion_recovery": {
+    "n_hybrid50_misses_in_any_expansion_search": 3,
+    "n_both_miss_recovered_by_expansion": 0,
+    "n_queries_with_equal_weight_displacement": 10,
+    "kept_experimental": true,
+    "not_production_default": true
+  },
+  "decomposition_recovery": {
+    "n_hybrid50_misses_recovered_by_subquery": 0,
+    "kept_off": true
+  },
+  "recovery_matrix_counts": {
+    "BM25": 38,
+    "MiniLM Dense": 22,
+    "PubMedBERT Dense": 9,
+    "Controlled lexical variant": 0,
+    "Deterministic expansion": 0,
+    "Decomposition subquery": 0,
+    "never_recovered": 376
+  },
+  "n_both_miss_recovered_only_by_pubmedbert_dense": 9,
+  "pubmedbert_hybrid_on_minilm_hybrid50_misses": {
+    "n_minilm_hybrid50_misses_in_pubmedbert_hybrid50": 24,
+    "n_minilm_hybrid50_misses_in_pubmedbert_hybrid100": 46
+  }
+}

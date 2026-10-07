@@ -1,0 +1,64 @@
+{
+  "n_passages": 40221,
+  "n_queries": 100,
+  "queries_path": "experiments/configs/evaluation_100.json",
+  "minilm_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "minilm_dimension": 384,
+  "minilm_index_seconds": 45.25714770900231,
+  "bm25_index_seconds": 1.4048579579975922,
+  "biomedical": {
+    "model": "pritamdeka/S-PubMedBert-MS-MARCO",
+    "available": true,
+    "source": "download",
+    "checked": [
+      {
+        "model": "pritamdeka/S-PubMedBert-MS-MARCO",
+        "cached": false
+      }
+    ]
+  },
+  "biomedical_model": "pritamdeka/S-PubMedBert-MS-MARCO",
+  "biomedical_dimension": 768,
+  "biomedical_index_seconds": 325.65973304199724,
+  "minilm_memory_bytes": 61779456,
+  "biomedical_memory_bytes": 123558912,
+  "same_bm25": true,
+  "same_rrf_k": 60,
+  "configurations": [
+    {
+      "name": "A MiniLM baseline",
+      "n_queries": 100,
+      "recall_at_5": 0.3107069703832774,
+      "recall_at_10": 0.43419126851674794,
+      "recall_at_50": 0.6238475678725754,
+      "mrr_at_10": 0.7958293650793651,
+      "ndcg_at_10": 0.573017454117515,
+      "avg_latency_ms": 64.72651128024154,
+      "median_latency_ms": 63.24154149842798,
+      "embedding_dimension": 384,
+      "embedding_memory_bytes": 61779456
+    },
+    {
+      "name": "B Biomedical embedding",
+      "n_queries": 100,
+      "recall_at_5": 0.32008215800306966,
+      "recall_at_10": 0.4444540000643766,
+      "recall_at_50": 0.6321374640874716,
+      "mrr_at_10": 0.8684563492063492,
+      "ndcg_at_10": 0.6014432201914799,
+      "avg_latency_ms": 72.51616041954549,
+      "median_latency_ms": 70.07016650095466,
+      "embedding_dimension": 768,
+      "embedding_memory_bytes": 123558912
+    }
+  ],
+  "winner_by_recall_at_10": {
+    "recall_at_10": "B",
+    "do_not_claim_without_measurement": true
+  },
+  "notes": [
+    "MiniLM is not replaced. Biomedical results appear only when a model loaded.",
+    "Do not claim improvement unless B metrics exceed A on this file.",
+    "Hybrid search used top_k=100 (BM25/dense candidate_k=100) then prefixes for @10/@50. That is why MiniLM Recall@10 here (0.4342) is not the production Hybrid@10 figure (0.4286), which uses candidate_k=10. A vs B remain comparable."
+  ]
+}

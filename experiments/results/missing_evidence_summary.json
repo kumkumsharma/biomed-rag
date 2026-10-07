@@ -1,0 +1,90 @@
+{
+  "n_queries": 100,
+  "hybrid_k": 50,
+  "probe_k": 100,
+  "n_queries_missing_from_hybrid": 94,
+  "ceiling_gap_note": "Query table: queries with at least one golden ID absent from Hybrid@50. Passage table: individual missed relevant IDs (the Recall@50 gap).",
+  "table": [
+    {
+      "failure_category": "lexical mismatch",
+      "count": 69,
+      "percentage": 0.7340425531914894,
+      "potential_remedy": "Stronger lexical matching / domain synonyms for BM25"
+    },
+    {
+      "failure_category": "both BM25 and dense failure",
+      "count": 7,
+      "percentage": 0.07446808510638298,
+      "potential_remedy": "First-stage recall (larger K, domain encoder, or different lexical model)"
+    },
+    {
+      "failure_category": "dense retrieval failure",
+      "count": 7,
+      "percentage": 0.07446808510638298,
+      "potential_remedy": "Biomedical embeddings; do not rely on MiniLM alone"
+    },
+    {
+      "failure_category": "terminology mismatch",
+      "count": 6,
+      "percentage": 0.06382978723404255,
+      "potential_remedy": "Better BioASQ-specific abbreviation handling"
+    },
+    {
+      "failure_category": "BM25 failure",
+      "count": 4,
+      "percentage": 0.0425531914893617,
+      "potential_remedy": "Query rewriting for lexical gaps; keep dense"
+    },
+    {
+      "failure_category": "query formulation issue",
+      "count": 1,
+      "percentage": 0.010638297872340425,
+      "potential_remedy": "Selective decomposition for multi-part questions"
+    }
+  ],
+  "n_missed_relevant_ids": 445,
+  "passage_table": [
+    {
+      "failure_category": "lexical mismatch",
+      "count": 309,
+      "percentage": 0.6943820224719102,
+      "potential_remedy": "Stronger lexical matching / domain synonyms for BM25"
+    },
+    {
+      "failure_category": "dense retrieval failure",
+      "count": 37,
+      "percentage": 0.08314606741573034,
+      "potential_remedy": "Biomedical embeddings; do not rely on MiniLM alone"
+    },
+    {
+      "failure_category": "both BM25 and dense failure",
+      "count": 36,
+      "percentage": 0.08089887640449438,
+      "potential_remedy": "First-stage recall (larger K, domain encoder, or different lexical model)"
+    },
+    {
+      "failure_category": "terminology mismatch",
+      "count": 36,
+      "percentage": 0.08089887640449438,
+      "potential_remedy": "Better BioASQ-specific abbreviation handling"
+    },
+    {
+      "failure_category": "BM25 failure",
+      "count": 22,
+      "percentage": 0.04943820224719101,
+      "potential_remedy": "Query rewriting for lexical gaps; keep dense"
+    },
+    {
+      "failure_category": "query formulation issue",
+      "count": 4,
+      "percentage": 0.008988764044943821,
+      "potential_remedy": "Selective decomposition for multi-part questions"
+    },
+    {
+      "failure_category": "other",
+      "count": 1,
+      "percentage": 0.0022471910112359553,
+      "potential_remedy": "Inspect fusion cutoffs and rank distributions"
+    }
+  ]
+}
